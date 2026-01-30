@@ -10,6 +10,9 @@
         initScrollReveal(prefersReducedMotion);
         initConfetti(prefersReducedMotion);
         initNewsletter();
+        initScrollToTop(prefersReducedMotion);
+        initAmbassadorCarousel();
+        initSequentialGallery(prefersReducedMotion);
     });
 
     function initMobileNavigation() {
@@ -235,5 +238,192 @@
     function formatNumber(value, suffix) {
         const formatted = new Intl.NumberFormat('en-US').format(value);
         return `${formatted}${suffix}`;
+    }
+
+    function initScrollToTop(prefersReducedMotion) {
+        const scrollToTopBtn = document.getElementById('scrollToTop');
+        if (!scrollToTopBtn) return;
+
+        // Show/hide button based on scroll position
+        const toggleButton = () => {
+            if (window.scrollY > 300) {
+                scrollToTopBtn.classList.add('visible');
+            } else {
+                scrollToTopBtn.classList.remove('visible');
+            }
+        };
+
+        // Scroll to top when clicked
+        scrollToTopBtn.addEventListener('click', () => {
+            if (prefersReducedMotion) {
+                window.scrollTo(0, 0);
+            } else {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            }
+        });
+
+        // Listen to scroll events
+        window.addEventListener('scroll', toggleButton);
+
+        // Initial check
+        toggleButton();
+    }
+
+    function initAmbassadorCarousel() {
+        const grid = document.querySelector('.ambassadors-grid');
+        const prevBtn = document.querySelector('.carousel-arrow-prev');
+        const nextBtn = document.querySelector('.carousel-arrow-next');
+        const progressContainer = document.querySelector('.carousel-progress');
+
+        if (!grid || !prevBtn || !nextBtn || !progressContainer) return;
+
+        const cards = Array.from(grid.querySelectorAll('.ambassador-card'));
+        const totalCards = cards.length;
+        const cardsPerView = 3;
+        const totalPages = Math.ceil(totalCards / cardsPerView);
+
+        // Create progress dots
+        for (let i = 0; i < totalPages; i++) {
+            const dot = document.createElement('div');
+            dot.className = 'progress-dot';
+            if (i === 0) dot.classList.add('active');
+            dot.addEventListener('click', () => scrollToPage(i));
+            progressContainer.appendChild(dot);
+        }
+
+        const dots = Array.from(progressContainer.querySelectorAll('.progress-dot'));
+
+        function updateActiveDot() {
+            const scrollLeft = grid.scrollLeft;
+            const cardWidth = cards[0].offsetWidth;
+            const gap = parseInt(getComputedStyle(grid).gap);
+            const scrollPerPage = (cardWidth + gap) * cardsPerView;
+            const currentPage = Math.round(scrollLeft / scrollPerPage);
+
+            dots.forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentPage);
+            });
+        }
+
+        function scrollToPage(pageIndex) {
+            const cardWidth = cards[0].offsetWidth;
+            const gap = parseInt(getComputedStyle(grid).gap);
+            const scrollAmount = (cardWidth + gap) * cardsPerView * pageIndex;
+            grid.scrollTo({ left: scrollAmount, behavior: 'smooth' });
+        }
+
+        prevBtn.addEventListener('click', () => {
+            const cardWidth = cards[0].offsetWidth;
+            const gap = parseInt(getComputedStyle(grid).gap);
+            const scrollAmount = (cardWidth + gap) * cardsPerView;
+            grid.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+        });
+
+        nextBtn.addEventListener('click', () => {
+            const cardWidth = cards[0].offsetWidth;
+            const gap = parseInt(getComputedStyle(grid).gap);
+            const scrollAmount = (cardWidth + gap) * cardsPerView;
+            grid.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+        });
+
+        grid.addEventListener('scroll', updateActiveDot);
+    }
+
+    function initSequentialGallery(prefersReducedMotion) {
+        const gallerySlides = document.querySelectorAll('.gallery-slide');
+
+        if (!gallerySlides.length) return;
+
+        if (prefersReducedMotion) {
+            gallerySlides.forEach(slide => {
+                slide.style.opacity = '1';
+                slide.style.transform = 'translate(-50%, -50%) scale(1)';
+            });
+            return;
+        }
+
+        let currentIndex = 0;
+        let animationInProgress = false;
+
+        // Function to show the next slide
+        function showNextSlide() {
+            if (animationInProgress || currentIndex >= gallerySlides.length) {
+                return;
+            }
+
+            animationInProgress = true;
+            const currentSlide = gallerySlides[currentIndex];
+
+            if (currentIndex === 0) {
+                // First slide: Zoom in dramatically
+                currentSlide.classList.add('zoom-in');
+
+                // Wait 2.5 seconds, then zoom out
+                setTimeout(() => {
+                    currentSlide.classList.remove('zoom-in');
+                    currentSlide.classList.add('zoom-out');
+
+                    // After zoom out animation, move to next
+                    setTimeout(() => {
+                        currentIndex++;
+                        animationInProgress = false;
+                        showNextSlide();
+                    }, 1000);
+                }, 2500);
+            } else {
+                // Subsequent slides: Just show them
+                currentSlide.classList.add('show-next');
+
+                // Stay for 2 seconds, then disappear
+                setTimeout(() => {
+                    currentSlide.classList.remove('show-next');
+                    currentSlide.classList.add('zoom-out');
+
+                    // After disappearing, move to next
+                    setTimeout(() => {
+                        currentIndex++;
+                        animationInProgress = false;
+
+                        // If not the last slide, show next
+                        if (currentIndex < gallerySlides.length) {
+                            showNextSlide();
+                        } else {
+                            // Loop back to beginning after a pause
+                            setTimeout(() => {
+                                resetGallery();
+                            }, 2000);
+                        }
+                    }, 1000);
+                }, 2000);
+            }
+        }
+
+        // Function to reset gallery and start over
+        function resetGallery() {
+            gallerySlides.forEach(slide => {
+                slide.classList.remove('zoom-in', 'zoom-out', 'show-next');
+            });
+            currentIndex = 0;
+            animationInProgress = false;
+            showNextSlide();
+        }
+
+        // Observer to start animation when gallery comes into view
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting && currentIndex === 0 && !animationInProgress) {
+                    showNextSlide();
+                    observer.disconnect(); // Only trigger once
+                }
+            });
+        }, { threshold: 0.3 });
+
+        const galleryStage = document.querySelector('.gallery-stage');
+        if (galleryStage) {
+            observer.observe(galleryStage);
+        }
     }
 })();
