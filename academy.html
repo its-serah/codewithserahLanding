@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academy — Code with Serah</title>
+    <meta name="description" content="The Code with Serah Academy is coming soon. Sign up to be the first to know when we launch.">
+    <link rel="icon" type="image/png" href="images/logo.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Caveat:wght@600;700&family=Outfit:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+
+    <style>
+        .academy-section {
+            background:
+                radial-gradient(circle at 20% 30%, rgba(255, 224, 102, 0.15) 0%, transparent 45%),
+                radial-gradient(circle at 80% 70%, rgba(157, 78, 221, 0.12) 0%, transparent 45%),
+                linear-gradient(180deg, var(--warm-white) 0%, rgba(247, 243, 233, 0.5) 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: calc(100px + var(--space-12)) var(--space-6) var(--space-16);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .academy-section::before {
+            content: '';
+            position: absolute;
+            width: 250px;
+            height: 250px;
+            background: radial-gradient(circle, rgba(123, 44, 191, 0.08), transparent);
+            border-radius: 50%;
+            top: 15%;
+            right: 8%;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .academy-section::after {
+            content: '';
+            position: absolute;
+            width: 180px;
+            height: 180px;
+            background: radial-gradient(circle, rgba(255, 215, 0, 0.1), transparent);
+            border-radius: 50%;
+            bottom: 15%;
+            left: 10%;
+            animation: float 8s ease-in-out infinite reverse;
+        }
+
+        .academy-content {
+            max-width: 560px;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .academy-label {
+            font-family: var(--font-handwritten);
+            font-size: var(--text-2xl);
+            color: var(--serah-purple);
+            font-weight: 600;
+            transform: rotate(-1deg);
+            display: block;
+            margin-bottom: var(--space-4);
+        }
+
+        .academy-title {
+            font-size: clamp(2.2rem, 6vw, var(--text-5xl));
+            font-weight: 700;
+            color: var(--text-primary);
+            line-height: 1.2;
+            margin-bottom: var(--space-8);
+        }
+
+        .academy-title .highlight {
+            background: linear-gradient(135deg, #7B2CBF 0%, #9D4EDD 50%, #C77DFF 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            display: inline-block;
+        }
+
+        .academy-body {
+            color: var(--text-secondary);
+            font-size: var(--text-lg);
+            line-height: 1.8;
+            margin-bottom: var(--space-10);
+        }
+
+        .academy-body strong {
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+
+        .academy-signup {
+            max-width: 380px;
+            margin: 0 auto var(--space-6);
+        }
+
+        .academy-signup input[type="email"] {
+            width: 100%;
+            padding: var(--space-3) var(--space-4);
+            background: transparent;
+            border: 2px solid var(--serah-purple-soft);
+            border-radius: var(--radius-2xl);
+            outline: none;
+            font-size: var(--text-lg);
+            font-family: var(--font-primary);
+            color: var(--text-primary);
+            text-align: center;
+            transition: border-color 0.3s var(--ease-gentle);
+        }
+
+        .academy-signup input[type="email"]:focus {
+            border-color: var(--serah-purple);
+        }
+
+        .academy-signup input[type="email"]::placeholder {
+            color: var(--text-light);
+        }
+
+        .academy-notify {
+            font-family: var(--font-handwritten);
+            font-size: var(--text-2xl);
+            font-weight: 700;
+            background: linear-gradient(135deg, #7B2CBF 0%, #9D4EDD 50%, #C77DFF 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            border: none;
+            cursor: pointer;
+            padding: var(--space-2) var(--space-4);
+            margin-top: -0.5rem;
+            transition: transform 0.2s var(--ease-gentle), opacity 0.2s;
+            display: inline-block;
+            transform: rotate(-1deg);
+            text-decoration: none;
+        }
+
+        .academy-notify:hover {
+            transform: rotate(-1deg) scale(1.08);
+            opacity: 0.85;
+        }
+
+        .academy-fine-print {
+            color: var(--text-muted);
+            font-size: var(--text-sm);
+            line-height: 1.7;
+            margin-top: var(--space-8);
+        }
+    </style>
+</head>
+<body>
+    <div class="floating-shapes">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+        <div class="shape shape-4"></div>
+    </div>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">
+                    <img src="images/logo.png" alt="Code with Serah Logo">
+                </a>
+            </div>
+            <div class="nav-menu">
+                <a href="index.html#story" class="nav-link">Impact</a>
+                <a href="index.html#programs" class="nav-link">Academy</a>
+                <a href="index.html#ambassadors" class="nav-link">Ambassadors</a>
+                <a href="index.html#events" class="nav-link">Events and Webinars</a>
+                <a href="index.html#join" class="nav-link">Join Us</a>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <section class="academy-section">
+        <div class="academy-content">
+            <span class="academy-label">Something exciting is brewing</span>
+            <h1 class="academy-title">The Academy is <span class="highlight">Coming Soon</span></h1>
+
+            <p class="academy-body">
+                We're currently in private beta with a small group of early learners. The full Academy experience, complete with hands-on projects, mentorship, and a curriculum built around real-world skills, is on its way.
+                <br><br>
+                <strong>Be the first to know when we open the doors.</strong>
+            </p>
+
+            <form class="academy-signup newsletter-form">
+                <input type="email" name="email" placeholder="your@email.com" required>
+                <button type="submit" class="academy-notify">Notify Me</button>
+            </form>
+
+            <p class="academy-fine-print">
+                You'll receive one newsletter on the 13th of every month, or whenever we have an important update to share. That's it. No spam, just the good stuff.
+            </p>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <img src="images/logo.png" alt="Code with Serah Logo" style="height: 80px; width: auto; max-width: 200px; margin-bottom: 1rem;">
+                    <div class="footer-social">
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Programs</h4>
+                        <a href="#">Full-Stack Journey</a>
+                        <a href="#">Mentor Magic</a>
+                        <a href="#">Pocket Agents</a>
+                    </div>
+
+                    <div class="footer-column">
+                        <h4>Community</h4>
+                        <a href="#">Ambassador Program</a>
+                        <a href="#">Code of Conduct</a>
+                    </div>
+
+                    <div class="footer-column">
+                        <h4>Support</h4>
+                        <a href="mailto:contact@codewithserah.com">Get Help</a>
+                        <a href="mailto:contact@codewithserah.com">Contact Serah</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-legal">
+                    <p>&copy; 2026 Code with Serah</p>
+                    <div class="legal-links">
+                        <a href="#privacy">Privacy Policy</a>
+                        <a href="#terms">Terms of Service</a>
+                        <a href="#accessibility">Accessibility</a>
+                    </div>
+                </div>
+                <div class="footer-message">
+                    <p class="handwritten">"Don't be another brick in the wall. Build differently." - Serah</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+        if (hamburger && navMenu) {
+            hamburger.addEventListener('click', function() {
+                const expanded = this.getAttribute('aria-expanded') === 'true';
+                this.setAttribute('aria-expanded', String(!expanded));
+                this.classList.toggle('active');
+                navMenu.classList.toggle('active');
+            });
+            navMenu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    hamburger.setAttribute('aria-expanded', 'false');
+                    hamburger.classList.remove('active');
+                    navMenu.classList.remove('active');
+                });
+            });
+        }
+
+        const form = document.querySelector('.newsletter-form');
+        if (form) {
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const email = this.querySelector('input[type="email"]');
+                if (!email || !email.value.trim()) { email?.focus(); return; }
+                email.value = '';
+                this.classList.add('success');
+                setTimeout(() => this.classList.remove('success'), 2000);
+            });
+        }
+    </script>
+</body>
+</html>

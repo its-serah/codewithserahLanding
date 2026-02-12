@@ -6,9 +6,20 @@
     <title>Code with Serah</title>
     <meta name="description" content="Join a movement that's changing lives through code. Real stories, real community, real change.">
     <link rel="icon" type="image/png" href="images/logo.png">
+
+    <!-- Preconnect to external domains for faster loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+
+    <!-- Load critical CSS first -->
     <link rel="stylesheet" href="css/styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&family=Caveat:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Load fonts with display=swap to prevent blocking -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Caveat:wght@600;700&family=Outfit:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Defer Font Awesome to prevent blocking -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
 </head>
 <body>
     <!-- Floating shapes -->
@@ -29,7 +40,7 @@
             </div>
             <div class="nav-menu">
                 <a href="#story" class="nav-link">Impact</a>
-                <a href="#programs" class="nav-link">Academy</a>
+                <a href="academy.html" class="nav-link">Academy</a>
                 <a href="#ambassadors" class="nav-link">Ambassadors</a>
                 <a href="#events" class="nav-link">Events and Webinars</a>
                 <a href="#join" class="nav-link">Join Us</a>
@@ -75,97 +86,99 @@
                         <div class="code-line"><span class="code-keyword">return</span> <span class="code-string">'dreams coming true'</span></div>
                     </div>
                 </div>
-                <div class="floating-emoji emoji-1"><img src="images/tech.png" alt="Tech"></div>
-                <div class="floating-emoji emoji-2"><img src="images/math.png" alt="Math"></div>
-                <div class="floating-emoji emoji-3"><img src="images/chem.png" alt="Chemistry"></div>
-                <div class="floating-emoji emoji-4"><img src="images/art.png" alt="Art"></div>
-                <div class="floating-emoji emoji-5"><img src="images/literture.png" alt="Literature"></div>
+                <div class="floating-emoji emoji-1"><img src="images/tech.png" alt="Tech" loading="eager"></div>
+                <div class="floating-emoji emoji-2"><img src="images/math.png" alt="Math" loading="lazy"></div>
+                <div class="floating-emoji emoji-3"><img src="images/chem.png" alt="Chemistry" loading="lazy"></div>
+                <div class="floating-emoji emoji-4"><img src="images/art.png" alt="Art" loading="lazy"></div>
+                <div class="floating-emoji emoji-5"><img src="images/literture.png" alt="Literature" loading="lazy"></div>
             </div>
         </div>
     </section>
 
-    <!-- Story Section -->
-    <section id="story" class="story">
+    <!-- Impact Section -->
+    <section id="story" class="impact">
         <div class="container">
-            <div class="story-header">
-                <h2 class="handwritten">Our Impact</h2>
-                <p class="story-tagline">Real people. Real change. Real stories.</p>
-            </div>
 
-            <!-- 1. Ada Lovelace Section - Image with Text -->
-            <div class="ada-lovelace-section">
-                <div class="ada-container">
-                    <div class="ada-image">
-                        <img src="images/ada-lovelace.png" alt="Ada Lovelace">
-                    </div>
-                    <div class="ada-content">
-                        <h3 class="handwritten">Ada Lovelace</h3>
-                        <p class="ada-subtitle">The World's First Programmer</p>
-                        <p><strong>Code with Serah was founded on October 13th, 2024</strong> — celebrating <strong>Ada Lovelace Day</strong>, honoring the woman who wrote the world's first computer program.</p>
-                        <p>Ada Lovelace wasn't just a mathematician; she was a visionary who saw the potential of computing beyond mere calculation. She imagined a future where machines could create music, art, and change the world.</p>
-                        <p>Our very first event, <strong>"The T IN STEM Workshop"</strong>, brought together 28 curious minds. Today, we're a thriving community of over <strong>1,200 members</strong>.</p>
-                    </div>
+            <h2 class="bento-heading handwritten">Our Story So Far.</h2>
+
+            <div class="bento-board">
+                <!-- Col 1: stat top -->
+                <div class="bento-pin bento-pin--stat bento-pin--stat-white">
+                    <span class="bento-pin__value">1,500+</span>
+                    <span class="bento-pin__label">Community Members</span>
+                </div>
+                <div class="bento-pin">
+                    <img src="bento/_%20(51).jpeg" alt="Learn by doing" loading="lazy">
+                </div>
+                <div class="bento-pin">
+                    <img src="bento/_%20(49).jpeg" alt="Now" loading="lazy">
+                </div>
+
+                <!-- Col 2: stat middle -->
+                <div class="bento-pin">
+                    <img src="bento/Ideas%20for%20life%20%233.jpeg" alt="Live what you love" loading="lazy">
+                </div>
+                <div class="bento-pin bento-pin--stat bento-pin--stat-purple">
+                    <span class="bento-pin__value">25+</span>
+                    <span class="bento-pin__label">Countries</span>
+                </div>
+                <div class="bento-pin">
+                    <img src="bento/_%20(50).jpeg" alt="Listen" loading="lazy">
+                </div>
+
+                <!-- Col 3: stat bottom -->
+                <div class="bento-pin">
+                    <img src="bento/Ideas%20for%20life%20%235.jpeg" alt="Connect" loading="lazy">
+                </div>
+                <div class="bento-pin">
+                    <img src="bento/_%20(52).jpeg" alt="You can" loading="lazy">
+                </div>
+                <div class="bento-pin bento-pin--stat bento-pin--stat-yellow">
+                    <span class="bento-pin__value">80+</span>
+                    <span class="bento-pin__label">Students Mentored</span>
+                </div>
+
+                <!-- Col 4: images only -->
+                <div class="bento-pin">
+                    <img src="bento/practice.jpeg" alt="Practice" loading="lazy">
+                </div>
+                <div class="bento-pin">
+                    <img src="bento/MacBook%20wallpaper.jpeg" alt="Work hard" loading="lazy">
                 </div>
             </div>
 
-            <!-- 3. Mountain Section with Stats -->
-            <div class="mountain-section">
-                <div class="mountain-container">
-                    <div class="mountain-image">
-                        <img src="images/mountain.png" alt="Our Journey">
-                    </div>
-                    <div class="mountain-content">
-                        <h3 class="handwritten">Climbing Together</h3>
-                        <div class="mountain-stats">
-                            <div class="stat-box">
-                                <span class="stat-number">1,200+</span>
-                                <span class="stat-text">Community Members from around the world</span>
-                            </div>
-                            <div class="stat-box">
-                                <span class="stat-number">28</span>
-                                <span class="stat-text">Started with our first workshop</span>
-                            </div>
-                            <div class="stat-box">
-                                <span class="stat-number">15+</span>
-                                <span class="stat-text">Events and workshops hosted</span>
-                            </div>
-                            <div class="stat-box">
-                                <span class="stat-number">Oct 13, 2024</span>
-                                <span class="stat-text">Founded on Ada Lovelace Day</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Mission & Vision -->
-            <div class="mission-vision">
-                <div class="mission">
+            <div class="mv-row">
+                <div class="mv-block">
                     <h3 class="handwritten">Mission</h3>
-                    <p>Your mission statement goes here - what drives you and what you aim to achieve.</p>
+                    <p>To spark curiosity and empower the next generation of creators, thinkers, and innovators, regardless of where they come from. We believe that when you give someone the tools to create, they don't just build software, they build futures.</p>
                 </div>
-                <div class="vision">
+                <div class="mv-block">
                     <h3 class="handwritten">Vision</h3>
-                    <p>Your vision statement goes here - where you see the community going and the future you're building.</p>
+                    <p>A world where every young mind has the opportunity to explore, create, and lead, where technology is a bridge, not a barrier, and where the next groundbreaking idea can come from anywhere.</p>
                 </div>
             </div>
 
-            <!-- Stats -->
-            <div class="impact-stats">
-                <div class="stat-card">
-                    <div class="stat-number">1,200+</div>
-                    <div class="stat-label">Community Members</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number">28</div>
-                    <div class="stat-label">Where We Started</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number">Oct 13, 2024</div>
-                    <div class="stat-label">Ada Lovelace Day</div>
-                </div>
-            </div>
+        </div>
+    </section>
 
+    <!-- Pinterest Masonry Collage -->
+    <section class="masonry-collage">
+        <div class="masonry-grid">
+            <div class="masonry-col">
+                <div class="masonry-item"><img src="events/1.jpeg" alt="Event moment" loading="lazy"></div>
+                <div class="masonry-item"><img src="events/2.jpeg" alt="Event moment" loading="lazy"></div>
+                <div class="masonry-item"><img src="events/3.jpeg" alt="Event moment" loading="lazy"></div>
+            </div>
+            <div class="masonry-col">
+                <div class="masonry-item"><img src="events/4.jpeg" alt="Event moment" loading="lazy"></div>
+                <div class="masonry-item"><img src="events/5.jpeg" alt="Event moment" loading="lazy"></div>
+                <div class="masonry-item"><img src="events/6.jpeg" alt="Event moment" loading="lazy"></div>
+            </div>
+            <div class="masonry-col">
+                <div class="masonry-item"><img src="events/7.jpeg" alt="Event moment" loading="lazy"></div>
+                <div class="masonry-item"><img src="events/8.jpeg" alt="Event moment" loading="lazy"></div>
+                <div class="masonry-item"><img src="events/9.jpeg" alt="Event moment" loading="lazy"></div>
+            </div>
         </div>
     </section>
 
@@ -178,6 +191,14 @@
             </div>
 
             <div class="programs-list">
+                <div class="program-item">
+                    <div class="program-header">
+                        <h3>Pocket Agents</h3>
+                        <span class="program-date ongoing">Ongoing</span>
+                    </div>
+                    <p class="program-oneliner">Build intelligent AI agents that solve real-world problems.</p>
+                </div>
+
                 <div class="program-item">
                     <div class="program-header">
                         <h3>Full-Stack Journey</h3>
@@ -193,18 +214,10 @@
                     </div>
                     <p class="program-oneliner">Learn to create beautiful, responsive user interfaces that users love.</p>
                 </div>
-
-                <div class="program-item">
-                    <div class="program-header">
-                        <h3>Pocket Agents</h3>
-                        <span class="program-date ongoing">Ongoing</span>
-                    </div>
-                    <p class="program-oneliner">Build intelligent AI agents that solve real-world problems.</p>
-                </div>
             </div>
 
             <div style="text-align: center; margin-top: 3rem;">
-                <a href="#" class="btn btn-primary">Go to Academy</a>
+                <a href="academy.html" class="btn btn-primary">Go to Academy</a>
             </div>
         </div>
     </section>
@@ -293,8 +306,8 @@
 
             <div class="become-ambassador">
                 <div class="cta-card">
-                    <img src="images/star.png" alt="Star" class="star-decoration">
-                    <img src="dog.jpeg" alt="Dog" class="dog-decoration">
+                    <img src="images/star.png" alt="Star" class="star-decoration" loading="lazy">
+                    <img src="dog.jpeg" alt="Dog" class="dog-decoration" loading="lazy">
                     <h3 class="handwritten">Want to become an ambassador?</h3>
                     <p>Share your journey, support others, and join us in the same mission of building a more inclusive tech community.</p>
                     <a href="#" class="btn btn-primary ambassador-btn">Apply to be an Ambassador</a>
@@ -311,10 +324,31 @@
                 <p class="section-intro">Join us for workshops, talks, and community gatherings. Can't make it live? Check out what we've done before!</p>
             </div>
 
-            <!-- Upcoming Events -->
+            <!-- Ongoing -->
             <div class="events-section">
-                <h3 class="subsection-title">Upcoming</h3>
+                <h3 class="subsection-title">Ongoing</h3>
                 <div class="events-grid">
+                    <div class="event-card">
+                        <div class="event-date">
+                            <span class="date-day">8-15</span>
+                            <span class="date-month">Feb</span>
+                            <span class="date-year">2026</span>
+                        </div>
+                        <div class="event-content">
+                            <h4>Winter Sprint Bootcamp</h4>
+                            <p class="event-description">An intensive week of building, learning, and shipping. Feb 8, 9, 11, 12, 15 2026.</p>
+                            <p class="event-time"><i class="fas fa-users"></i> 495 attendees</p>
+                            <p class="event-time"><i class="fas fa-globe"></i> Online</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Past Highlights - Show 3 most recent -->
+            <div class="events-section">
+                <h3 class="subsection-title">Past Highlights</h3>
+                <div class="events-grid">
+
                     <div class="event-card">
                         <div class="event-date">
                             <span class="date-day">5</span>
@@ -327,154 +361,17 @@
                             <p class="event-time"><i class="fas fa-globe"></i> Online</p>
                         </div>
                     </div>
-                </div>
-            </div>
-
-            <!-- Past Events -->
-            <div class="events-section">
-                <h3 class="subsection-title">Past Highlights</h3>
-                <div class="events-grid">
-                    <div class="event-card">
-                        <div class="event-date">
-                            <span class="date-day">13</span>
-                            <span class="date-month">Oct</span>
-                        </div>
-                        <div class="event-content">
-                            <h4>The T IN STEM Workshop</h4>
-                            <p class="event-description">Our very first event! 28 curious minds gathered to explore technology, innovation, and the power of STEM on Ada Lovelace Day.</p>
-                            <p class="event-time"><i class="fas fa-users"></i> 28 attendees</p>
-                        </div>
-                    </div>
-
-                    <div class="event-card">
-                        <div class="event-date">
-                            <span class="date-day">9-10</span>
-                            <span class="date-month">Nov</span>
-                        </div>
-                        <div class="event-content">
-                            <h4>STEAM in Action</h4>
-                            <p class="event-description">A weekend workshop exploring Science, Technology, Engineering, Art, and Mathematics through creative projects.</p>
-                            <p class="event-time"><i class="fas fa-globe"></i> Online</p>
-                        </div>
-                    </div>
-
-                    <div class="event-card">
-                        <div class="event-date">
-                            <span class="date-day">14-15</span>
-                            <span class="date-month">Dec</span>
-                        </div>
-                        <div class="event-content">
-                            <h4>AI Feels: An NLP Workshop</h4>
-                            <p class="event-description">Dive into Natural Language Processing and sentiment analysis. Learn how AI understands human emotions through text.</p>
-                            <p class="event-time"><i class="fas fa-globe"></i> Online</p>
-                        </div>
-                    </div>
 
                     <div class="event-card">
                         <div class="event-date">
                             <span class="date-day">24</span>
                             <span class="date-month">Jan</span>
+                            <span class="date-year">2026</span>
                         </div>
                         <div class="event-content">
                             <h4>Pre-Winter Sprint One Day Bootcamp</h4>
                             <p class="event-description">Celebrating International Day of Education with an intensive coding bootcamp. Build a complete project in one day.</p>
-                            <p class="event-time"><i class="fas fa-globe"></i> Online</p>
-                        </div>
-                    </div>
-
-                    <div class="event-card">
-                        <div class="event-date">
-                            <span class="date-day">11</span>
-                            <span class="date-month">Feb</span>
-                        </div>
-                        <div class="event-content">
-                            <h4>Reflect, Rise and Redefine</h4>
-                            <p class="event-description">Celebrating International Women in STEM Day with inspiring stories, panel discussions, and networking opportunities.</p>
-                            <p class="event-time"><i class="fas fa-globe"></i> Online</p>
-                        </div>
-                    </div>
-
-                    <div class="event-card">
-                        <div class="event-date">
-                            <span class="date-day">22</span>
-                            <span class="date-month">Mar</span>
-                        </div>
-                        <div class="event-content">
-                            <h4>Cybersecurity: The Galaxy Guardian</h4>
-                            <p class="event-description">Learn to protect the digital universe through ethical hacking, encryption, and security fundamentals.</p>
-                            <p class="event-time"><i class="fas fa-globe"></i> Online</p>
-                        </div>
-                    </div>
-
-                    <div class="event-card">
-                        <div class="event-date">
-                            <span class="date-day">22</span>
-                            <span class="date-month">Mar</span>
-                        </div>
-                        <div class="event-content">
-                            <h4>Young Ecology Research Program</h4>
-                            <p class="event-description">Technology meets environmental science. Use data analysis and AI to track climate patterns and contribute to research.</p>
-                            <p class="event-time"><i class="fas fa-globe"></i> Online</p>
-                        </div>
-                    </div>
-
-                    <div class="event-card">
-                        <div class="event-date">
-                            <span class="date-day">29</span>
-                            <span class="date-month">Mar</span>
-                        </div>
-                        <div class="event-content">
-                            <h4>Equity Through XAI</h4>
-                            <p class="event-description">Celebrating International Women's Day by exploring Explainable AI and building fair, transparent AI systems.</p>
-                            <p class="event-time"><i class="fas fa-globe"></i> Online</p>
-                        </div>
-                    </div>
-
-                    <div class="event-card">
-                        <div class="event-date">
-                            <span class="date-day">17</span>
-                            <span class="date-month">Apr</span>
-                        </div>
-                        <div class="event-content">
-                            <h4>AI in Healthcare: ML and XAI for Celiac Disease</h4>
-                            <p class="event-description">Our first in-person healthcare AI workshop exploring machine learning in medical diagnosis.</p>
-                            <p class="event-time"><i class="fas fa-map-marker-alt"></i> On-site</p>
-                        </div>
-                    </div>
-
-                    <div class="event-card">
-                        <div class="event-date">
-                            <span class="date-day">12</span>
-                            <span class="date-month">May</span>
-                        </div>
-                        <div class="event-content">
-                            <h4>Undefined Limits: WOMEN IN MATH × AI</h4>
-                            <p class="event-description">Celebrating women who shaped mathematics and AI. Explore mathematical concepts behind machine learning.</p>
-                            <p class="event-time"><i class="fas fa-globe"></i> Online</p>
-                        </div>
-                    </div>
-
-                    <div class="event-card">
-                        <div class="event-date">
-                            <span class="date-day">18</span>
-                            <span class="date-month">May</span>
-                        </div>
-                        <div class="event-content">
-                            <h4>CTRL + ALT + EARTH</h4>
-                            <p class="event-description">Code for climate action! Learn how technology can help solve environmental challenges and build impactful projects.</p>
-                            <p class="event-time"><i class="fas fa-globe"></i> Online</p>
-                        </div>
-                    </div>
-
-                    <div class="event-card">
-                        <div class="event-date">
-                            <span class="date-day">14-25</span>
-                            <span class="date-month">Jul</span>
-                        </div>
-                        <div class="event-content">
-                            <h4>AI Summer Sprint Bootcamp</h4>
-                            <p class="event-description">Our biggest event! Two weeks of intensive AI training with 650+ participants from around the world.</p>
-                            <p class="event-time"><i class="fas fa-users"></i> 650+ attendees</p>
+                            <p class="event-time"><i class="fas fa-users"></i> 52 attendees</p>
                             <p class="event-time"><i class="fas fa-globe"></i> Online</p>
                         </div>
                     </div>
@@ -483,13 +380,20 @@
                         <div class="event-date">
                             <span class="date-day">21</span>
                             <span class="date-month">Sep</span>
+                            <span class="date-year">2025</span>
                         </div>
                         <div class="event-content">
                             <h4>Food Trends Unpacked</h4>
                             <p class="event-description">Ambassador Series: Exploring data science in the food industry, analyzing trends and understanding consumer behavior.</p>
+                            <p class="event-time"><i class="fas fa-users"></i> 50 attendees</p>
                             <p class="event-time"><i class="fas fa-globe"></i> Online</p>
                         </div>
                     </div>
+
+                </div>
+
+                <div style="text-align: center; margin-top: var(--space-10);">
+                    <a href="events.html" class="btn btn-primary">View All Events</a>
                 </div>
             </div>
         </div>
@@ -500,7 +404,7 @@
         <div class="container">
             <div class="newsletter-content">
                 <div class="newsletter-visual">
-                    <img src="newsletter.gif" alt="Newsletter Preview" class="newsletter-gif">
+                    <img src="newsletter.gif" alt="Newsletter Preview" class="newsletter-gif" loading="lazy">
                 </div>
                 <div class="newsletter-signup">
                     <h2 class="handwritten">Our Newsletter</h2>
@@ -545,15 +449,8 @@
                     </div>
 
                     <div class="footer-column">
-                        <h4>Resources</h4>
-                        <a href="#" style="opacity: 0.6; cursor: not-allowed;">Monthly Blog (Coming Soon)</a>
-                        <a href="#" style="opacity: 0.6; cursor: not-allowed;">Career Resources (Coming Soon)</a>
-                    </div>
-
-                    <div class="footer-column">
                         <h4>Support</h4>
                         <a href="mailto:contact@codewithserah.com">Get Help</a>
-                        <a href="#" style="opacity: 0.6; cursor: not-allowed;">Mental Health Resources (Coming Soon)</a>
                         <a href="mailto:contact@codewithserah.com">Contact Serah</a>
                     </div>
                 </div>
@@ -561,7 +458,7 @@
             
             <div class="footer-bottom">
                 <div class="footer-legal">
-                    <p>&copy; 2025 Code with Serah</p>
+                    <p>&copy; 2026 Code with Serah</p>
                     <div class="legal-links">
                         <a href="#privacy">Privacy Policy</a>
                         <a href="#terms">Terms of Service</a>
@@ -580,6 +477,6 @@
         <i class="fas fa-arrow-up"></i>
     </button>
 
-    <script src="js/script.js"></script>
+    <script src="js/script.js" defer></script>
 </body>
 </html>

@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events — Code with Serah</title>
+    <meta name="description" content="Join Code with Serah events and workshops. From AI bootcamps to cybersecurity, explore technology through hands-on learning experiences.">
+    <link rel="icon" type="image/png" href="images/logo.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Caveat:wght@600;700&family=Outfit:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+
+    <style>
+        .events-page {
+            background:
+                radial-gradient(circle at 20% 30%, rgba(255, 224, 102, 0.15) 0%, transparent 45%),
+                radial-gradient(circle at 80% 70%, rgba(157, 78, 221, 0.12) 0%, transparent 45%),
+                linear-gradient(180deg, var(--warm-white) 0%, rgba(247, 243, 233, 0.5) 100%);
+            min-height: 100vh;
+            padding: calc(100px + var(--space-12)) 0 var(--space-16);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .events-page::before {
+            content: '';
+            position: absolute;
+            width: 250px;
+            height: 250px;
+            background: radial-gradient(circle, rgba(123, 44, 191, 0.08), transparent);
+            border-radius: 50%;
+            top: 15%;
+            right: 8%;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .events-page::after {
+            content: '';
+            position: absolute;
+            width: 180px;
+            height: 180px;
+            background: radial-gradient(circle, rgba(255, 215, 0, 0.1), transparent);
+            border-radius: 50%;
+            bottom: 15%;
+            left: 10%;
+            animation: float 8s ease-in-out infinite reverse;
+        }
+
+        .events-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--space-6);
+            position: relative;
+            z-index: 1;
+        }
+
+        .events-header {
+            text-align: center;
+            margin-bottom: var(--space-16);
+        }
+
+        .events-label {
+            font-family: var(--font-handwritten);
+            font-size: var(--text-2xl);
+            color: var(--serah-purple);
+            font-weight: 600;
+            transform: rotate(-1deg);
+            display: block;
+            margin-bottom: var(--space-4);
+        }
+
+        .events-title {
+            font-size: clamp(2.2rem, 6vw, var(--text-5xl));
+            font-weight: 700;
+            color: var(--text-primary);
+            line-height: 1.2;
+            margin-bottom: var(--space-6);
+        }
+
+        .events-title .highlight {
+            background: linear-gradient(135deg, #7B2CBF 0%, #9D4EDD 50%, #C77DFF 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            display: inline-block;
+        }
+
+        .events-subtitle {
+            color: var(--text-secondary);
+            font-size: var(--text-lg);
+            line-height: 1.7;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .events-section {
+            margin-bottom: var(--space-16);
+        }
+
+        .events-section:last-of-type {
+            margin-bottom: 0;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+
+        @media (max-width: 768px) {
+            .events-page {
+                padding: calc(80px + var(--space-8)) 0 var(--space-12);
+            }
+
+            .events-header {
+                margin-bottom: var(--space-12);
+            }
+
+            .events-section {
+                margin-bottom: var(--space-12);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="floating-shapes">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+        <div class="shape shape-4"></div>
+    </div>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">
+                    <img src="images/logo.png" alt="Code with Serah Logo">
+                </a>
+            </div>
+            <div class="nav-menu">
+                <a href="index.html#story" class="nav-link">Impact</a>
+                <a href="academy.html" class="nav-link">Academy</a>
+                <a href="index.html#ambassadors" class="nav-link">Ambassadors</a>
+                <a href="index.html#events" class="nav-link">Events and Webinars</a>
+                <a href="index.html#join" class="nav-link">Join Us</a>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <main class="events-page">
+        <div class="events-container">
+            <header class="events-header">
+                <span class="events-label">Where learning comes alive</span>
+                <h1 class="events-title">Code with Serah <span class="highlight">Events</span></h1>
+                <p class="events-subtitle">
+                    From intensive bootcamps to deep-dive workshops, join us in exploring AI, cybersecurity, healthcare tech, and more. Every event is designed to challenge, inspire, and build real skills.
+                </p>
+            </header>
+
+            <!-- Ongoing Events -->
+            <section class="events-section">
+                <h2 class="subsection-title">Ongoing</h2>
+                <div class="events-grid">
+                    <article class="event-card">
+                        <div class="event-date">
+                            <div class="date-day">8-15</div>
+                            <div class="date-month">Feb 2026</div>
+                        </div>
+                        <div class="event-content">
+                            <h4>Winter Sprint Bootcamp</h4>
+                            <p class="event-time">
+                                <i class="fas fa-users" aria-hidden="true"></i>
+                                495 attendees
+                                <span style="margin: 0 var(--space-2);">•</span>
+                                <i class="fas fa-globe" aria-hidden="true"></i>
+                                Online
+                            </p>
+                            <p class="event-description">
+                                An intensive week of building, learning, and shipping. Feb 8, 9, 11, 12, 15 2026.
+                            </p>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Past Highlights -->
+            <section class="events-section">
+                <h2 class="subsection-title">Past Highlights</h2>
+                <div class="events-grid">
+                    <article class="event-card past-event">
+                        <div class="event-date past">
+                            <div class="date-day">5</div>
+                            <div class="date-month">Feb 2026</div>
+                        </div>
+                        <div class="event-content">
+                            <h4>Halicin: How AI Helped Find a Superbug Killer</h4>
+                            <p class="event-time">
+                                <i class="fas fa-globe" aria-hidden="true"></i>
+                                Online
+                            </p>
+                            <p class="event-description">
+                                Discover how MIT researchers used machine learning to identify Halicin, a powerful antibiotic that can kill drug-resistant bacteria.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="event-card past-event">
+                        <div class="event-date past">
+                            <div class="date-day">24</div>
+                            <div class="date-month">Jan 2026</div>
+                        </div>
+                        <div class="event-content">
+                            <h4>Pre-Winter Sprint One Day Bootcamp</h4>
+                            <p class="event-time">
+                                <i class="fas fa-users" aria-hidden="true"></i>
+                                52 attendees
+                                <span style="margin: 0 var(--space-2);">•</span>
+                                <i class="fas fa-globe" aria-hidden="true"></i>
+                                Online
+                            </p>
+                            <p class="event-description">
+                                Celebrating International Day of Education with an intensive coding bootcamp. Build a complete project in one day.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="event-card past-event">
+                        <div class="event-date past">
+                            <div class="date-day">21</div>
+                            <div class="date-month">Sep 2025</div>
+                        </div>
+                        <div class="event-content">
+                            <h4>Food Trends Unpacked</h4>
+                            <p class="event-time">
+                                <i class="fas fa-users" aria-hidden="true"></i>
+                                50 attendees
+                                <span style="margin: 0 var(--space-2);">•</span>
+                                <i class="fas fa-globe" aria-hidden="true"></i>
+                                Online
+                            </p>
+                            <p class="event-description">
+                                Ambassador Series: Exploring data science in the food industry, analyzing trends and understanding consumer behavior.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="event-card past-event">
+                        <div class="event-date past">
+                            <div class="date-day">14-25</div>
+                            <div class="date-month">Jul 2025</div>
+                        </div>
+                        <div class="event-content">
+                            <h4>AI Summer Sprint Bootcamp</h4>
+                            <p class="event-time">
+                                <i class="fas fa-users" aria-hidden="true"></i>
+                                650+ attendees
+                                <span style="margin: 0 var(--space-2);">•</span>
+                                <i class="fas fa-globe" aria-hidden="true"></i>
+                                Online
+                            </p>
+                            <p class="event-description">
+                                Our biggest event! Two weeks of intensive AI training with 650+ participants from around the world.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="event-card past-event">
+                        <div class="event-date past">
+                            <div class="date-day">18</div>
+                            <div class="date-month">May 2025</div>
+                        </div>
+                        <div class="event-content">
+                            <h4>CTRL + ALT + EARTH</h4>
+                            <p class="event-time">
+                                <i class="fas fa-users" aria-hidden="true"></i>
+                                20 attendees
+                                <span style="margin: 0 var(--space-2);">•</span>
+                                <i class="fas fa-globe" aria-hidden="true"></i>
+                                Online
+                            </p>
+                            <p class="event-description">
+                                Code for climate action! Learn how technology can help solve environmental challenges and build impactful projects.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="event-card past-event">
+                        <div class="event-date past">
+                            <div class="date-day">12</div>
+                            <div class="date-month">May 2025</div>
+                        </div>
+                        <div class="event-content">
+                            <h4>Undefined Limits: WOMEN IN MATH × AI</h4>
+                            <p class="event-time">
+                                <i class="fas fa-users" aria-hidden="true"></i>
+                                24 attendees
+                                <span style="margin: 0 var(--space-2);">•</span>
+                                <i class="fas fa-globe" aria-hidden="true"></i>
+                                Online
+                            </p>
+                            <p class="event-description">
+                                Celebrating women who shaped mathematics and AI. Explore mathematical concepts behind machine learning.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="event-card past-event">
+                        <div class="event-date past">
+                            <div class="date-day">17</div>
+                            <div class="date-month">Apr 2025</div>
+                        </div>
+                        <div class="event-content">
+                            <h4>AI in Healthcare: ML and XAI for Celiac Disease</h4>
+                            <p class="event-time">
+                                <i class="fas fa-users" aria-hidden="true"></i>
+                                34 attendees
+                                <span style="margin: 0 var(--space-2);">•</span>
+                                <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                                On-site
+                            </p>
+                            <p class="event-description">
+                                Our first in-person healthcare AI workshop exploring machine learning in medical diagnosis.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="event-card past-event">
+                        <div class="event-date past">
+                            <div class="date-day">29</div>
+                            <div class="date-month">Mar 2025</div>
+                        </div>
+                        <div class="event-content">
+                            <h4>Equity Through XAI</h4>
+                            <p class="event-time">
+                                <i class="fas fa-users" aria-hidden="true"></i>
+                                35 attendees
+                                <span style="margin: 0 var(--space-2);">•</span>
+                                <i class="fas fa-globe" aria-hidden="true"></i>
+                                Online
+                            </p>
+                            <p class="event-description">
+                                Celebrating International Women's Day by exploring Explainable AI and building fair, transparent AI systems.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="event-card past-event">
+                        <div class="event-date past">
+                            <div class="date-day">22</div>
+                            <div class="date-month">Mar 2025</div>
+                        </div>
+                        <div class="event-content">
+                            <h4>Cybersecurity: The Galaxy Guardian</h4>
+                            <p class="event-time">
+                                <i class="fas fa-users" aria-hidden="true"></i>
+                                118 attendees
+                                <span style="margin: 0 var(--space-2);">•</span>
+                                <i class="fas fa-globe" aria-hidden="true"></i>
+                                Online
+                            </p>
+                            <p class="event-description">
+                                Learn to protect the digital universe through ethical hacking, encryption, and security fundamentals.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="event-card past-event">
+                        <div class="event-date past">
+                            <div class="date-day">22</div>
+                            <div class="date-month">Mar 2025</div>
+                        </div>
+                        <div class="event-content">
+                            <h4>Young Ecology Research Program</h4>
+                            <p class="event-time">
+                                <i class="fas fa-users" aria-hidden="true"></i>
+                                14 attendees
+                                <span style="margin: 0 var(--space-2);">•</span>
+                                <i class="fas fa-globe" aria-hidden="true"></i>
+                                Online
+                            </p>
+                            <p class="event-description">
+                                Technology meets environmental science. Use data analysis and AI to track climate patterns and contribute to research.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="event-card past-event">
+                        <div class="event-date past">
+                            <div class="date-day">11</div>
+                            <div class="date-month">Feb 2025</div>
+                        </div>
+                        <div class="event-content">
+                            <h4>Reflect, Rise and Redefine</h4>
+                            <p class="event-time">
+                                <i class="fas fa-users" aria-hidden="true"></i>
+                                140 attendees
+                                <span style="margin: 0 var(--space-2);">•</span>
+                                <i class="fas fa-globe" aria-hidden="true"></i>
+                                Online
+                            </p>
+                            <p class="event-description">
+                                Celebrating International Women in STEM Day with inspiring stories, panel discussions, and networking opportunities.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="event-card past-event">
+                        <div class="event-date past">
+                            <div class="date-day">14-15</div>
+                            <div class="date-month">Dec 2024</div>
+                        </div>
+                        <div class="event-content">
+                            <h4>AI Feels: An NLP Workshop</h4>
+                            <p class="event-time">
+                                <i class="fas fa-users" aria-hidden="true"></i>
+                                115 attendees
+                                <span style="margin: 0 var(--space-2);">•</span>
+                                <i class="fas fa-globe" aria-hidden="true"></i>
+                                Online
+                            </p>
+                            <p class="event-description">
+                                Dive into Natural Language Processing and sentiment analysis. Learn how AI understands human emotions through text.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="event-card past-event">
+                        <div class="event-date past">
+                            <div class="date-day">9-10</div>
+                            <div class="date-month">Nov 2024</div>
+                        </div>
+                        <div class="event-content">
+                            <h4>STEAM in Action</h4>
+                            <p class="event-time">
+                                <i class="fas fa-users" aria-hidden="true"></i>
+                                65 attendees
+                                <span style="margin: 0 var(--space-2);">•</span>
+                                <i class="fas fa-globe" aria-hidden="true"></i>
+                                Online
+                            </p>
+                            <p class="event-description">
+                                A weekend workshop exploring Science, Technology, Engineering, Art, and Mathematics through creative projects.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="event-card past-event">
+                        <div class="event-date past">
+                            <div class="date-day">13</div>
+                            <div class="date-month">Oct 2024</div>
+                        </div>
+                        <div class="event-content">
+                            <h4>The T IN STEM Workshop</h4>
+                            <p class="event-time">
+                                <i class="fas fa-users" aria-hidden="true"></i>
+                                28 attendees
+                            </p>
+                            <p class="event-description">
+                                Our very first event! 28 curious minds gathered to explore technology, innovation, and the power of STEM on Ada Lovelace Day.
+                            </p>
+                        </div>
+                    </article>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <img src="images/logo.png" alt="Code with Serah Logo" style="height: 80px; width: auto; max-width: 200px; margin-bottom: 1rem;">
+                    <div class="footer-social">
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Programs</h4>
+                        <a href="#">Full-Stack Journey</a>
+                        <a href="#">Mentor Magic</a>
+                        <a href="#">Pocket Agents</a>
+                    </div>
+
+                    <div class="footer-column">
+                        <h4>Community</h4>
+                        <a href="#">Ambassador Program</a>
+                        <a href="#">Code of Conduct</a>
+                    </div>
+
+                    <div class="footer-column">
+                        <h4>Support</h4>
+                        <a href="mailto:contact@codewithserah.com">Get Help</a>
+                        <a href="mailto:contact@codewithserah.com">Contact Serah</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-legal">
+                    <p>&copy; 2026 Code with Serah</p>
+                    <div class="legal-links">
+                        <a href="#privacy">Privacy Policy</a>
+                        <a href="#terms">Terms of Service</a>
+                        <a href="#accessibility">Accessibility</a>
+                    </div>
+                </div>
+                <div class="footer-message">
+                    <p class="handwritten">"Don't be another brick in the wall. Build differently." - Serah</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+        if (hamburger && navMenu) {
+            hamburger.addEventListener('click', function() {
+                const expanded = this.getAttribute('aria-expanded') === 'true';
+                this.setAttribute('aria-expanded', String(!expanded));
+                this.classList.toggle('active');
+                navMenu.classList.toggle('active');
+            });
+            navMenu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    hamburger.setAttribute('aria-expanded', 'false');
+                    hamburger.classList.remove('active');
+                    navMenu.classList.remove('active');
+                });
+            });
+        }
+    </script>
+</body>
+</html>

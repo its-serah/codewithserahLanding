@@ -3,17 +3,40 @@
         document.body.classList.add('js-enabled');
         const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+        // Initialize critical functionality immediately
         initMobileNavigation();
         initHeroObserver();
+        initNewsletter();
+        initScrollToTop(prefersReducedMotion);
+
+        // Defer non-critical animations to after page load
+        if (document.readyState === 'complete') {
+            initDeferredFeatures(prefersReducedMotion);
+        } else {
+            window.addEventListener('load', function() {
+                // Use requestIdleCallback if available, otherwise setTimeout
+                if ('requestIdleCallback' in window) {
+                    requestIdleCallback(function() {
+                        initDeferredFeatures(prefersReducedMotion);
+                    });
+                } else {
+                    setTimeout(function() {
+                        initDeferredFeatures(prefersReducedMotion);
+                    }, 100);
+                }
+            });
+        }
+    });
+
+    function initDeferredFeatures(prefersReducedMotion) {
+        initHeroTyping(prefersReducedMotion);
         initCodeTyping(prefersReducedMotion);
         initStatCounters(prefersReducedMotion);
         initScrollReveal(prefersReducedMotion);
         initConfetti(prefersReducedMotion);
-        initNewsletter();
-        initScrollToTop(prefersReducedMotion);
         initAmbassadorCarousel();
         initSequentialGallery(prefersReducedMotion);
-    });
+    }
 
     function initMobileNavigation() {
         const hamburger = document.querySelector('.hamburger');
@@ -49,6 +72,63 @@
         }, { rootMargin: '-80px 0px 0px 0px', threshold: 0 });
 
         observer.observe(hero);
+    }
+
+    function initHeroTyping(prefersReducedMotion) {
+        const textEl = document.querySelector('.typing-text');
+        const cursorEl = document.querySelector('.typing-cursor');
+        if (!textEl) return;
+
+        const phrases = [
+            'Learn to Code',
+            'Build Cool Projects',
+            'Explore Science & Art',
+            'Think Creatively',
+            'Shape the Future'
+        ];
+
+        if (prefersReducedMotion) {
+            textEl.textContent = phrases[0];
+            if (cursorEl) cursorEl.style.display = 'none';
+            return;
+        }
+
+        let phraseIndex = 0;
+        let charIndex = 0;
+        let deleting = false;
+        let pauseTimer = null;
+
+        function tick() {
+            const current = phrases[phraseIndex];
+
+            if (!deleting) {
+                textEl.textContent = current.substring(0, charIndex + 1);
+                charIndex++;
+
+                if (charIndex === current.length) {
+                    // Pause before deleting
+                    pauseTimer = setTimeout(function() {
+                        deleting = true;
+                        tick();
+                    }, 1800);
+                    return;
+                }
+                setTimeout(tick, 80);
+            } else {
+                textEl.textContent = current.substring(0, charIndex - 1);
+                charIndex--;
+
+                if (charIndex === 0) {
+                    deleting = false;
+                    phraseIndex = (phraseIndex + 1) % phrases.length;
+                    setTimeout(tick, 400);
+                    return;
+                }
+                setTimeout(tick, 40);
+            }
+        }
+
+        tick();
     }
 
     function initCodeTyping(prefersReducedMotion) {
