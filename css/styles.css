@@ -344,6 +344,12 @@ p {
     transition: all 0.3s var(--ease-gentle);
 }
 
+@media (max-width: 1024px) {
+    .hamburger {
+        display: flex;
+    }
+}
+
 .hamburger:hover {
     transform: scale(1.05);
 }
@@ -1390,6 +1396,32 @@ p {
     justify-content: flex-end;
 }
 
+@media (max-width: 1024px) {
+    .nav-menu {
+        display: none;
+        position: fixed;
+        top: 80px;
+        left: var(--space-4);
+        right: var(--space-4);
+        background: rgba(254, 252, 247, 0.98);
+        backdrop-filter: blur(30px);
+        -webkit-backdrop-filter: blur(30px);
+        flex-direction: column;
+        flex: unset;
+        padding: var(--space-8) var(--space-6);
+        gap: var(--space-2);
+        box-shadow: 0 10px 40px rgba(123, 44, 191, 0.15);
+        border: 1px solid rgba(123, 44, 191, 0.1);
+        border-radius: var(--radius-2xl);
+        z-index: 999;
+    }
+
+    .nav-menu.active {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
 .nav-link {
     text-decoration: none;
     color: var(--text-primary);
@@ -1681,13 +1713,12 @@ p {
 
 /* Pinterest Masonry Board */
 .bento-board {
-    columns: 4;
-    column-gap: 14px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
 }
 
 .bento-pin {
-    break-inside: avoid;
-    margin-bottom: 14px;
     border-radius: var(--radius-2xl);
     overflow: hidden;
     transition: transform 0.3s var(--ease-gentle), box-shadow 0.3s var(--ease-gentle);
@@ -1701,7 +1732,7 @@ p {
 /* Image Pins */
 .bento-pin img {
     width: 100%;
-    height: auto;
+    aspect-ratio: 4 / 3;
     display: block;
     object-fit: cover;
 }
@@ -1910,7 +1941,7 @@ p {
 
 @media (max-width: 1024px) {
     .bento-board {
-        columns: 3;
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 
@@ -1920,12 +1951,8 @@ p {
     }
 
     .bento-board {
-        columns: 2;
-        column-gap: 10px;
-    }
-
-    .bento-pin {
-        margin-bottom: 10px;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
     }
 
     .bento-pin--stat {
@@ -1943,12 +1970,11 @@ p {
 
 @media (max-width: 480px) {
     .bento-board {
-        columns: 2;
-        column-gap: 8px;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
     }
 
     .bento-pin {
-        margin-bottom: 8px;
         border-radius: 12px;
     }
 
@@ -4175,45 +4201,6 @@ p {
 
     .events-grid {
         grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    }
-
-    /* Mobile navigation at 1024px */
-    .nav-menu {
-        display: none;
-        position: fixed;
-        top: 80px;
-        left: var(--space-4);
-        right: var(--space-4);
-        background: rgba(254, 252, 247, 0.98);
-        backdrop-filter: blur(30px);
-        -webkit-backdrop-filter: blur(30px);
-        flex-direction: column;
-        padding: var(--space-8) var(--space-6);
-        gap: var(--space-2);
-        box-shadow: 0 10px 40px rgba(123, 44, 191, 0.15);
-        border: 1px solid rgba(123, 44, 191, 0.1);
-        border-radius: var(--radius-2xl);
-        z-index: 999;
-    }
-
-    .nav-menu.active {
-        display: flex;
-    }
-
-    .hamburger {
-        display: flex;
-        flex-direction: column;
-        gap: 4px;
-        cursor: pointer;
-        padding: var(--space-2);
-    }
-
-    .hamburger span {
-        width: 25px;
-        height: 3px;
-        background: var(--serah-purple);
-        border-radius: var(--radius-sm);
-        transition: all 0.3s var(--ease-gentle);
     }
 
     .hamburger.active span:nth-child(1) {
