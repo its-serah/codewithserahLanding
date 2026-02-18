@@ -46,19 +46,42 @@
 
     if (!hamburger || !navMenu) return;
 
-    hamburger.addEventListener("click", function () {
-      const expanded = this.getAttribute("aria-expanded") === "true";
-      this.setAttribute("aria-expanded", String(!expanded));
-      this.classList.toggle("active");
-      navMenu.classList.toggle("active");
+    function closeMenu() {
+      hamburger.setAttribute("aria-expanded", "false");
+      hamburger.classList.remove("active");
+      navMenu.classList.remove("active");
+      document.body.classList.remove("menu-open");
+    }
+
+    hamburger.addEventListener("click", function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+      const isOpen = navMenu.classList.contains("active");
+      if (isOpen) {
+        closeMenu();
+      } else {
+        this.setAttribute("aria-expanded", "true");
+        this.classList.add("active");
+        navMenu.classList.add("active");
+        document.body.classList.add("menu-open");
+      }
     });
 
     navMenu.querySelectorAll("a").forEach((link) => {
       link.addEventListener("click", () => {
-        hamburger.setAttribute("aria-expanded", "false");
-        hamburger.classList.remove("active");
-        navMenu.classList.remove("active");
+        closeMenu();
       });
+    });
+
+    // Close on outside tap
+    document.addEventListener("click", function (e) {
+      if (
+        navMenu.classList.contains("active") &&
+        !navMenu.contains(e.target) &&
+        !hamburger.contains(e.target)
+      ) {
+        closeMenu();
+      }
     });
   }
 
@@ -380,56 +403,86 @@
 
     const cards = Array.from(grid.querySelectorAll(".ambassador-card"));
     const totalCards = cards.length;
-    const cardsPerView = 3;
-    const totalPages = Math.ceil(totalCards / cardsPerView);
 
-    // Create progress dots
-    for (let i = 0; i < totalPages; i++) {
-      const dot = document.createElement("div");
-      dot.className = "progress-dot";
-      if (i === 0) dot.classList.add("active");
-      dot.addEventListener("click", () => scrollToPage(i));
-      progressContainer.appendChild(dot);
+    function getCardsPerView() {
+      if (window.innerWidth <= 768) return totalCards; // stacked, no carousel
+      if (window.innerWidth <= 1024) return 2;
+      return 3;
     }
 
-    const dots = Array.from(
-      progressContainer.querySelectorAll(".progress-dot"),
-    );
+    function buildDots() {
+      progressContainer.innerHTML = "";
+      var cpv = getCardsPerView();
+      if (cpv >= totalCards) return; // no dots needed
+      var pages = Math.ceil(totalCards / cpv);
+      for (var i = 0; i < pages; i++) {
+        var dot = document.createElement("div");
+        dot.className = "progress-dot";
+        if (i === 0) dot.classList.add("active");
+        dot.addEventListener(
+          "click",
+          (function (idx) {
+            return function () {
+              scrollToPage(idx);
+            };
+          })(i),
+        );
+        progressContainer.appendChild(dot);
+      }
+    }
+
+    buildDots();
+
+    function getDots() {
+      return Array.from(progressContainer.querySelectorAll(".progress-dot"));
+    }
 
     function updateActiveDot() {
-      const scrollLeft = grid.scrollLeft;
-      const cardWidth = cards[0].offsetWidth;
-      const gap = parseInt(getComputedStyle(grid).gap);
-      const scrollPerPage = (cardWidth + gap) * cardsPerView;
-      const currentPage = Math.round(scrollLeft / scrollPerPage);
-
-      dots.forEach((dot, index) => {
+      var dots = getDots();
+      if (!dots.length || !cards[0]) return;
+      var cardWidth = cards[0].offsetWidth;
+      var gap = parseInt(getComputedStyle(grid).gap) || 0;
+      var cpv = getCardsPerView();
+      var scrollPerPage = (cardWidth + gap) * cpv;
+      var currentPage = Math.round(grid.scrollLeft / scrollPerPage);
+      dots.forEach(function (dot, index) {
         dot.classList.toggle("active", index === currentPage);
       });
     }
 
     function scrollToPage(pageIndex) {
-      const cardWidth = cards[0].offsetWidth;
-      const gap = parseInt(getComputedStyle(grid).gap);
-      const scrollAmount = (cardWidth + gap) * cardsPerView * pageIndex;
+      if (!cards[0]) return;
+      var cardWidth = cards[0].offsetWidth;
+      var gap = parseInt(getComputedStyle(grid).gap) || 0;
+      var cpv = getCardsPerView();
+      var scrollAmount = (cardWidth + gap) * cpv * pageIndex;
       grid.scrollTo({ left: scrollAmount, behavior: "smooth" });
     }
 
-    prevBtn.addEventListener("click", () => {
-      const cardWidth = cards[0].offsetWidth;
-      const gap = parseInt(getComputedStyle(grid).gap);
-      const scrollAmount = (cardWidth + gap) * cardsPerView;
-      grid.scrollBy({ left: -scrollAmount, behavior: "smooth" });
+    prevBtn.addEventListener("click", function () {
+      if (!cards[0]) return;
+      var cardWidth = cards[0].offsetWidth;
+      var gap = parseInt(getComputedStyle(grid).gap) || 0;
+      var cpv = getCardsPerView();
+      grid.scrollBy({ left: -(cardWidth + gap) * cpv, behavior: "smooth" });
     });
 
-    nextBtn.addEventListener("click", () => {
-      const cardWidth = cards[0].offsetWidth;
-      const gap = parseInt(getComputedStyle(grid).gap);
-      const scrollAmount = (cardWidth + gap) * cardsPerView;
-      grid.scrollBy({ left: scrollAmount, behavior: "smooth" });
+    nextBtn.addEventListener("click", function () {
+      if (!cards[0]) return;
+      var cardWidth = cards[0].offsetWidth;
+      var gap = parseInt(getComputedStyle(grid).gap) || 0;
+      var cpv = getCardsPerView();
+      grid.scrollBy({ left: (cardWidth + gap) * cpv, behavior: "smooth" });
     });
 
     grid.addEventListener("scroll", updateActiveDot);
+
+    // Rebuild dots on resize
+    var resizeTimer;
+    window.addEventListener("resize", function () {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(buildDots, 200);
+    });
   }
 
   function initSequentialGallery(prefersReducedMotion) {

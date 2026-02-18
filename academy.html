@@ -175,7 +175,8 @@
             <div class="nav-menu">
                 <a href="index.html#story" class="nav-link">Impact</a>
                 <a href="academy.html" class="nav-link">Academy</a>
-                <a href="events.html" class="nav-link">Events and Webinars</a>
+                <a href="bootcamp.html" class="nav-link">Bootcamp</a>
+                <a href="events.html" class="nav-link">Events</a>
                 <a href="https://forms.gle/EFNc22wrwwbnmgo57" target="_blank" class="nav-link">Join Us</a>
             </div>
             <div class="hamburger">
@@ -212,7 +213,7 @@
         <div class="container">
             <div class="footer-main">
                 <div class="footer-brand">
-                    <img src="images/logo.png" alt="Code with Serah Logo" style="height: 80px; width: auto; max-width: 200px; margin-bottom: 1rem;">
+                    <img src="images/logo.png" alt="Code with Serah Logo" class="footer-logo">
                     <div class="footer-social">
                         <a href="https://www.youtube.com/@CodewithSerah" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
                         <a href="https://www.linkedin.com/company/codewithserah" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
@@ -264,18 +265,28 @@
         const hamburger = document.querySelector('.hamburger');
         const navMenu = document.querySelector('.nav-menu');
         if (hamburger && navMenu) {
-            hamburger.addEventListener('click', function() {
-                const expanded = this.getAttribute('aria-expanded') === 'true';
-                this.setAttribute('aria-expanded', String(!expanded));
-                this.classList.toggle('active');
-                navMenu.classList.toggle('active');
+            function closeMenu() {
+                hamburger.setAttribute('aria-expanded', 'false');
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+                document.body.classList.remove('menu-open');
+            }
+            hamburger.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                const isOpen = navMenu.classList.contains('active');
+                if (isOpen) { closeMenu(); } else {
+                    this.setAttribute('aria-expanded', 'true');
+                    this.classList.add('active');
+                    navMenu.classList.add('active');
+                    document.body.classList.add('menu-open');
+                }
             });
             navMenu.querySelectorAll('a').forEach(link => {
-                link.addEventListener('click', () => {
-                    hamburger.setAttribute('aria-expanded', 'false');
-                    hamburger.classList.remove('active');
-                    navMenu.classList.remove('active');
-                });
+                link.addEventListener('click', () => closeMenu());
+            });
+            document.addEventListener('click', function(e) {
+                if (navMenu.classList.contains('active') && !navMenu.contains(e.target) && !hamburger.contains(e.target)) closeMenu();
             });
         }
 
