@@ -19,7 +19,6 @@
 
 .navbar {
   will-change: transform, background;
-  contain: layout style paint;
 }
 
 /* Improve rendering performance for sections */
@@ -1841,8 +1840,9 @@ p {
 /* Image Pins */
 .bento-pin img {
   width: 100%;
+  height: 100%;
+  object-fit: cover;
   display: block;
-  border-radius: var(--radius-2xl);
 }
 
 /* Stat Pins — shared */
