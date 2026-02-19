@@ -10,6 +10,7 @@
     initHeroObserver();
     initNewsletter();
     initScrollToTop(prefersReducedMotion);
+    initEventStatus();
 
     // Defer non-critical animations to after page load
     if (document.readyState === "complete") {
@@ -483,6 +484,84 @@
       clearTimeout(resizeTimer);
       resizeTimer = setTimeout(buildDots, 200);
     });
+  }
+
+  function initEventStatus() {
+    var container = document.getElementById("home-events-container");
+    if (!container) return;
+
+    var cards = Array.from(container.querySelectorAll(".event-card"));
+    var today = new Date();
+    today.setHours(0, 0, 0, 0);
+
+    var ongoing = [];
+    var upcoming = [];
+    var past = [];
+
+    cards.forEach(function (card) {
+      var start = new Date(card.dataset.start + "T00:00:00");
+      var end = new Date(card.dataset.end + "T23:59:59");
+      if (today >= start && today <= end) {
+        ongoing.push(card);
+      } else if (today < start) {
+        upcoming.push(card);
+      } else {
+        past.push(card);
+      }
+    });
+
+    upcoming.sort(function (a, b) {
+      return new Date(a.dataset.start) - new Date(b.dataset.start);
+    });
+    past.sort(function (a, b) {
+      return new Date(b.dataset.end) - new Date(a.dataset.end);
+    });
+
+    container.innerHTML = "";
+
+    function addSection(title, items, type, limit) {
+      if (items.length === 0) return;
+      var show = limit ? items.slice(0, limit) : items;
+      var section = document.createElement("div");
+      section.className = "events-section";
+      var h3 = document.createElement("h3");
+      h3.className = "subsection-title";
+      h3.textContent = title;
+      section.appendChild(h3);
+      var grid = document.createElement("div");
+      grid.className = "events-grid";
+      show.forEach(function (card) {
+        var dateEl = card.querySelector(".event-date");
+        if (type === "ongoing") {
+          card.classList.add("ongoing");
+          var badge = document.createElement("span");
+          badge.className = "ongoing-badge";
+          badge.textContent = "Live";
+          var content = card.querySelector(".event-content");
+          content.insertBefore(badge, content.firstChild);
+        } else if (type === "upcoming") {
+          var ubadge = document.createElement("span");
+          ubadge.className = "ongoing-badge";
+          ubadge.style.background = "rgba(59, 130, 246, 0.15)";
+          ubadge.style.color = "#3b82f6";
+          ubadge.textContent = "Upcoming";
+          var ucontent = card.querySelector(".event-content");
+          ucontent.insertBefore(ubadge, ucontent.firstChild);
+        } else {
+          card.classList.add("past-event");
+          if (dateEl) dateEl.classList.add("past");
+        }
+        grid.appendChild(card);
+      });
+      section.appendChild(grid);
+      container.appendChild(section);
+    }
+
+    addSection("Ongoing", ongoing, "ongoing");
+    addSection("Upcoming", upcoming, "upcoming");
+    // Show up to 3 past events on homepage, fill remaining slots if ongoing/upcoming have fewer
+    var pastLimit = Math.max(3, 4 - ongoing.length - upcoming.length);
+    addSection("Past Highlights", past, "past", pastLimit);
   }
 
   function initSequentialGallery(prefersReducedMotion) {

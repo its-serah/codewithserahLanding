@@ -126,29 +126,6 @@
             color: var(--text-light);
         }
 
-        .academy-notify {
-            font-family: var(--font-handwritten);
-            font-size: var(--text-2xl);
-            font-weight: 700;
-            background: linear-gradient(135deg, #7B2CBF 0%, #9D4EDD 50%, #C77DFF 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            border: none;
-            cursor: pointer;
-            padding: var(--space-2) var(--space-4);
-            margin-top: -0.5rem;
-            transition: transform 0.2s var(--ease-gentle), opacity 0.2s;
-            display: inline-block;
-            transform: rotate(-1deg);
-            text-decoration: none;
-        }
-
-        .academy-notify:hover {
-            transform: rotate(-1deg) scale(1.08);
-            opacity: 0.85;
-        }
-
         .academy-fine-print {
             color: var(--text-muted);
             font-size: var(--text-sm);
@@ -195,16 +172,15 @@
             <p class="academy-body">
                 We're currently in private beta with a small group of early learners. The full Academy experience, complete with hands-on projects, mentorship, and a curriculum built around real-world skills, is on its way.
                 <br><br>
-                <strong>Be the first to know when we open the doors.</strong>
+                <strong>Stay updated by signing up to our newsletter below.</strong>
             </p>
 
             <form class="academy-signup newsletter-form">
-                <input type="email" name="email" placeholder="your@email.com" required>
-                <button type="submit" class="academy-notify">Notify Me</button>
+                <input type="email" name="email" placeholder="your@email.com" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
             </form>
 
             <p class="academy-fine-print">
-                You'll receive one newsletter on the 13th of every month, or whenever we have an important update to share. That's it. No spam, just the good stuff.
+                You'll receive a newsletter whenever we have an important update to share. That's it. No spam, just the good stuff.
             </p>
         </div>
     </section>
