@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bootcamp — Code with Serah</title>
-    <meta name="description" content="The Sprint Bootcamp — Code with Serah's winter and summer flagship event. Real projects, real mentors, real chaos (the good kind).">
+    <title>Pocket Agents — Code with Serah</title>
+    <meta name="description" content="Pocket Agents — Build intelligent AI agents that solve real-world problems. An ongoing program by Code with Serah Academy.">
     <link rel="icon" type="image/png" href="images/logo.png">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
 
     <style>
-        .bootcamp-hero {
+        .program-hero {
             background:
                 radial-gradient(circle at 30% 20%, rgba(255, 224, 102, 0.18) 0%, transparent 50%),
                 radial-gradient(circle at 70% 80%, rgba(157, 78, 221, 0.14) 0%, transparent 50%),
@@ -27,14 +27,14 @@
             overflow: hidden;
         }
 
-        .bootcamp-hero-content {
+        .program-hero-content {
             max-width: 650px;
             margin: 0 auto;
             position: relative;
             z-index: 1;
         }
 
-        .bootcamp-label {
+        .program-label {
             font-family: var(--font-handwritten);
             font-size: var(--text-2xl);
             color: var(--serah-purple);
@@ -44,7 +44,20 @@
             margin-bottom: var(--space-4);
         }
 
-        .bootcamp-title {
+        .program-status {
+            display: inline-block;
+            font-size: var(--text-xs);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            padding: var(--space-1) var(--space-3);
+            border-radius: var(--radius-full);
+            background: rgba(16, 185, 129, 0.12);
+            color: #059669;
+            margin-bottom: var(--space-4);
+        }
+
+        .program-title {
             font-size: clamp(2rem, 6vw, var(--text-5xl));
             font-weight: 700;
             color: var(--text-primary);
@@ -52,7 +65,7 @@
             margin-bottom: var(--space-6);
         }
 
-        .bootcamp-title .highlight {
+        .program-title .highlight {
             background: linear-gradient(135deg, #7B2CBF 0%, #9D4EDD 50%, #C77DFF 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -60,137 +73,100 @@
             display: inline-block;
         }
 
-        .bootcamp-subtitle {
+        .program-description {
             color: var(--text-secondary);
             font-size: var(--text-lg);
             line-height: 1.8;
             margin-bottom: var(--space-8);
         }
 
-        .bootcamp-subtitle strong {
+        .program-description strong {
             color: var(--text-primary);
             font-weight: 600;
         }
 
-        .bootcamp-cta-row {
+        .program-cta-row {
             display: flex;
             gap: var(--space-4);
             justify-content: center;
             flex-wrap: wrap;
         }
 
-        /* The deal section */
-        .bootcamp-deal {
+        /* What You'll Learn */
+        .program-learn {
             padding: var(--space-16) 0;
             background: var(--warm-white);
         }
 
-        .deal-content {
-            max-width: 700px;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        .deal-content p {
-            color: var(--text-secondary);
-            font-size: var(--text-lg);
-            line-height: 1.9;
-            margin-bottom: var(--space-6);
-        }
-
-        .deal-content p strong {
-            color: var(--text-primary);
-        }
-
-        /* Sprints listing */
-        .bootcamp-sprints {
-            padding: var(--space-16) 0;
-            background: var(--beige);
-        }
-
-        .sprints-grid {
+        .learn-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
             gap: var(--space-6);
             max-width: 900px;
             margin: 0 auto;
         }
 
-        .sprint-card {
+        .learn-card {
             background: white;
             border-radius: var(--radius-2xl);
-            padding: var(--space-8);
+            padding: var(--space-6);
             box-shadow: var(--shadow-soft);
-            text-decoration: none;
-            color: inherit;
-            transition: transform 0.2s var(--ease-gentle), box-shadow 0.2s var(--ease-gentle);
-            display: block;
+            text-align: center;
         }
 
-        .sprint-card:hover {
-            transform: translateY(-4px);
-            box-shadow: var(--shadow-medium);
-        }
-
-        .sprint-card .sprint-date {
-            font-family: var(--font-handwritten);
-            font-size: var(--text-lg);
-            color: var(--serah-purple);
-            font-weight: 600;
-            display: block;
-            margin-bottom: var(--space-2);
-        }
-
-        .sprint-card h3 {
-            font-size: var(--text-xl);
-            font-weight: 700;
-            color: var(--text-primary);
+        .learn-icon {
+            font-size: var(--text-3xl);
             margin-bottom: var(--space-3);
         }
 
-        .sprint-card p {
+        .learn-card h3 {
+            font-size: var(--text-lg);
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: var(--space-2);
+        }
+
+        .learn-card p {
             color: var(--text-secondary);
             font-size: var(--text-sm);
             line-height: 1.7;
-            margin-bottom: var(--space-4);
         }
 
-        .sprint-stats {
-            display: flex;
-            gap: var(--space-4);
-            font-size: var(--text-sm);
-            color: var(--text-light);
+        /* Who It's For */
+        .program-audience {
+            padding: var(--space-16) 0;
+            background: var(--beige);
         }
 
-        .sprint-stats span {
-            display: flex;
-            align-items: center;
-            gap: var(--space-1);
+        .audience-content {
+            max-width: 650px;
+            margin: 0 auto;
+            text-align: center;
         }
 
-        .sprint-view {
-            display: inline-flex;
-            align-items: center;
-            gap: var(--space-1);
-            font-size: var(--text-sm);
-            font-weight: 600;
-            color: var(--serah-purple);
-            margin-top: var(--space-4);
+        .audience-content p {
+            color: var(--text-secondary);
+            font-size: var(--text-lg);
+            line-height: 1.9;
+        }
+
+        .audience-content p strong {
+            color: var(--text-primary);
         }
 
         /* Bottom CTA */
-        .bootcamp-cta {
+        .program-cta {
             padding: var(--space-16) 0;
             background: var(--warm-white);
             text-align: center;
         }
 
-        .bootcamp-cta-content {
+        .program-cta-content {
             max-width: 550px;
             margin: 0 auto;
         }
 
-        .bootcamp-cta h2 {
+        .program-cta h2 {
             font-family: var(--font-handwritten);
             font-size: clamp(1.8rem, 5vw, var(--text-4xl));
             font-weight: 700;
@@ -199,7 +175,7 @@
             transform: rotate(-1deg);
         }
 
-        .bootcamp-cta p {
+        .program-cta p {
             color: var(--text-secondary);
             font-size: var(--text-base);
             margin-bottom: var(--space-8);
@@ -207,42 +183,42 @@
         }
 
         @media (max-width: 768px) {
-            .bootcamp-hero {
+            .program-hero {
                 padding: calc(80px + var(--space-8)) var(--space-4) var(--space-10);
             }
 
-            .bootcamp-label {
+            .program-label {
                 font-size: var(--text-xl);
             }
 
-            .bootcamp-subtitle {
+            .program-description {
                 font-size: var(--text-base);
             }
 
-            .sprints-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .bootcamp-deal,
-            .bootcamp-sprints,
-            .bootcamp-cta {
+            .program-learn,
+            .program-audience,
+            .program-cta {
                 padding: var(--space-12) 0;
             }
         }
 
         @media (max-width: 480px) {
-            .bootcamp-hero {
+            .program-hero {
                 padding: calc(70px + var(--space-6)) var(--space-4) var(--space-8);
             }
 
-            .bootcamp-cta-row {
+            .program-cta-row {
                 flex-direction: column;
                 align-items: stretch;
             }
 
-            .bootcamp-cta-row .btn {
+            .program-cta-row .btn {
                 width: 100%;
                 text-align: center;
+            }
+
+            .learn-grid {
+                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -277,74 +253,65 @@
         </div>
     </nav>
 
-    <section class="bootcamp-hero">
-        <div class="bootcamp-hero-content">
-            <span class="bootcamp-label">the one everyone talks about</span>
-            <h1 class="bootcamp-title">The <span class="highlight">Sprint Bootcamp</span></h1>
-            <p class="bootcamp-subtitle">
-                Every winter and summer, we get hundreds of people in one room (well, one Zoom) and build things together. It's intense, it's messy, it's <strong>the best thing we do</strong>.
+    <section class="program-hero">
+        <div class="program-hero-content">
+            <span class="program-label">Academy Program</span>
+            <span class="program-status">Ongoing</span>
+            <h1 class="program-title"><span class="highlight">Pocket Agents</span></h1>
+            <p class="program-description">
+                Build intelligent AI agents that solve real-world problems. From simple chatbots to multi-step reasoning systems &mdash; learn how to <strong>design, build, and deploy agents</strong> that actually do useful things.
             </p>
-            <div class="bootcamp-cta-row">
-                <a href="https://forms.gle/EFNc22wrwwbnmgo57" target="_blank" class="btn btn-primary">Join the Next One</a>
-                <a href="events.html" class="btn btn-secondary">The Stage</a>
+            <div class="program-cta-row">
+                <a href="https://forms.gle/EFNc22wrwwbnmgo57" target="_blank" class="btn btn-primary">Join the Program</a>
+                <a href="academy.html" class="btn btn-secondary">All Programs</a>
             </div>
         </div>
     </section>
 
-    <section class="bootcamp-deal">
-        <div class="container">
-            <div class="deal-content">
-                <div class="section-header">
-                    <h2 class="handwritten">What actually happens</h2>
-                </div>
-                <p>
-                    Each sprint has a different theme — we've covered everything from full-stack web apps and AI agents to machine learning, NLP, and data science. Some sprints are a few days, others stretch to two weeks. It really depends.
-                </p>
-                <p>
-                    You join live sessions with mentors, get your hands on real tools, and start building. By the end, you walk away with something you actually made — not something you followed a tutorial for. People have submitted projects we didn't even have on the schedule, and honestly, those are usually the best ones.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <section class="bootcamp-sprints">
+    <section class="program-learn">
         <div class="container">
             <div class="section-header">
-                <h2 class="handwritten">Past Sprints</h2>
+                <h2 class="handwritten">What you'll learn</h2>
             </div>
-
-            <div class="sprints-grid">
-                <a href="bootcamp-winter.html" class="sprint-card">
-                    <span class="sprint-date">Jan &ndash; Feb 2026</span>
-                    <h3>Winter Sprint Bootcamp 2026</h3>
-                    <p>AI Agents, Full-Stack, Data Science — five days of building, breaking, and shipping. Started with a kickoff on International Day of Education.</p>
-                    <div class="sprint-stats">
-                        <span><i class="fas fa-users"></i> 495 attendees</span>
-                        <span><i class="fas fa-calendar"></i> 5 days</span>
-                    </div>
-                    <span class="sprint-view">View details <i class="fas fa-arrow-right"></i></span>
-                </a>
-
-                <a href="bootcamp-summer.html" class="sprint-card">
-                    <span class="sprint-date">Jul 14 &ndash; 25, 2025</span>
-                    <h3>AI Summer Sprint Bootcamp 2025</h3>
-                    <p>Two weeks of Machine Learning, Deep Learning, and NLP. The biggest event in Code with Serah history.</p>
-                    <div class="sprint-stats">
-                        <span><i class="fas fa-users"></i> 650+ attendees</span>
-                        <span><i class="fas fa-calendar"></i> 2 weeks</span>
-                    </div>
-                    <span class="sprint-view">View details <i class="fas fa-arrow-right"></i></span>
-                </a>
+            <div class="learn-grid">
+                <div class="learn-card">
+                    <div class="learn-icon"><i class="fas fa-robot"></i></div>
+                    <h3>Agent Fundamentals</h3>
+                    <p>Understand how AI agents work &mdash; from prompt engineering and tool use to memory, planning, and reasoning loops.</p>
+                </div>
+                <div class="learn-card">
+                    <div class="learn-icon"><i class="fas fa-tools"></i></div>
+                    <h3>Frameworks & Tools</h3>
+                    <p>Hands-on with LangChain, LangGraph, and the Model Context Protocol (MCP). Build agents that connect to real APIs and data sources.</p>
+                </div>
+                <div class="learn-card">
+                    <div class="learn-icon"><i class="fas fa-rocket"></i></div>
+                    <h3>Ship Real Projects</h3>
+                    <p>Build and deploy your own agents &mdash; from personal assistants to research bots to automation workflows.</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <section class="bootcamp-cta">
+    <section class="program-audience">
         <div class="container">
-            <div class="bootcamp-cta-content">
-                <h2>Don't miss the next one</h2>
-                <p>The next Sprint Bootcamp is coming August — September 2026. Sign up so you're in the loop when registration opens.</p>
-                <a href="https://forms.gle/EFNc22wrwwbnmgo57" target="_blank" class="btn btn-primary">Get on the List</a>
+            <div class="section-header">
+                <h2 class="handwritten">Who it's for</h2>
+            </div>
+            <div class="audience-content">
+                <p>
+                    Anyone curious about AI agents &mdash; whether you're a <strong>complete beginner</strong> who's never written a prompt or a <strong>developer</strong> who wants to build smarter tools. If you've ever wondered how ChatGPT-style tools work under the hood, or wanted to build your own, this is for you.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="program-cta">
+        <div class="container">
+            <div class="program-cta-content">
+                <h2>Ready to build?</h2>
+                <p>Join Pocket Agents and start building intelligent systems. No prerequisites &mdash; just curiosity and a willingness to experiment.</p>
+                <a href="https://forms.gle/EFNc22wrwwbnmgo57" target="_blank" class="btn btn-primary">Join the Program</a>
             </div>
         </div>
     </section>

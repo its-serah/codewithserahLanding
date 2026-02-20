@@ -1455,9 +1455,9 @@ p {
 }
 
 .nav-logo img {
-  height: 65px;
+  height: 85px;
   width: auto;
-  max-width: 220px;
+  max-width: 260px;
   object-fit: contain;
 }
 
@@ -4532,8 +4532,8 @@ p {
   }
 
   .nav-logo img {
-    height: 50px;
-    max-width: 160px;
+    height: 65px;
+    max-width: 200px;
   }
 
   .hero {
@@ -4906,8 +4906,8 @@ p {
   }
 
   .nav-logo img {
-    height: 42px;
-    max-width: 140px;
+    height: 55px;
+    max-width: 170px;
   }
 
   .hero {

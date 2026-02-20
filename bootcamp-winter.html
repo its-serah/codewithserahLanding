@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Winter Sprint Bootcamp 2026 — Code with Serah</title>
+    <meta name="description" content="Winter Sprint Bootcamp 2026 — 495 attendees, 5 days, 3 tracks. AI Agents, Full-Stack, and Data Science. Watch the sessions, read the testimonials.">
+    <link rel="icon" type="image/png" href="images/logo.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Caveat:wght@600;700&family=Outfit:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+
+    <style>
+        .bootcamp-hero {
+            background:
+                radial-gradient(circle at 30% 20%, rgba(255, 224, 102, 0.18) 0%, transparent 50%),
+                radial-gradient(circle at 70% 80%, rgba(157, 78, 221, 0.14) 0%, transparent 50%),
+                linear-gradient(180deg, var(--warm-white) 0%, var(--beige) 100%);
+            padding: calc(100px + var(--space-12)) var(--space-6) var(--space-12);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .bootcamp-hero-content {
+            max-width: 650px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .bootcamp-label {
+            font-family: var(--font-handwritten);
+            font-size: var(--text-2xl);
+            color: var(--serah-purple);
+            font-weight: 600;
+            transform: rotate(-1deg);
+            display: block;
+            margin-bottom: var(--space-4);
+        }
+
+        .bootcamp-title {
+            font-size: clamp(2rem, 6vw, var(--text-5xl));
+            font-weight: 700;
+            color: var(--text-primary);
+            line-height: 1.2;
+            margin-bottom: var(--space-6);
+        }
+
+        .bootcamp-title .highlight {
+            background: linear-gradient(135deg, #7B2CBF 0%, #9D4EDD 50%, #C77DFF 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            display: inline-block;
+        }
+
+        .bootcamp-subtitle {
+            color: var(--text-secondary);
+            font-size: var(--text-lg);
+            line-height: 1.8;
+            margin-bottom: var(--space-8);
+        }
+
+        .bootcamp-subtitle strong {
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+
+        .bootcamp-cta-row {
+            display: flex;
+            gap: var(--space-4);
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* Stats strip */
+        .stats-strip {
+            background: var(--warm-white);
+            padding: var(--space-10) 0;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .stats-row {
+            display: flex;
+            justify-content: center;
+            gap: var(--space-10);
+            flex-wrap: wrap;
+            max-width: 700px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .stat-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: var(--space-1);
+        }
+
+        .stat-value {
+            font-size: var(--text-3xl);
+            font-weight: 700;
+            color: var(--serah-purple);
+            font-family: var(--font-heading);
+        }
+
+        .stat-label {
+            font-size: var(--text-sm);
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+
+        /* Tracks */
+        .bootcamp-tracks {
+            padding: var(--space-16) 0;
+            background: var(--beige);
+        }
+
+        .tracks-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: var(--space-6);
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .track-card {
+            background: white;
+            border-radius: var(--radius-2xl);
+            padding: var(--space-6);
+            box-shadow: var(--shadow-soft);
+            text-align: center;
+        }
+
+        .track-icon {
+            font-size: var(--text-3xl);
+            margin-bottom: var(--space-3);
+        }
+
+        .track-card h3 {
+            font-size: var(--text-lg);
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: var(--space-2);
+        }
+
+        .track-card p {
+            color: var(--text-secondary);
+            font-size: var(--text-sm);
+            line-height: 1.7;
+        }
+
+        /* Playlists */
+        .bootcamp-playlists {
+            padding: var(--space-16) 0;
+            background: var(--warm-white);
+        }
+
+        .playlists-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--space-6);
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .playlist-embed {
+            border-radius: var(--radius-2xl);
+            overflow: hidden;
+            box-shadow: var(--shadow-medium);
+            background: #000;
+        }
+
+        .playlist-embed iframe {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            display: block;
+            border: 0;
+        }
+
+        .playlist-label {
+            padding: var(--space-3) var(--space-4);
+            background: white;
+            font-size: var(--text-sm);
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        /* Testimonials */
+        .bootcamp-testimonials {
+            padding: var(--space-16) 0;
+            background: var(--beige);
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: var(--space-6);
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .testimonial-card {
+            background: white;
+            border-radius: var(--radius-2xl);
+            padding: var(--space-6);
+            box-shadow: var(--shadow-soft);
+        }
+
+        .testimonial-card p {
+            color: var(--text-secondary);
+            font-size: var(--text-sm);
+            line-height: 1.7;
+            font-style: italic;
+            margin-bottom: var(--space-3);
+        }
+
+        .testimonial-card .testimonial-name {
+            font-size: var(--text-sm);
+            font-weight: 600;
+            color: var(--text-primary);
+            font-style: normal;
+        }
+
+        /* Bottom CTA */
+        .bootcamp-cta {
+            padding: var(--space-16) 0;
+            background: var(--warm-white);
+            text-align: center;
+        }
+
+        .bootcamp-cta-content {
+            max-width: 550px;
+            margin: 0 auto;
+        }
+
+        .bootcamp-cta h2 {
+            font-family: var(--font-handwritten);
+            font-size: clamp(1.8rem, 5vw, var(--text-4xl));
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: var(--space-3);
+            transform: rotate(-1deg);
+        }
+
+        .bootcamp-cta p {
+            color: var(--text-secondary);
+            font-size: var(--text-base);
+            margin-bottom: var(--space-8);
+            line-height: 1.7;
+        }
+
+        @media (max-width: 768px) {
+            .bootcamp-hero {
+                padding: calc(80px + var(--space-8)) var(--space-4) var(--space-10);
+            }
+
+            .bootcamp-label {
+                font-size: var(--text-xl);
+            }
+
+            .bootcamp-subtitle {
+                font-size: var(--text-base);
+            }
+
+            .playlists-grid,
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stats-row {
+                gap: var(--space-6);
+            }
+
+            .bootcamp-tracks,
+            .bootcamp-playlists,
+            .bootcamp-testimonials,
+            .bootcamp-cta {
+                padding: var(--space-12) 0;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .bootcamp-hero {
+                padding: calc(70px + var(--space-6)) var(--space-4) var(--space-8);
+            }
+
+            .bootcamp-cta-row {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .bootcamp-cta-row .btn {
+                width: 100%;
+                text-align: center;
+            }
+
+            .tracks-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="floating-shapes">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+        <div class="shape shape-4"></div>
+    </div>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">
+                    <img src="images/logo.png" alt="Code with Serah Logo">
+                </a>
+            </div>
+            <div class="nav-menu">
+                <a href="index.html#story" class="nav-link">Impact</a>
+                <a href="academy.html" class="nav-link">Academy</a>
+                <a href="bootcamp.html" class="nav-link">Bootcamp</a>
+                <a href="events.html" class="nav-link">The Stage</a>
+                <a href="https://forms.gle/EFNc22wrwwbnmgo57" target="_blank" class="nav-link">Join Us</a>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <section class="bootcamp-hero">
+        <div class="bootcamp-hero-content">
+            <span class="bootcamp-label">Jan &ndash; Feb 2026</span>
+            <h1 class="bootcamp-title">Winter <span class="highlight">Sprint Bootcamp</span></h1>
+            <p class="bootcamp-subtitle">
+                Started with a one-day kickoff on Jan 24 (International Day of Education), then the full sprint ran Feb 8-15. AI Agents, Full-Stack, Data Science &mdash; <strong>five days of building, breaking, and shipping</strong>.
+            </p>
+            <div class="bootcamp-cta-row">
+                <a href="https://forms.gle/EFNc22wrwwbnmgo57" target="_blank" class="btn btn-primary">Join the Next One</a>
+                <a href="bootcamp.html" class="btn btn-secondary">All Sprints</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="stats-strip">
+        <div class="container">
+            <div class="stats-row">
+                <div class="stat-item">
+                    <span class="stat-value">495</span>
+                    <span class="stat-label">Sprint Attendees</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value">52</span>
+                    <span class="stat-label">Kickoff Day Attendees</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value">5</span>
+                    <span class="stat-label">Days</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value">3</span>
+                    <span class="stat-label">Tracks</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bootcamp-tracks">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="handwritten">The Tracks</h2>
+            </div>
+            <div class="tracks-grid">
+                <div class="track-card">
+                    <div class="track-icon"><i class="fas fa-robot"></i></div>
+                    <h3>AI Agents</h3>
+                    <p>Build intelligent agents that reason, plan, and use tools. From LangGraph workflows to MCP servers and real-world automation.</p>
+                </div>
+                <div class="track-card">
+                    <div class="track-icon"><i class="fas fa-layer-group"></i></div>
+                    <h3>Full-Stack</h3>
+                    <p>Frontend to backend to deployment. React, Node, databases, APIs &mdash; ship a complete project by the end of the week.</p>
+                </div>
+                <div class="track-card">
+                    <div class="track-icon"><i class="fas fa-chart-line"></i></div>
+                    <h3>Data Science</h3>
+                    <p>From data wrangling to visualization to machine learning. Python, pandas, and real datasets &mdash; turn numbers into insights.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bootcamp-playlists">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="handwritten">Watch the sessions</h2>
+            </div>
+
+            <div class="playlists-grid">
+                <div class="playlist-embed">
+                    <iframe src="https://www.youtube.com/embed/videoseries?list=PLByjXZBtwwYimLz7h9ohoVEoyjxhRzYbw" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy" title="Winter Sprint Bootcamp"></iframe>
+                    <div class="playlist-label">Winter Sprint Bootcamp 2026</div>
+                </div>
+                <div class="playlist-embed">
+                    <iframe src="https://www.youtube.com/embed/videoseries?list=PLByjXZBtwwYifzyazVFDuAD1a5nSoVaVm" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy" title="Pre-Winter Sprint One Day Bootcamp"></iframe>
+                    <div class="playlist-label">Pre-Winter Kickoff Day</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bootcamp-testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="handwritten">What they said</h2>
+            </div>
+
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <p>"The Winter Sprint Bootcamp was a great experience from start to finish. What set this bootcamp apart was the atmosphere — having Pengu and Elmo as characters with us made the whole thing more engaging and gave the event a personality of its own. You walk away having learned something valuable while actually enjoying the process."</p>
+                    <span class="testimonial-name">— Hussein</span>
+                </div>
+
+                <div class="testimonial-card">
+                    <p>"The bootcamp was a rich and well structured experience that combined technical knowledge with mindset development. It helped me strengthen my fundamentals, think more critically. Overall it was inspiring and exceeded my expectations."</p>
+                    <span class="testimonial-name">— Chaza</span>
+                </div>
+
+                <div class="testimonial-card">
+                    <p>"As someone coming from a biochemistry background, I learned a lottt of new things and terminologies. I was able to get an overview on the complexity of SWE and the way each component connects to the other. I would definitely recommend this bootcamp to someone in my major."</p>
+                    <span class="testimonial-name">— Lara</span>
+                </div>
+
+                <div class="testimonial-card">
+                    <p>"This was my first time attending a bootcamp and even though this wasn't completely related to the major I'm pursuing, the sessions were truly enlightening and helpful. It was genuinely a one of a kind experience that I would 100% wanna try again."</p>
+                    <span class="testimonial-name">— Hanaa</span>
+                </div>
+
+                <div class="testimonial-card">
+                    <p>"Truly amazing! Diversity in speakers, yet they all gave so much valuable information about many different topics in a beautifully explained way, easy to understand."</p>
+                    <span class="testimonial-name">— Yana</span>
+                </div>
+
+                <div class="testimonial-card">
+                    <p>"A well-organized and insightful bootcamp with practical content and great trainers. It enhanced my skills, perspective, and motivation in software engineering. Highly recommended."</p>
+                    <span class="testimonial-name">— Houssein</span>
+                </div>
+
+                <div class="testimonial-card">
+                    <p>"Really enjoyed the bootcamp! The sessions were clear, hands-on, and the instructors explained the concepts in a simple, structured way."</p>
+                    <span class="testimonial-name">— Mariam</span>
+                </div>
+
+                <div class="testimonial-card">
+                    <p>"It was really fun and informative and also made us all contributed and active. They heard all of our questions and made learning more fun and interactive. A great experience indeed."</p>
+                    <span class="testimonial-name">— Rozaline</span>
+                </div>
+
+                <div class="testimonial-card">
+                    <p>"The five-day Bootcamp was truly amazing from start to finish. Beyond just learning the essentials of software engineering, I deeply appreciated the hard work and time you put into creating such a wonderful program."</p>
+                    <span class="testimonial-name">— Hiyam</span>
+                </div>
+
+                <div class="testimonial-card">
+                    <p>"The boot camp introduced me to several new perspectives and broadened my understanding of emerging technologies around us. It also highlighted the importance of writing well structured, organized code."</p>
+                    <span class="testimonial-name">— Jamila</span>
+                </div>
+
+                <div class="testimonial-card">
+                    <p>"I recommend beginners and even seniors to watch and participate in the bootcamp. The founders put time and effort for making this bootcamp worth your time by bringing people with expertise."</p>
+                    <span class="testimonial-name">— Michael</span>
+                </div>
+
+                <div class="testimonial-card">
+                    <p>"I really hope that you make a new bootcamp on summer. We really enjoyed it and had a lot of information and really, I have the curiosity to learn from you guys more and more."</p>
+                    <span class="testimonial-name">— Raz</span>
+                </div>
+
+                <div class="testimonial-card">
+                    <p>"The bootcamp was fantastic. I benefited greatly from it, especially on day 5, as it covered multiple topics."</p>
+                    <span class="testimonial-name">— Sajed</span>
+                </div>
+
+                <div class="testimonial-card">
+                    <p>"It was a great bootcamp, full of useful sessions and hands-on experiences that transformed theories and ideas to practical applications."</p>
+                    <span class="testimonial-name">— Sondos</span>
+                </div>
+
+                <div class="testimonial-card">
+                    <p>"It was fabulous. Learned a lot of formal stuff about software engineering and how systems work in corporations. Thank you for this great opportunity."</p>
+                    <span class="testimonial-name">— Suqlain</span>
+                </div>
+
+                <div class="testimonial-card">
+                    <p>"It was really amazing. I got the opportunity to meet people that are successful in the domain. It helped me by improving my soft skills and expanding my knowledge."</p>
+                    <span class="testimonial-name">— Hawraa</span>
+                </div>
+
+                <div class="testimonial-card">
+                    <p>"I really liked the storytelling with Elmo and Pengu, making it interesting to know their future after the bootcamp. Overall it was solid."</p>
+                    <span class="testimonial-name">— Abdallah</span>
+                </div>
+
+                <div class="testimonial-card">
+                    <p>"The bootcamp was amazing. It covered so many aspects of the field, both in theoretical and practical manner. I trust in the quality you provide for us."</p>
+                    <span class="testimonial-name">— Tarek</span>
+                </div>
+
+                <div class="testimonial-card">
+                    <p>"This bootcamp helped me think more structurally and strategically, giving me the confidence to design and scale solutions effectively."</p>
+                    <span class="testimonial-name">— Fatima</span>
+                </div>
+
+                <div class="testimonial-card">
+                    <p>"The sessions were focused, practical, and packed with valuable insights especially in Backend Development and Software Engineering principles. A well organized and impactful program."</p>
+                    <span class="testimonial-name">— Ghadeer</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bootcamp-cta">
+        <div class="container">
+            <div class="bootcamp-cta-content">
+                <h2>Don't miss the next one</h2>
+                <p>The next Sprint Bootcamp is coming August &mdash; September 2026. Sign up so you're in the loop when registration opens.</p>
+                <a href="https://forms.gle/EFNc22wrwwbnmgo57" target="_blank" class="btn btn-primary">Get on the List</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <img src="images/logo.png" alt="Code with Serah Logo" class="footer-logo">
+                    <div class="footer-social">
+                        <a href="https://www.youtube.com/@CodewithSerah" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.linkedin.com/company/codewithserah" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://www.instagram.com/codewithserah/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://chat.whatsapp.com/CUZuaSJLydM4y1zJ5Zw2h0" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://github.com/Code-with-Serah" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Programs</h4>
+                        <a href="full-stack-journey.html">Full-Stack Journey</a>
+                        <a href="operation-save-elmo.html">Operation Save ELMO</a>
+                        <a href="pocket-agents.html">Pocket Agents</a>
+                    </div>
+
+                    <div class="footer-column">
+                        <h4>Community</h4>
+                        <a href="https://forms.gle/EFNc22wrwwbnmgo57" target="_blank">Ambassador Program</a>
+                        <a href="#">Code of Conduct</a>
+                    </div>
+
+                    <div class="footer-column">
+                        <h4>Support</h4>
+                        <a href="mailto:contact@codewithserah.com">Get Help</a>
+                        <a href="mailto:contact@codewithserah.com">Contact Serah</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-legal">
+                    <p>&copy; 2026 Code with Serah</p>
+                    <div class="legal-links">
+                        <a href="#privacy">Privacy Policy</a>
+                        <a href="#terms">Terms of Service</a>
+                        <a href="#accessibility">Accessibility</a>
+                    </div>
+                </div>
+                <div class="footer-message">
+                    <p class="handwritten">"Don't be another brick in the wall. Build differently." - Serah</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+        if (hamburger && navMenu) {
+            function closeMenu() {
+                hamburger.setAttribute('aria-expanded', 'false');
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+                document.body.classList.remove('menu-open');
+            }
+            hamburger.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                const isOpen = navMenu.classList.contains('active');
+                if (isOpen) { closeMenu(); } else {
+                    this.setAttribute('aria-expanded', 'true');
+                    this.classList.add('active');
+                    navMenu.classList.add('active');
+                    document.body.classList.add('menu-open');
+                }
+            });
+            navMenu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => closeMenu());
+            });
+            document.addEventListener('click', function(e) {
+                if (navMenu.classList.contains('active') && !navMenu.contains(e.target) && !hamburger.contains(e.target)) closeMenu();
+            });
+        }
+    </script>
+</body>
+</html>

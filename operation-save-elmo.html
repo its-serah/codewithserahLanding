@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Academy — Code with Serah</title>
-    <meta name="description" content="The Code with Serah Academy — explore our programs: Pocket Agents, Full-Stack Journey, Front-End Program, and Operation Save ELMO.">
+    <title>Operation Save ELMO — Code with Serah</title>
+    <meta name="description" content="Operation Save ELMO — A new Code with Serah program is coming. Stay tuned for something exciting.">
     <link rel="icon" type="image/png" href="images/logo.png">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,11 +16,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
 
     <style>
-        .academy-section {
+        .program-hero {
             background:
                 radial-gradient(circle at 20% 30%, rgba(255, 224, 102, 0.15) 0%, transparent 45%),
                 radial-gradient(circle at 80% 70%, rgba(157, 78, 221, 0.12) 0%, transparent 45%),
                 linear-gradient(180deg, var(--warm-white) 0%, rgba(247, 243, 233, 0.5) 100%);
+            min-height: 70vh;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -29,7 +30,7 @@
             overflow: hidden;
         }
 
-        .academy-section::before {
+        .program-hero::before {
             content: '';
             position: absolute;
             width: 250px;
@@ -41,7 +42,7 @@
             animation: float 6s ease-in-out infinite;
         }
 
-        .academy-section::after {
+        .program-hero::after {
             content: '';
             position: absolute;
             width: 180px;
@@ -53,14 +54,14 @@
             animation: float 8s ease-in-out infinite reverse;
         }
 
-        .academy-content {
+        .program-hero-content {
             max-width: 560px;
             text-align: center;
             position: relative;
             z-index: 1;
         }
 
-        .academy-label {
+        .program-label {
             font-family: var(--font-handwritten);
             font-size: var(--text-2xl);
             color: var(--serah-purple);
@@ -70,99 +71,7 @@
             margin-bottom: var(--space-4);
         }
 
-        .academy-title {
-            font-size: clamp(2.2rem, 6vw, var(--text-5xl));
-            font-weight: 700;
-            color: var(--text-primary);
-            line-height: 1.2;
-            margin-bottom: var(--space-8);
-        }
-
-        .academy-title .highlight {
-            background: linear-gradient(135deg, #7B2CBF 0%, #9D4EDD 50%, #C77DFF 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            display: inline-block;
-        }
-
-        .academy-body {
-            color: var(--text-secondary);
-            font-size: var(--text-lg);
-            line-height: 1.8;
-            margin-bottom: var(--space-10);
-        }
-
-        .academy-body strong {
-            color: var(--text-primary);
-            font-weight: 600;
-        }
-
-        .academy-signup {
-            max-width: 380px;
-            margin: 0 auto var(--space-6);
-        }
-
-        .academy-signup input[type="email"] {
-            width: 100%;
-            padding: var(--space-3) var(--space-4);
-            background: transparent;
-            border: 2px solid var(--serah-purple-soft);
-            border-radius: var(--radius-2xl);
-            outline: none;
-            font-size: var(--text-lg);
-            font-family: var(--font-primary);
-            color: var(--text-primary);
-            text-align: center;
-            transition: border-color 0.3s var(--ease-gentle);
-        }
-
-        .academy-signup input[type="email"]:focus {
-            border-color: var(--serah-purple);
-        }
-
-        .academy-signup input[type="email"]::placeholder {
-            color: var(--text-light);
-        }
-
-        .academy-fine-print {
-            color: var(--text-muted);
-            font-size: var(--text-sm);
-            line-height: 1.7;
-            margin-top: var(--space-8);
-        }
-
-        /* Programs listing */
-        .academy-programs {
-            padding: var(--space-16) 0;
-            background: var(--beige);
-        }
-
-        .programs-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: var(--space-6);
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-
-        .program-card {
-            background: white;
-            border-radius: var(--radius-2xl);
-            padding: var(--space-6);
-            box-shadow: var(--shadow-soft);
-            text-decoration: none;
-            color: inherit;
-            transition: transform 0.2s var(--ease-gentle), box-shadow 0.2s var(--ease-gentle);
-            display: block;
-        }
-
-        .program-card:hover {
-            transform: translateY(-4px);
-            box-shadow: var(--shadow-medium);
-        }
-
-        .program-card-badge {
+        .program-status {
             display: inline-block;
             font-size: var(--text-xs);
             font-weight: 600;
@@ -170,54 +79,69 @@
             letter-spacing: 0.05em;
             padding: var(--space-1) var(--space-3);
             border-radius: var(--radius-full);
-            margin-bottom: var(--space-3);
-        }
-
-        .program-card-badge.ongoing {
-            background: rgba(16, 185, 129, 0.12);
-            color: #059669;
-        }
-
-        .program-card-badge.past {
-            background: rgba(107, 114, 128, 0.12);
-            color: #6b7280;
-        }
-
-        .program-card-badge.coming-soon {
             background: rgba(245, 158, 11, 0.12);
             color: #d97706;
-        }
-
-        .program-card h3 {
-            font-size: var(--text-lg);
-            font-weight: 700;
-            color: var(--text-primary);
-            margin-bottom: var(--space-2);
-        }
-
-        .program-card p {
-            color: var(--text-secondary);
-            font-size: var(--text-sm);
-            line-height: 1.7;
             margin-bottom: var(--space-4);
         }
 
-        .program-card-link {
-            display: inline-flex;
-            align-items: center;
-            gap: var(--space-1);
-            font-size: var(--text-sm);
+        .program-title {
+            font-size: clamp(2.2rem, 6vw, var(--text-5xl));
+            font-weight: 700;
+            color: var(--text-primary);
+            line-height: 1.2;
+            margin-bottom: var(--space-8);
+        }
+
+        .program-title .highlight {
+            background: linear-gradient(135deg, #7B2CBF 0%, #9D4EDD 50%, #C77DFF 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            display: inline-block;
+        }
+
+        .program-body {
+            color: var(--text-secondary);
+            font-size: var(--text-lg);
+            line-height: 1.8;
+            margin-bottom: var(--space-10);
+        }
+
+        .program-body strong {
+            color: var(--text-primary);
             font-weight: 600;
-            color: var(--serah-purple);
+        }
+
+        .program-cta-row {
+            display: flex;
+            gap: var(--space-4);
+            justify-content: center;
+            flex-wrap: wrap;
         }
 
         @media (max-width: 768px) {
-            .programs-grid {
-                grid-template-columns: 1fr;
+            .program-hero {
+                padding: calc(80px + var(--space-8)) var(--space-4) var(--space-12);
             }
 
-            .academy-programs {
-                padding: var(--space-12) 0;
+            .program-label {
+                font-size: var(--text-xl);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .program-hero {
+                padding: calc(70px + var(--space-6)) var(--space-4) var(--space-8);
+            }
+
+            .program-cta-row {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .program-cta-row .btn {
+                width: 100%;
+                text-align: center;
             }
         }
     </style>
@@ -252,61 +176,21 @@
         </div>
     </nav>
 
-    <section class="academy-section">
-        <div class="academy-content">
-            <span class="academy-label">Something exciting is brewing</span>
-            <h1 class="academy-title">The Academy is <span class="highlight">Coming Soon</span></h1>
+    <section class="program-hero">
+        <div class="program-hero-content">
+            <span class="program-label">Something exciting is coming</span>
+            <span class="program-status">Coming Soon</span>
+            <h1 class="program-title">Operation <span class="highlight">Save ELMO</span></h1>
 
-            <p class="academy-body">
-                We're currently in private beta with a small group of early learners. The full Academy experience, complete with hands-on projects, mentorship, and a curriculum built around real-world skills, is on its way.
+            <p class="program-body">
+                We can't say too much just yet &mdash; but if you were at the Winter Sprint Bootcamp, you know ELMO has been on quite the journey. This time, <strong>you're part of the rescue mission</strong>.
                 <br><br>
-                <strong>Stay updated by signing up to our newsletter below.</strong>
+                Stay tuned. Details are coming soon.
             </p>
 
-            <form class="academy-signup newsletter-form">
-                <input type="email" name="email" placeholder="your@email.com" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
-            </form>
-
-            <p class="academy-fine-print">
-                You'll receive a newsletter whenever we have an important update to share. That's it. No spam, just the good stuff.
-            </p>
-        </div>
-    </section>
-
-    <section class="academy-programs">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="handwritten">Our Programs</h2>
-            </div>
-
-            <div class="programs-grid">
-                <a href="pocket-agents.html" class="program-card">
-                    <span class="program-card-badge ongoing">Ongoing</span>
-                    <h3>Pocket Agents</h3>
-                    <p>Build intelligent AI agents that solve real-world problems. From simple chatbots to multi-step reasoning systems.</p>
-                    <span class="program-card-link">Learn more <i class="fas fa-arrow-right"></i></span>
-                </a>
-
-                <a href="operation-save-elmo.html" class="program-card">
-                    <span class="program-card-badge coming-soon">Coming Soon</span>
-                    <h3>Operation Save ELMO</h3>
-                    <p>ELMO has been on quite the journey. This time, you're part of the rescue mission. Details coming soon.</p>
-                    <span class="program-card-link">Learn more <i class="fas fa-arrow-right"></i></span>
-                </a>
-
-                <a href="full-stack-journey.html" class="program-card">
-                    <span class="program-card-badge past">October 2024</span>
-                    <h3>Full-Stack Journey</h3>
-                    <p>Master both frontend and backend to build complete web applications from scratch.</p>
-                    <span class="program-card-link">Learn more <i class="fas fa-arrow-right"></i></span>
-                </a>
-
-                <a href="front-end-program.html" class="program-card">
-                    <span class="program-card-badge past">October 2024</span>
-                    <h3>Front-End Program</h3>
-                    <p>Learn to create beautiful, responsive user interfaces that users love.</p>
-                    <span class="program-card-link">Learn more <i class="fas fa-arrow-right"></i></span>
-                </a>
+            <div class="program-cta-row">
+                <a href="https://forms.gle/EFNc22wrwwbnmgo57" target="_blank" class="btn btn-primary">Get Notified</a>
+                <a href="academy.html" class="btn btn-secondary">All Programs</a>
             </div>
         </div>
     </section>
@@ -389,18 +273,6 @@
             });
             document.addEventListener('click', function(e) {
                 if (navMenu.classList.contains('active') && !navMenu.contains(e.target) && !hamburger.contains(e.target)) closeMenu();
-            });
-        }
-
-        const form = document.querySelector('.newsletter-form');
-        if (form) {
-            form.addEventListener('submit', function(e) {
-                e.preventDefault();
-                const email = this.querySelector('input[type="email"]');
-                if (!email || !email.value.trim()) { email?.focus(); return; }
-                email.value = '';
-                this.classList.add('success');
-                setTimeout(() => this.classList.remove('success'), 2000);
             });
         }
     </script>

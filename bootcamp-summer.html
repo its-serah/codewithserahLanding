@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bootcamp — Code with Serah</title>
-    <meta name="description" content="The Sprint Bootcamp — Code with Serah's winter and summer flagship event. Real projects, real mentors, real chaos (the good kind).">
+    <title>AI Summer Sprint Bootcamp 2025 — Code with Serah</title>
+    <meta name="description" content="AI Summer Sprint Bootcamp 2025 — 650+ attendees, 2 weeks, 3 tracks. Machine Learning, Deep Learning, and NLP. The biggest event in Code with Serah history.">
     <link rel="icon" type="image/png" href="images/logo.png">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -79,109 +79,123 @@
             flex-wrap: wrap;
         }
 
-        /* The deal section */
-        .bootcamp-deal {
-            padding: var(--space-16) 0;
+        /* Stats strip */
+        .stats-strip {
             background: var(--warm-white);
+            padding: var(--space-10) 0;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
         }
 
-        .deal-content {
+        .stats-row {
+            display: flex;
+            justify-content: center;
+            gap: var(--space-10);
+            flex-wrap: wrap;
             max-width: 700px;
             margin: 0 auto;
             text-align: center;
         }
 
-        .deal-content p {
+        .stat-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: var(--space-1);
+        }
+
+        .stat-value {
+            font-size: var(--text-3xl);
+            font-weight: 700;
+            color: var(--serah-purple);
+            font-family: var(--font-heading);
+        }
+
+        .stat-label {
+            font-size: var(--text-sm);
             color: var(--text-secondary);
-            font-size: var(--text-lg);
-            line-height: 1.9;
-            margin-bottom: var(--space-6);
+            font-weight: 500;
         }
 
-        .deal-content p strong {
-            color: var(--text-primary);
-        }
-
-        /* Sprints listing */
-        .bootcamp-sprints {
+        /* Tracks */
+        .bootcamp-tracks {
             padding: var(--space-16) 0;
             background: var(--beige);
         }
 
-        .sprints-grid {
+        .tracks-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
             gap: var(--space-6);
             max-width: 900px;
             margin: 0 auto;
         }
 
-        .sprint-card {
+        .track-card {
             background: white;
             border-radius: var(--radius-2xl);
-            padding: var(--space-8);
+            padding: var(--space-6);
             box-shadow: var(--shadow-soft);
-            text-decoration: none;
-            color: inherit;
-            transition: transform 0.2s var(--ease-gentle), box-shadow 0.2s var(--ease-gentle);
-            display: block;
+            text-align: center;
         }
 
-        .sprint-card:hover {
-            transform: translateY(-4px);
-            box-shadow: var(--shadow-medium);
-        }
-
-        .sprint-card .sprint-date {
-            font-family: var(--font-handwritten);
-            font-size: var(--text-lg);
-            color: var(--serah-purple);
-            font-weight: 600;
-            display: block;
-            margin-bottom: var(--space-2);
-        }
-
-        .sprint-card h3 {
-            font-size: var(--text-xl);
-            font-weight: 700;
-            color: var(--text-primary);
+        .track-icon {
+            font-size: var(--text-3xl);
             margin-bottom: var(--space-3);
         }
 
-        .sprint-card p {
+        .track-card h3 {
+            font-size: var(--text-lg);
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: var(--space-2);
+        }
+
+        .track-card p {
             color: var(--text-secondary);
             font-size: var(--text-sm);
             line-height: 1.7;
-            margin-bottom: var(--space-4);
         }
 
-        .sprint-stats {
-            display: flex;
-            gap: var(--space-4);
-            font-size: var(--text-sm);
-            color: var(--text-light);
+        /* Playlists */
+        .bootcamp-playlists {
+            padding: var(--space-16) 0;
+            background: var(--warm-white);
         }
 
-        .sprint-stats span {
-            display: flex;
-            align-items: center;
-            gap: var(--space-1);
+        .playlists-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: var(--space-6);
+            max-width: 560px;
+            margin: 0 auto;
         }
 
-        .sprint-view {
-            display: inline-flex;
-            align-items: center;
-            gap: var(--space-1);
+        .playlist-embed {
+            border-radius: var(--radius-2xl);
+            overflow: hidden;
+            box-shadow: var(--shadow-medium);
+            background: #000;
+        }
+
+        .playlist-embed iframe {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            display: block;
+            border: 0;
+        }
+
+        .playlist-label {
+            padding: var(--space-3) var(--space-4);
+            background: white;
             font-size: var(--text-sm);
             font-weight: 600;
-            color: var(--serah-purple);
-            margin-top: var(--space-4);
+            color: var(--text-primary);
         }
 
         /* Bottom CTA */
         .bootcamp-cta {
             padding: var(--space-16) 0;
-            background: var(--warm-white);
+            background: var(--beige);
             text-align: center;
         }
 
@@ -219,12 +233,12 @@
                 font-size: var(--text-base);
             }
 
-            .sprints-grid {
-                grid-template-columns: 1fr;
+            .stats-row {
+                gap: var(--space-6);
             }
 
-            .bootcamp-deal,
-            .bootcamp-sprints,
+            .bootcamp-tracks,
+            .bootcamp-playlists,
             .bootcamp-cta {
                 padding: var(--space-12) 0;
             }
@@ -243,6 +257,10 @@
             .bootcamp-cta-row .btn {
                 width: 100%;
                 text-align: center;
+            }
+
+            .tracks-grid {
+                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -279,62 +297,73 @@
 
     <section class="bootcamp-hero">
         <div class="bootcamp-hero-content">
-            <span class="bootcamp-label">the one everyone talks about</span>
-            <h1 class="bootcamp-title">The <span class="highlight">Sprint Bootcamp</span></h1>
+            <span class="bootcamp-label">Jul 14 &ndash; 25, 2025</span>
+            <h1 class="bootcamp-title">AI Summer <span class="highlight">Sprint Bootcamp</span></h1>
             <p class="bootcamp-subtitle">
-                Every winter and summer, we get hundreds of people in one room (well, one Zoom) and build things together. It's intense, it's messy, it's <strong>the best thing we do</strong>.
+                Two weeks of Machine Learning, Deep Learning, and NLP. <strong>The biggest event in Code with Serah history</strong> &mdash; 650+ people showed up and built things that blew our minds.
             </p>
             <div class="bootcamp-cta-row">
                 <a href="https://forms.gle/EFNc22wrwwbnmgo57" target="_blank" class="btn btn-primary">Join the Next One</a>
-                <a href="events.html" class="btn btn-secondary">The Stage</a>
+                <a href="bootcamp.html" class="btn btn-secondary">All Sprints</a>
             </div>
         </div>
     </section>
 
-    <section class="bootcamp-deal">
+    <section class="stats-strip">
         <div class="container">
-            <div class="deal-content">
-                <div class="section-header">
-                    <h2 class="handwritten">What actually happens</h2>
+            <div class="stats-row">
+                <div class="stat-item">
+                    <span class="stat-value">650+</span>
+                    <span class="stat-label">Attendees</span>
                 </div>
-                <p>
-                    Each sprint has a different theme — we've covered everything from full-stack web apps and AI agents to machine learning, NLP, and data science. Some sprints are a few days, others stretch to two weeks. It really depends.
-                </p>
-                <p>
-                    You join live sessions with mentors, get your hands on real tools, and start building. By the end, you walk away with something you actually made — not something you followed a tutorial for. People have submitted projects we didn't even have on the schedule, and honestly, those are usually the best ones.
-                </p>
+                <div class="stat-item">
+                    <span class="stat-value">2</span>
+                    <span class="stat-label">Weeks</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value">3</span>
+                    <span class="stat-label">Tracks</span>
+                </div>
             </div>
         </div>
     </section>
 
-    <section class="bootcamp-sprints">
+    <section class="bootcamp-tracks">
         <div class="container">
             <div class="section-header">
-                <h2 class="handwritten">Past Sprints</h2>
+                <h2 class="handwritten">The Tracks</h2>
+            </div>
+            <div class="tracks-grid">
+                <div class="track-card">
+                    <div class="track-icon"><i class="fas fa-brain"></i></div>
+                    <h3>Machine Learning</h3>
+                    <p>From supervised learning to model evaluation. Scikit-learn, feature engineering, and real-world prediction tasks.</p>
+                </div>
+                <div class="track-card">
+                    <div class="track-icon"><i class="fas fa-network-wired"></i></div>
+                    <h3>Deep Learning</h3>
+                    <p>Neural networks from scratch to transfer learning. TensorFlow, CNNs, and training models that actually work.</p>
+                </div>
+                <div class="track-card">
+                    <div class="track-icon"><i class="fas fa-comment-dots"></i></div>
+                    <h3>NLP</h3>
+                    <p>Text processing, sentiment analysis, and language models. Turn unstructured text into structured insights.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bootcamp-playlists">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="handwritten">Watch the sessions</h2>
             </div>
 
-            <div class="sprints-grid">
-                <a href="bootcamp-winter.html" class="sprint-card">
-                    <span class="sprint-date">Jan &ndash; Feb 2026</span>
-                    <h3>Winter Sprint Bootcamp 2026</h3>
-                    <p>AI Agents, Full-Stack, Data Science — five days of building, breaking, and shipping. Started with a kickoff on International Day of Education.</p>
-                    <div class="sprint-stats">
-                        <span><i class="fas fa-users"></i> 495 attendees</span>
-                        <span><i class="fas fa-calendar"></i> 5 days</span>
-                    </div>
-                    <span class="sprint-view">View details <i class="fas fa-arrow-right"></i></span>
-                </a>
-
-                <a href="bootcamp-summer.html" class="sprint-card">
-                    <span class="sprint-date">Jul 14 &ndash; 25, 2025</span>
-                    <h3>AI Summer Sprint Bootcamp 2025</h3>
-                    <p>Two weeks of Machine Learning, Deep Learning, and NLP. The biggest event in Code with Serah history.</p>
-                    <div class="sprint-stats">
-                        <span><i class="fas fa-users"></i> 650+ attendees</span>
-                        <span><i class="fas fa-calendar"></i> 2 weeks</span>
-                    </div>
-                    <span class="sprint-view">View details <i class="fas fa-arrow-right"></i></span>
-                </a>
+            <div class="playlists-grid">
+                <div class="playlist-embed">
+                    <iframe src="https://www.youtube.com/embed/videoseries?list=PLByjXZBtwwYjeYa87YCUsf0otxH_pBrbw" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy" title="AI Summer Sprint Bootcamp"></iframe>
+                    <div class="playlist-label">AI Summer Sprint Bootcamp 2025</div>
+                </div>
             </div>
         </div>
     </section>
@@ -343,7 +372,7 @@
         <div class="container">
             <div class="bootcamp-cta-content">
                 <h2>Don't miss the next one</h2>
-                <p>The next Sprint Bootcamp is coming August — September 2026. Sign up so you're in the loop when registration opens.</p>
+                <p>The next Sprint Bootcamp is coming August &mdash; September 2026. Sign up so you're in the loop when registration opens.</p>
                 <a href="https://forms.gle/EFNc22wrwwbnmgo57" target="_blank" class="btn btn-primary">Get on the List</a>
             </div>
         </div>
