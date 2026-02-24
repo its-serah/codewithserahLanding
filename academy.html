@@ -132,94 +132,6 @@
             margin-top: var(--space-8);
         }
 
-        /* Programs listing */
-        .academy-programs {
-            padding: var(--space-16) 0;
-            background: var(--beige);
-        }
-
-        .programs-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: var(--space-6);
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-
-        .program-card {
-            background: white;
-            border-radius: var(--radius-2xl);
-            padding: var(--space-6);
-            box-shadow: var(--shadow-soft);
-            text-decoration: none;
-            color: inherit;
-            transition: transform 0.2s var(--ease-gentle), box-shadow 0.2s var(--ease-gentle);
-            display: block;
-        }
-
-        .program-card:hover {
-            transform: translateY(-4px);
-            box-shadow: var(--shadow-medium);
-        }
-
-        .program-card-badge {
-            display: inline-block;
-            font-size: var(--text-xs);
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            padding: var(--space-1) var(--space-3);
-            border-radius: var(--radius-full);
-            margin-bottom: var(--space-3);
-        }
-
-        .program-card-badge.ongoing {
-            background: rgba(16, 185, 129, 0.12);
-            color: #059669;
-        }
-
-        .program-card-badge.past {
-            background: rgba(107, 114, 128, 0.12);
-            color: #6b7280;
-        }
-
-        .program-card-badge.coming-soon {
-            background: rgba(245, 158, 11, 0.12);
-            color: #d97706;
-        }
-
-        .program-card h3 {
-            font-size: var(--text-lg);
-            font-weight: 700;
-            color: var(--text-primary);
-            margin-bottom: var(--space-2);
-        }
-
-        .program-card p {
-            color: var(--text-secondary);
-            font-size: var(--text-sm);
-            line-height: 1.7;
-            margin-bottom: var(--space-4);
-        }
-
-        .program-card-link {
-            display: inline-flex;
-            align-items: center;
-            gap: var(--space-1);
-            font-size: var(--text-sm);
-            font-weight: 600;
-            color: var(--serah-purple);
-        }
-
-        @media (max-width: 768px) {
-            .programs-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .academy-programs {
-                padding: var(--space-12) 0;
-            }
-        }
     </style>
 </head>
 <body>
@@ -273,44 +185,6 @@
         </div>
     </section>
 
-    <section class="academy-programs">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="handwritten">Our Programs</h2>
-            </div>
-
-            <div class="programs-grid">
-                <a href="pocket-agents.html" class="program-card">
-                    <span class="program-card-badge ongoing">Ongoing</span>
-                    <h3>Pocket Agents</h3>
-                    <p>Build intelligent AI agents that solve real-world problems. From simple chatbots to multi-step reasoning systems.</p>
-                    <span class="program-card-link">Learn more <i class="fas fa-arrow-right"></i></span>
-                </a>
-
-                <a href="operation-save-elmo.html" class="program-card">
-                    <span class="program-card-badge coming-soon">Coming Soon</span>
-                    <h3>Operation Save ELMO</h3>
-                    <p>ELMO has been on quite the journey. This time, you're part of the rescue mission. Details coming soon.</p>
-                    <span class="program-card-link">Learn more <i class="fas fa-arrow-right"></i></span>
-                </a>
-
-                <a href="full-stack-journey.html" class="program-card">
-                    <span class="program-card-badge past">October 2024</span>
-                    <h3>Full-Stack Journey</h3>
-                    <p>Master both frontend and backend to build complete web applications from scratch.</p>
-                    <span class="program-card-link">Learn more <i class="fas fa-arrow-right"></i></span>
-                </a>
-
-                <a href="front-end-program.html" class="program-card">
-                    <span class="program-card-badge past">October 2024</span>
-                    <h3>Front-End Program</h3>
-                    <p>Learn to create beautiful, responsive user interfaces that users love.</p>
-                    <span class="program-card-link">Learn more <i class="fas fa-arrow-right"></i></span>
-                </a>
-            </div>
-        </div>
-    </section>
-
     <footer class="footer">
         <div class="container">
             <div class="footer-main">
@@ -329,19 +203,21 @@
                     <div class="footer-column">
                         <h4>Programs</h4>
                         <a href="full-stack-journey.html">Full-Stack Journey</a>
+                        <a href="front-end-program.html">Front-End Program</a>
                         <a href="operation-save-elmo.html">Operation Save ELMO</a>
                         <a href="pocket-agents.html">Pocket Agents</a>
                     </div>
 
                     <div class="footer-column">
-                        <h4>Community</h4>
-                        <a href="https://forms.gle/EFNc22wrwwbnmgo57" target="_blank">Ambassador Program</a>
-                        <a href="#">Code of Conduct</a>
+                        <h4>Explore</h4>
+                        <a href="academy.html">Academy</a>
+                        <a href="bootcamp.html">Bootcamp</a>
+                        <a href="events.html">The Stage</a>
                     </div>
 
                     <div class="footer-column">
-                        <h4>Support</h4>
-                        <a href="mailto:contact@codewithserah.com">Get Help</a>
+                        <h4>Community</h4>
+                        <a href="https://forms.gle/EFNc22wrwwbnmgo57" target="_blank">Join Us</a>
                         <a href="mailto:contact@codewithserah.com">Contact Serah</a>
                     </div>
                 </div>
@@ -350,11 +226,6 @@
             <div class="footer-bottom">
                 <div class="footer-legal">
                     <p>&copy; 2026 Code with Serah</p>
-                    <div class="legal-links">
-                        <a href="#privacy">Privacy Policy</a>
-                        <a href="#terms">Terms of Service</a>
-                        <a href="#accessibility">Accessibility</a>
-                    </div>
                 </div>
                 <div class="footer-message">
                     <p class="handwritten">"Don't be another brick in the wall. Build differently." - Serah</p>

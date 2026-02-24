@@ -6,6 +6,7 @@
     ).matches;
 
     // Initialize critical functionality immediately
+    initActiveNavLink();
     initMobileNavigation();
     initHeroObserver();
     initNewsletter();
@@ -39,6 +40,22 @@
     initConfetti(prefersReducedMotion);
     initAmbassadorCarousel();
     initSequentialGallery(prefersReducedMotion);
+  }
+
+  function initActiveNavLink() {
+    var currentPath = window.location.pathname.split("/").pop() || "index.html";
+    document.querySelectorAll(".nav-link").forEach(function (link) {
+      var href = link.getAttribute("href");
+      if (!href) return;
+      var linkPath = href.split("/").pop().split("#")[0] || "index.html";
+      if (linkPath === currentPath) {
+        link.classList.add("active");
+      }
+      // For index.html hash links (e.g. #story), mark active if on index
+      if (currentPath === "index.html" && href.startsWith("#")) {
+        // Don't mark hash links as active on page load
+      }
+    });
   }
 
   function initMobileNavigation() {
