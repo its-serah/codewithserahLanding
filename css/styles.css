@@ -1416,7 +1416,7 @@ p {
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   z-index: 1000;
-  padding: 4px var(--space-4);
+  padding: 0 var(--space-6);
   transition:
     transform 0.3s var(--ease-gentle),
     background 0.3s var(--ease-gentle);
@@ -1455,10 +1455,12 @@ p {
 }
 
 .nav-logo img {
-  height: 85px;
+  height: 95px;
   width: auto;
-  max-width: 260px;
+  max-width: 350px;
   object-fit: contain;
+  position: relative;
+  top: 3px;
 }
 
 .nav-logo h2 {
@@ -1510,36 +1512,39 @@ p {
   font-weight: 500;
   font-size: 15px;
   position: relative;
-  transition: all 0.2s ease;
-  padding: var(--space-2) var(--space-4);
+  transition: color 0.2s ease;
+  padding: var(--space-1) var(--space-2);
   letter-spacing: 0.2px;
   white-space: nowrap;
+  border-radius: 0;
+  background: none;
 }
 
 .nav-link:hover {
   color: var(--serah-purple);
 }
 
-.nav-link::before {
+.nav-link::after {
   content: "";
   position: absolute;
-  bottom: 0;
+  bottom: -2px;
   left: 50%;
   transform: translateX(-50%);
   width: 0;
   height: 2px;
   background: var(--serah-purple);
+  border-radius: 1px;
   transition: width 0.3s ease;
 }
 
-.nav-link:hover::before {
-  width: 70%;
+.nav-link:hover::after {
+  width: 60%;
 }
 
 /* Enhanced Hero Section */
 .hero {
   background: var(--gradient-warm);
-  padding: calc(120px + var(--space-24)) 0 var(--space-20);
+  padding: calc(80px + var(--space-20)) 0 var(--space-20);
   min-height: 100vh;
   display: flex;
   align-items: center;
@@ -2079,29 +2084,36 @@ p {
   }
 
   .bento-board {
-    grid-template-columns: repeat(2, 1fr);
-    grid-auto-rows: 180px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: auto;
     gap: 10px;
   }
 
+  .bento-pin img {
+    height: auto;
+    aspect-ratio: auto;
+    object-fit: contain;
+  }
+
   .bento-pin--stat {
-    padding: var(--space-8) var(--space-4);
+    padding: var(--space-6) var(--space-3);
+    aspect-ratio: 1 / 1;
   }
 
   .bento-pin__value {
-    font-size: var(--text-4xl);
+    font-size: var(--text-3xl);
   }
 
   .bento-pin__label {
-    font-size: var(--text-sm);
+    font-size: var(--text-xs);
   }
 }
 
 @media (max-width: 480px) {
   .bento-board {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(3, 1fr);
     grid-auto-rows: auto;
-    gap: 8px;
+    gap: 6px;
   }
 
   .bento-pin {
@@ -2109,15 +2121,18 @@ p {
   }
 
   .bento-pin img {
-    height: 200px;
+    height: auto;
+    aspect-ratio: auto;
+    object-fit: contain;
   }
 
   .bento-pin--stat {
-    padding: var(--space-8) var(--space-4);
+    padding: var(--space-4) var(--space-2);
+    aspect-ratio: 1 / 1;
   }
 
   .bento-pin__value {
-    font-size: var(--text-3xl);
+    font-size: var(--text-2xl);
   }
 
   .bento-pin__label {
@@ -2454,7 +2469,7 @@ p {
 /* Programs List */
 .programs-list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
   gap: var(--space-6);
   margin-top: var(--space-8);
 }
@@ -2484,10 +2499,9 @@ p {
 
 .program-header {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
   margin-bottom: var(--space-4);
-  flex-wrap: wrap;
   gap: var(--space-2);
 }
 
@@ -3361,6 +3375,12 @@ p {
   background: var(--warm-white);
 }
 
+.homepage-bootcamp .handwritten {
+  font-size: var(--text-4xl);
+  display: block;
+  margin-bottom: var(--space-2);
+}
+
 .homepage-sprints {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -3438,9 +3458,21 @@ p {
   margin-top: var(--space-10);
 }
 
+.homepage-bootcamp-footer h2 {
+  margin-bottom: var(--space-2);
+}
+
 .homepage-bootcamp-footer p {
   color: var(--text-secondary);
-  margin-bottom: var(--space-3);
+  margin-bottom: var(--space-6);
+  font-size: var(--text-lg);
+}
+
+.homepage-stage-btn {
+  padding: var(--space-4) var(--space-8);
+  font-size: var(--text-base);
+  border-radius: var(--radius-3xl);
+  box-shadow: 0 4px 16px rgba(123, 44, 191, 0.25);
 }
 
 /* Events & Webinars Section */
@@ -4569,6 +4601,10 @@ p {
     display: none;
   }
 
+  .programs-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   .programs-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -4626,7 +4662,7 @@ p {
 
   .navbar {
     width: calc(100% - var(--space-8));
-    padding: 4px var(--space-4);
+    padding: var(--space-2) var(--space-4);
     border-radius: 40px;
     top: var(--space-2);
   }
@@ -4636,12 +4672,12 @@ p {
   }
 
   .nav-logo img {
-    height: 65px;
-    max-width: 200px;
+    height: 40px;
+    max-width: 170px;
   }
 
   .hero {
-    padding: calc(80px + var(--space-12)) 0 var(--space-12);
+    padding: calc(70px + var(--space-12)) 0 var(--space-12);
     min-height: auto;
   }
 
@@ -4774,6 +4810,7 @@ p {
   }
 
   .programs-list {
+    grid-template-columns: 1fr;
     gap: var(--space-4);
     margin-top: var(--space-4);
   }
@@ -5015,8 +5052,8 @@ p {
   }
 
   .nav-logo img {
-    height: 55px;
-    max-width: 170px;
+    height: 34px;
+    max-width: 150px;
   }
 
   .hero {
@@ -5228,12 +5265,20 @@ p {
 
 /* Focus styles for accessibility */
 .btn:focus,
-.nav-link:focus,
 input:focus,
 textarea:focus,
 select:focus {
   outline: 2px solid var(--serah-purple);
   outline-offset: 2px;
+}
+
+.nav-link:focus {
+  outline: none;
+  color: var(--serah-purple);
+}
+
+.nav-link:focus::after {
+  width: 60%;
 }
 
 /* Special Effect Animations */
@@ -5364,10 +5409,11 @@ select:focus {
 .nav-link.active {
   color: var(--serah-purple);
   font-weight: 600;
+  background: none;
 }
 
-.nav-link.active::before {
-  width: 80%;
+.nav-link.active::after {
+  width: 60%;
 }
 
 /* Menu open body state */
