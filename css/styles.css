@@ -3381,6 +3381,10 @@ p {
   margin-bottom: var(--space-2);
 }
 
+.homepage-bootcamp .section-header h2 {
+  transform: none;
+}
+
 .homepage-sprints {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
