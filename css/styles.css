@@ -4422,9 +4422,9 @@ p {
 }
 
 .footer-logo {
-  height: 60px;
+  height: 140px;
   width: auto;
-  max-width: 180px;
+  max-width: 400px;
   margin-bottom: var(--space-4);
 }
 
@@ -5615,7 +5615,7 @@ textarea::placeholder {
   transition: all 0.3s ease;
   box-shadow: 0 4px 15px rgba(255, 215, 0, 0.4);
   z-index: 1000;
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
 }
@@ -5642,6 +5642,12 @@ textarea::placeholder {
 
 .scroll-to-top:hover i {
   transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .scroll-to-top {
+    display: flex;
+  }
 }
 
 /* =====================================================

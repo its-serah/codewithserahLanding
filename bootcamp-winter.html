@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Winter Sprint Bootcamp 2026 — Code with Serah</title>
     <meta name="description" content="Winter Sprint Bootcamp 2026 — 495 attendees, 6 days. AI Agents, Full-Stack, Software Engineering, DevOps, and more. Watch the sessions, read the testimonials.">
-    <link rel="icon" type="image/png" href="images/logo.png">
+    <link rel="icon" type="image/png" href="images/logo.png" media="(prefers-color-scheme: light)">
+    <link rel="icon" type="image/png" href="LogoVariance.png" media="(prefers-color-scheme: dark)">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,11 +17,16 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
 
     <style>
-        .bootcamp-hero {
+        body {
             background:
                 radial-gradient(circle at 20% 30%, rgba(255, 224, 102, 0.15) 0%, transparent 45%),
                 radial-gradient(circle at 80% 70%, rgba(157, 78, 221, 0.12) 0%, transparent 45%),
                 linear-gradient(180deg, var(--warm-white) 0%, rgba(247, 243, 233, 0.5) 100%);
+            background-attachment: fixed;
+        }
+
+        .bootcamp-hero {
+            background: transparent;
             padding: calc(100px + var(--space-12)) var(--space-6) var(--space-12);
             text-align: center;
             position: relative;
@@ -105,17 +111,17 @@
 
         /* Stats strip */
         .stats-strip {
-            background: var(--warm-white);
+            background: rgba(255, 255, 255, 0.55);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
             padding: var(--space-10) 0;
-            border-bottom: 1px solid rgba(0,0,0,0.05);
         }
 
         .stats-row {
             display: flex;
-            justify-content: center;
-            gap: var(--space-10);
+            justify-content: space-around;
             flex-wrap: wrap;
-            max-width: 700px;
+            max-width: 1000px;
             margin: 0 auto;
             text-align: center;
         }
@@ -143,7 +149,7 @@
         /* Tracks */
         .bootcamp-tracks {
             padding: var(--space-16) 0;
-            background: var(--beige);
+            background: transparent;
         }
 
         .tracks-grid {
@@ -183,7 +189,9 @@
         /* Playlists */
         .bootcamp-playlists {
             padding: var(--space-16) 0;
-            background: var(--warm-white);
+            background: rgba(255, 255, 255, 0.55);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
         }
 
         .playlists-grid {
@@ -219,7 +227,7 @@
         /* Testimonials */
         .bootcamp-testimonials {
             padding: var(--space-16) 0;
-            background: var(--beige);
+            background: transparent;
         }
 
         .testimonials-grid {
@@ -255,7 +263,7 @@
         /* Bottom CTA */
         .bootcamp-cta {
             padding: var(--space-16) 0;
-            background: var(--warm-white);
+            background: transparent;
             text-align: center;
         }
 
@@ -350,7 +358,7 @@
                 <a href="index.html#story" class="nav-link">Impact</a>
                 <a href="academy.html" class="nav-link">Academy</a>
                 <a href="bootcamp.html" class="nav-link">Bootcamps</a>
-                <a href="events.html" class="nav-link">The Stage</a>
+                <a href="events.html" class="nav-link">Stage</a>
                 <a href="https://forms.gle/EFNc22wrwwbnmgo57" target="_blank" class="nav-link">Join Us</a>
             </div>
             <div class="hamburger">
@@ -566,7 +574,7 @@
         <div class="container">
             <div class="footer-main">
                 <div class="footer-brand">
-                    <img src="images/logo.png" alt="Code with Serah Logo" class="footer-logo">
+                    <img src="LogoVariance.png" alt="Code with Serah Logo" class="footer-logo">
                     <div class="footer-social">
                         <a href="https://www.youtube.com/@CodewithSerah" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
                         <a href="https://www.linkedin.com/company/codewithserah" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
@@ -589,7 +597,7 @@
                         <h4>Explore</h4>
                         <a href="academy.html">Academy</a>
                         <a href="bootcamp.html">Bootcamp</a>
-                        <a href="events.html">The Stage</a>
+                        <a href="events.html">Stage</a>
                     </div>
 
                     <div class="footer-column">
