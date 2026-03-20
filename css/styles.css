@@ -2486,11 +2486,26 @@ p {
   color: inherit;
   display: block;
   cursor: pointer;
+  position: relative;
+}
+
+.program-item::after {
+  content: "Explore →";
+  display: block;
+  margin-top: var(--space-3);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--serah-purple);
+  transition: transform 0.3s var(--ease-gentle);
 }
 
 .program-item:hover {
   transform: translateY(-5px);
   box-shadow: var(--shadow-large);
+}
+
+.program-item:hover::after {
+  transform: translateX(4px);
 }
 
 .program-item:active {
