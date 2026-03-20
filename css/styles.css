@@ -2004,9 +2004,9 @@ p {
 }
 
 .impact-marquee-track img {
-  width: 260px;
-  height: 170px;
-  aspect-ratio: 260 / 170;
+  width: 380px;
+  height: 250px;
+  aspect-ratio: 380 / 250;
   object-fit: cover;
   border-radius: var(--radius-xl);
   flex-shrink: 0;
@@ -3482,7 +3482,7 @@ p {
 /* Events & Webinars Section */
 .events-webinars {
   padding: var(--space-24) 0;
-  background: var(--warm-white);
+  background: transparent;
 }
 
 .events-section {
@@ -3736,7 +3736,7 @@ p {
 
 /* Newsletter Section */
 .newsletter {
-  padding: var(--space-12) 0 var(--space-24);
+  padding: var(--space-4) 0 var(--space-6);
   background: white;
   color: var(--text-primary);
   position: relative;
@@ -3781,6 +3781,7 @@ p {
   border: none;
   box-shadow: none;
   border-radius: 0;
+  mix-blend-mode: multiply;
 }
 
 .newsletter-gif:hover {
