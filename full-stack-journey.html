@@ -29,6 +29,9 @@
             background: transparent;
             padding: calc(100px + var(--space-12)) var(--space-6) var(--space-12);
             text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             position: relative;
             overflow: hidden;
         }
@@ -186,36 +189,6 @@
             color: var(--text-primary);
         }
 
-        /* Bottom CTA */
-        .program-cta {
-            padding: var(--space-16) 0;
-            background: rgba(255, 255, 255, 0.55);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            text-align: center;
-        }
-
-        .program-cta-content {
-            max-width: 550px;
-            margin: 0 auto;
-        }
-
-        .program-cta h2 {
-            font-family: var(--font-handwritten);
-            font-size: clamp(1.8rem, 5vw, var(--text-4xl));
-            font-weight: 700;
-            color: var(--text-primary);
-            margin-bottom: var(--space-3);
-            transform: rotate(-1deg);
-        }
-
-        .program-cta p {
-            color: var(--text-secondary);
-            font-size: var(--text-base);
-            margin-bottom: var(--space-8);
-            line-height: 1.7;
-        }
-
         @media (max-width: 768px) {
             .program-hero {
                 padding: calc(80px + var(--space-8)) var(--space-4) var(--space-10);
@@ -230,8 +203,7 @@
             }
 
             .program-learn,
-            .program-audience,
-            .program-cta {
+            .program-audience {
                 padding: var(--space-12) 0;
             }
         }
@@ -290,14 +262,14 @@
     <section class="program-hero">
         <div class="program-hero-content">
             <span class="program-label">Academy Program</span>
-            <span class="program-status">October 2024</span>
+            <span class="program-status">Batch 1 · October 2024 – June 2025</span>
             <h1 class="program-title"><span class="highlight">Full-Stack</span> Journey</h1>
             <p class="program-description">
-                Master both frontend and backend to build complete web applications from scratch. HTML, CSS, JavaScript, React, Node.js, databases &mdash; the whole stack, <strong>from zero to deployed</strong>.
+                Students mastered both frontend and backend to build complete web applications from scratch. HTML, CSS, JavaScript, React, Tailwind, Shadcn, Node.js, databases, the whole stack, <strong>from zero to deployed</strong>.
             </p>
             <div class="program-cta-row">
-                <a href="https://forms.gle/EFNc22wrwwbnmgo57" target="_blank" class="btn btn-primary">Join the Waitlist</a>
-                <a href="academy.html" class="btn btn-secondary">All Programs</a>
+                <a href="front-end-program.html" class="btn btn-primary">Front-End Program</a>
+                <a href="pocket-agents.html" class="btn btn-secondary">Pocket Agents</a>
             </div>
         </div>
     </section>
@@ -305,7 +277,7 @@
     <section class="program-learn">
         <div class="container">
             <div class="section-header">
-                <h2 class="handwritten">What you'll learn</h2>
+                <h2 class="handwritten">What was covered</h2>
             </div>
             <div class="learn-grid">
                 <div class="learn-card">
@@ -330,22 +302,12 @@
     <section class="program-audience">
         <div class="container">
             <div class="section-header">
-                <h2 class="handwritten">Who it's for</h2>
+                <h2 class="handwritten">Who it was for</h2>
             </div>
             <div class="audience-content">
                 <p>
-                    <strong>Beginners who want the full picture.</strong> If you've dabbled in HTML or done a few tutorials but never built a complete app from scratch, this is your starting point. We go from the basics to building and deploying a real project &mdash; no shortcuts, no hand-waving.
+                    <strong>Beginners who wanted the full picture.</strong> Students who had dabbled in HTML or done a few tutorials but never built a complete app from scratch. We went from the basics to building and deploying a real project, no shortcuts, no hand-waving.
                 </p>
-            </div>
-        </div>
-    </section>
-
-    <section class="program-cta">
-        <div class="container">
-            <div class="program-cta-content">
-                <h2>Start the journey</h2>
-                <p>Join the waitlist and be the first to know when the next cohort opens. Your full-stack adventure starts here.</p>
-                <a href="https://forms.gle/EFNc22wrwwbnmgo57" target="_blank" class="btn btn-primary">Join the Waitlist</a>
             </div>
         </div>
     </section>

@@ -224,6 +224,42 @@
             color: var(--text-primary);
         }
 
+        /* Testimonials */
+        .bootcamp-testimonials {
+            padding: var(--space-16) 0;
+            background: transparent;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: var(--space-6);
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .testimonial-card {
+            background: white;
+            border-radius: var(--radius-2xl);
+            padding: var(--space-6);
+            box-shadow: var(--shadow-soft);
+        }
+
+        .testimonial-card p {
+            color: var(--text-secondary);
+            font-size: var(--text-sm);
+            line-height: 1.7;
+            font-style: italic;
+            margin-bottom: var(--space-3);
+        }
+
+        .testimonial-card .testimonial-name {
+            font-size: var(--text-sm);
+            font-weight: 600;
+            color: var(--text-primary);
+            font-style: normal;
+        }
+
         /* Bottom CTA */
         .bootcamp-cta {
             padding: var(--space-16) 0;
@@ -271,6 +307,7 @@
 
             .bootcamp-tracks,
             .bootcamp-playlists,
+            .bootcamp-testimonials,
             .bootcamp-cta {
                 padding: var(--space-12) 0;
             }
@@ -328,6 +365,9 @@
     </nav>
 
     <section class="bootcamp-hero">
+        <img src="images/tulip.webp" alt="" loading="lazy" decoding="async" style="position: absolute; right: 6%; top: 18%; width: 20px; opacity: 0.15; filter: blur(1px); pointer-events: none; z-index: 0; animation: float 7s ease-in-out infinite;">
+        <img src="images/cloud2.webp" alt="" loading="lazy" decoding="async" style="position: absolute; left: 8%; bottom: 20%; width: 35px; opacity: 0.14; filter: blur(2px); pointer-events: none; z-index: 0; animation: float 6s ease-in-out infinite reverse;">
+        <img src="images/tiny-star.webp" alt="" loading="lazy" decoding="async" style="position: absolute; left: 12%; top: 25%; width: 18px; opacity: 0.16; filter: blur(1px); pointer-events: none; z-index: 0; animation: float 5s ease-in-out infinite;">
         <div class="bootcamp-hero-content">
             <span class="bootcamp-label">Jul 14 &mdash; 25, 2025</span>
             <h1 class="bootcamp-title">AI Summer <span class="highlight">Sprint Bootcamp</span></h1>
@@ -414,6 +454,43 @@
         </div>
     </section>
 
+    <section class="bootcamp-testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="handwritten">What people said</h2>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <p>"I really enjoyed the bootcamp, it helped me understand more than I knew before so I am grateful for everything."</p>
+                    <span class="testimonial-name">Siidi</span>
+                </div>
+                <div class="testimonial-card">
+                    <p>"I just wanted to thank you for this amazing bootcamp. The guest speakers were phenomenal and it held a lot of valuable information for both levels of experience: beginner and intermediate. I also had fun working on the project, you made me realize my potential. I'm truly thankful for your kindness, hoping to participate again in future events!"</p>
+                    <span class="testimonial-name">Omar</span>
+                </div>
+                <div class="testimonial-card">
+                    <p>"I'm especially grateful for my team, they were supportive, talented, and genuinely fun to work with. The collaboration really made the experience even more meaningful."</p>
+                    <span class="testimonial-name"></span>
+                </div>
+                <div class="testimonial-card">
+                    <p>"Each session was insightful and well-structured, but the sessions with Sarah and Dr. Ammar really stood out to me. They brought valuable knowledge and energy that made learning enjoyable and inspiring. This bootcamp helped me grow both technically and personally. Looking forward to what's next!"</p>
+                    <span class="testimonial-name">Sarah Rashidi</span>
+                </div>
+                <div class="testimonial-card">
+                    <p>"Although I joined the bootcamp a bit late, it was absolutely worth it! I truly appreciated how everything was well-organized, on time, and handled professionally. What stood out most was the continuous support, you're always there for the students and never leave anyone behind when they need help."</p>
+                    <span class="testimonial-name">Fatima Hijazi</span>
+                </div>
+                <div class="testimonial-card">
+                    <p>"As someone from a different major, the bootcamp was very interesting and full of fruitful sessions. Although I took several AI trainings before, I learned a lot of new things here. Overall, it was a really nice experience."</p>
+                    <span class="testimonial-name">Lara Ahmad Damaj</span>
+                </div>
+                <div class="testimonial-card">
+                    <p>"It's been a really valuable experience. I learned a lot in a short time and really appreciated the hands-on approach. The sessions were well structured, and the mentors were super supportive. Thanks again for the opportunity!"</p>
+                    <span class="testimonial-name">Malak</span>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <footer class="footer">
         <div class="container">

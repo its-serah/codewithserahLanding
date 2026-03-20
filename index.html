@@ -55,7 +55,10 @@
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="hero">
+    <section id="home" class="hero" style="position: relative; overflow: hidden;">
+        <img src="images/puffy-star.webp" alt="" loading="lazy" decoding="async" style="position: absolute; right: 4%; bottom: 10%; width: 35px; opacity: 0.15; filter: blur(2px); pointer-events: none; z-index: 0; animation: float 8s ease-in-out infinite;">
+        <img src="images/cloud-stars.webp" alt="" loading="lazy" decoding="async" style="position: absolute; left: 3%; bottom: 20%; width: 30px; opacity: 0.12; filter: blur(2px); pointer-events: none; z-index: 0; animation: float 7s ease-in-out infinite reverse;">
+        <img src="images/tiny-star.webp" alt="" loading="lazy" decoding="async" style="position: absolute; left: 15%; top: 25%; width: 22px; opacity: 0.16; filter: blur(1px); pointer-events: none; z-index: 0; animation: float 5s ease-in-out infinite;">
         <div class="hero-container">
             <div class="hero-content">
                 <h1 class="hero-title fade-in-up">
@@ -97,7 +100,10 @@
     </section>
 
     <!-- Impact Section -->
-    <section id="story" class="impact">
+    <section id="story" class="impact" style="position: relative; overflow: hidden;">
+        <img src="images/cloud2.webp" alt="" loading="lazy" decoding="async" style="position: absolute; left: 5%; bottom: 15%; width: 35px; opacity: 0.14; filter: blur(2px); pointer-events: none; z-index: 0; animation: float 6s ease-in-out infinite reverse;">
+        <img src="images/tulip.webp" alt="" loading="lazy" decoding="async" style="position: absolute; right: 8%; top: 12%; width: 20px; opacity: 0.15; filter: blur(1px); pointer-events: none; z-index: 0; animation: float 7s ease-in-out infinite;">
+        <img src="images/tiny-star.webp" alt="" loading="lazy" decoding="async" style="position: absolute; right: 15%; bottom: 25%; width: 18px; opacity: 0.16; filter: blur(1px); pointer-events: none; z-index: 0; animation: float 5s ease-in-out infinite reverse;">
         <div class="container">
 
             <div class="mv-hero">
@@ -143,48 +149,33 @@
                 </div>
             </div>
 
-            <div style="max-width: 700px; margin: var(--space-16) auto 0; text-align: center;">
-                <h3 class="handwritten" style="color: var(--serah-purple); font-size: clamp(1.8rem, 4vw, 2.8rem); margin-bottom: var(--space-6); transform: rotate(-1deg);">Where It All Started</h3>
-                <p style="color: var(--text-secondary); font-size: var(--text-lg); line-height: 1.9; margin-bottom: var(--space-6);">
-                    Code with Serah was founded on <strong style="color: var(--text-primary);">Ada Lovelace Day, October 13th, 2024</strong> and that wasn't a coincidence. From day one, we've championed women in tech and underrepresented communities in STEAM. We believe inclusive education isn't a bonus. It's a right. Every person deserves access to the tools, mentorship, and opportunities that turn potential into something real.
+            <div style="max-width: 900px; margin: var(--space-16) auto 0; text-align: center; position: relative;">
+                <h3 class="handwritten" style="color: var(--serah-purple); font-size: clamp(2rem, 5vw, 3.5rem); margin-bottom: var(--space-6); transform: rotate(-1deg);">Where It All Started</h3>
+                <p style="color: var(--text-secondary); font-size: var(--text-lg); line-height: 1.8; max-width: 600px; margin: 0 auto var(--space-12);">
+                    Founded on <strong style="color: var(--text-primary);">Ada Lovelace Day, October 13th, 2024</strong>. That wasn't a coincidence.
                 </p>
-                <p style="color: var(--text-secondary); font-size: var(--text-lg); line-height: 1.9;">
-                    That vision grew with us. We noticed that so many of the barriers people face don't start with access. They start with giving up on what makes them <em>them</em>. People abandon their niche, their curiosity, their weird obsessions, just to fit in. We don't agree with that. Code with Serah exists because we believe the world gets better when people <strong style="color: var(--text-primary);">lean into what they love</strong>, not away from it.
-                </p>
+
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: var(--space-8); text-align: left;">
+                    <div style="background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border: 1px solid rgba(123, 44, 191, 0.08); border-radius: var(--radius-2xl); padding: var(--space-10); box-shadow: 0 4px 24px rgba(123, 44, 191, 0.06); position: relative; overflow: visible;">
+                        <p style="font-family: var(--font-handwritten); font-size: var(--text-2xl); color: var(--serah-purple); margin-bottom: var(--space-4); font-weight: 600;">Inclusive by design</p>
+                        <p style="color: var(--text-secondary); font-size: var(--text-base); line-height: 1.9;">
+                            From day one, we've championed women in tech and underrepresented communities in STEAM. Inclusive education isn't a bonus. It's a right. Every person deserves access to the tools, mentorship, and opportunities that turn potential into something real.
+                        </p>
+                        <img src="images/ada-lovelace.webp" alt="Ada Lovelace — Mother of Computers" loading="lazy" decoding="async" style="width: clamp(80px, 15vw, 130px); position: absolute; left: -60px; bottom: -65px; transform: rotate(-6deg); filter: drop-shadow(0 6px 20px rgba(123, 44, 191, 0.18)); pointer-events: none; z-index: 2;">
+                    </div>
+                    <div style="background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border: 1px solid rgba(123, 44, 191, 0.08); border-radius: var(--radius-2xl); padding: var(--space-10); box-shadow: 0 4px 24px rgba(123, 44, 191, 0.06); position: relative; overflow: visible;">
+                        <p style="font-family: var(--font-handwritten); font-size: var(--text-2xl); color: var(--serah-purple); margin-bottom: var(--space-4); font-weight: 600;">Stay weird, stay curious</p>
+                        <p style="color: var(--text-secondary); font-size: var(--text-base); line-height: 1.9;">
+                            So many barriers people face don't start with access. They start with giving up on what makes them <em>them</em>. Code with Serah exists because the world gets better when people <strong style="color: var(--text-primary);">lean into what they love</strong>, not away from it.
+                        </p>
+                        <img src="'Make It Weird' Sticker _ Spreadshirt.jpeg" alt="Make It Weird" loading="lazy" decoding="async" style="width: clamp(60px, 12vw, 90px); position: absolute; right: -25px; top: -25px; transform: rotate(10deg); filter: drop-shadow(0 4px 12px rgba(123, 44, 191, 0.15)); pointer-events: none; z-index: 2; mix-blend-mode: multiply;">
+                    </div>
+                </div>
             </div>
 
         </div>
     </section>
 
-
-    <!-- Partnerships -->
-    <section style="padding: var(--space-16) 0; background: var(--warm-white);">
-        <div class="container" style="max-width: 800px; text-align: center;">
-            <h2 class="handwritten" style="color: var(--serah-purple); font-size: clamp(2rem, 5vw, 3.5rem); margin-bottom: var(--space-4); transform: rotate(-1deg);">The Company We Keep</h2>
-            <p style="color: var(--text-secondary); font-size: var(--text-lg); line-height: 1.8; max-width: 650px; margin: 0 auto var(--space-12);">We've partnered with university clubs, student initiatives, and organizations affiliated with some of the region's top universities. Our speakers come from the same caliber. Industry professionals and academics who don't just talk, they build.</p>
-            <div style="display: flex; align-items: center; justify-content: center; gap: var(--space-6); flex-wrap: wrap; margin-bottom: var(--space-10);">
-                <div style="padding: var(--space-4) var(--space-6); background: white; border-radius: var(--radius-2xl); box-shadow: 0 4px 16px rgba(123, 44, 191, 0.08); border: 1.5px solid rgba(123, 44, 191, 0.06); display: flex; align-items: center; justify-content: center;">
-                    <img src="aub_logo_msfea_horizontal_rgb.webp" alt="AUB MSFEA" style="height: 40px; object-fit: contain;" loading="lazy" decoding="async">
-                </div>
-                <div style="padding: var(--space-4) var(--space-6); background: white; border-radius: var(--radius-2xl); box-shadow: 0 4px 16px rgba(123, 44, 191, 0.08); border: 1.5px solid rgba(123, 44, 191, 0.06); display: flex; align-items: center; justify-content: center;">
-                    <img src="FileRouter.webp" alt="LAU" style="height: 40px; object-fit: contain;" loading="lazy" decoding="async">
-                </div>
-                <div style="padding: var(--space-4) var(--space-6); background: white; border-radius: var(--radius-2xl); box-shadow: 0 4px 16px rgba(123, 44, 191, 0.08); border: 1.5px solid rgba(123, 44, 191, 0.06); display: flex; align-items: center; justify-content: center;">
-                    <img src="Meta-Logo.webp" alt="Meta" style="height: 36px; object-fit: contain;" loading="lazy" decoding="async">
-                </div>
-                <div style="padding: var(--space-4) var(--space-6); background: white; border-radius: var(--radius-2xl); box-shadow: 0 4px 16px rgba(123, 44, 191, 0.08); border: 1.5px solid rgba(123, 44, 191, 0.06); display: flex; align-items: center; justify-content: center;">
-                    <img src="images (7).webp" alt="AUB Suliman S. Olayan School of Business" style="height: 40px; object-fit: contain;" loading="lazy" decoding="async">
-                </div>
-                <div style="padding: var(--space-4) var(--space-6); background: white; border-radius: var(--radius-2xl); box-shadow: 0 4px 16px rgba(123, 44, 191, 0.08); border: 1.5px solid rgba(123, 44, 191, 0.06); display: flex; align-items: center; justify-content: center;">
-                    <img src="LogoVariance (1).webp" alt="Near East University Faculty of AI and Informatics" style="height: 75px; object-fit: contain;" loading="lazy" decoding="async">
-                </div>
-                <div style="padding: var(--space-4) var(--space-6); background: white; border-radius: var(--radius-2xl); box-shadow: 0 4px 16px rgba(123, 44, 191, 0.08); border: 1.5px solid rgba(123, 44, 191, 0.06); display: flex; align-items: center; justify-content: center;">
-                    <img src="LogoVariance (2).webp" alt="Near East University International Research Center for AI and IoT" style="height: 75px; object-fit: contain;" loading="lazy" decoding="async">
-                </div>
-            </div>
-            <p style="color: var(--text-light); font-size: var(--text-base); font-style: italic;">When people hear Code with Serah, they already know what to expect.</p>
-        </div>
-    </section>
 
     <!-- Bootcamp Section -->
     <section id="bootcamp" class="homepage-bootcamp">
@@ -222,6 +213,35 @@
             <div class="homepage-bootcamp-footer">
                 <a href="events.html" class="btn btn-primary homepage-stage-btn">View All Events</a>
             </div>
+        </div>
+    </section>
+
+    <!-- Partnerships -->
+    <section style="padding: var(--space-24) 0; background: var(--warm-white);">
+        <div class="container" style="max-width: 800px; text-align: center;">
+            <h2 class="handwritten" style="color: var(--serah-purple); font-size: clamp(2rem, 5vw, 3.5rem); margin-bottom: var(--space-4); transform: rotate(-1deg);">The Company We Keep</h2>
+            <p style="color: var(--text-secondary); font-size: var(--text-lg); line-height: 1.8; max-width: 650px; margin: 0 auto var(--space-12);">We've partnered with university clubs, student initiatives, and organizations affiliated with some of the region's top universities. Our speakers come from the same caliber. Industry professionals and academics who don't just talk, they build.</p>
+            <div style="display: flex; align-items: center; justify-content: center; gap: var(--space-6); flex-wrap: wrap; margin-bottom: var(--space-10);">
+                <div style="padding: var(--space-4) var(--space-6); background: white; border-radius: var(--radius-2xl); box-shadow: 0 4px 16px rgba(123, 44, 191, 0.08); border: 1.5px solid rgba(123, 44, 191, 0.06); display: flex; align-items: center; justify-content: center;">
+                    <img src="aub_logo_msfea_horizontal_rgb.webp" alt="AUB MSFEA" style="height: 40px; object-fit: contain;" loading="lazy" decoding="async">
+                </div>
+                <div style="padding: var(--space-4) var(--space-6); background: white; border-radius: var(--radius-2xl); box-shadow: 0 4px 16px rgba(123, 44, 191, 0.08); border: 1.5px solid rgba(123, 44, 191, 0.06); display: flex; align-items: center; justify-content: center;">
+                    <img src="FileRouter.webp" alt="LAU" style="height: 40px; object-fit: contain;" loading="lazy" decoding="async">
+                </div>
+                <div style="padding: var(--space-4) var(--space-6); background: white; border-radius: var(--radius-2xl); box-shadow: 0 4px 16px rgba(123, 44, 191, 0.08); border: 1.5px solid rgba(123, 44, 191, 0.06); display: flex; align-items: center; justify-content: center;">
+                    <img src="Meta-Logo.webp" alt="Meta" style="height: 36px; object-fit: contain;" loading="lazy" decoding="async">
+                </div>
+                <div style="padding: var(--space-4) var(--space-6); background: white; border-radius: var(--radius-2xl); box-shadow: 0 4px 16px rgba(123, 44, 191, 0.08); border: 1.5px solid rgba(123, 44, 191, 0.06); display: flex; align-items: center; justify-content: center;">
+                    <img src="images (7).webp" alt="AUB Suliman S. Olayan School of Business" style="height: 40px; object-fit: contain;" loading="lazy" decoding="async">
+                </div>
+                <div style="padding: var(--space-4) var(--space-6); background: white; border-radius: var(--radius-2xl); box-shadow: 0 4px 16px rgba(123, 44, 191, 0.08); border: 1.5px solid rgba(123, 44, 191, 0.06); display: flex; align-items: center; justify-content: center;">
+                    <img src="LogoVariance (3).webp" alt="Near East University Faculty of AI and Informatics" style="height: 40px; object-fit: contain;" loading="lazy" decoding="async">
+                </div>
+                <div style="padding: var(--space-4) var(--space-6); background: white; border-radius: var(--radius-2xl); box-shadow: 0 4px 16px rgba(123, 44, 191, 0.08); border: 1.5px solid rgba(123, 44, 191, 0.06); display: flex; align-items: center; justify-content: center;">
+                    <img src="LogoVariance (4).webp" alt="Near East University International Research Center for AI and IoT" style="height: 40px; object-fit: contain;" loading="lazy" decoding="async">
+                </div>
+            </div>
+            <p style="color: var(--text-light); font-size: var(--text-base); font-style: italic;">When people hear Code with Serah, they already know what to expect.</p>
         </div>
     </section>
 
@@ -348,17 +368,17 @@
                 <a href="full-stack-journey.html" class="program-item">
                     <div class="program-header">
                         <h3>Full-Stack Journey</h3>
-                        <span class="program-date">October 2024 – July 2025</span>
+                        <span class="program-date">Batch 1 · Oct 2024 – Jun 2025</span>
                     </div>
-                    <p class="program-oneliner">Master both frontend and backend to build complete web applications from scratch.</p>
+                    <p class="program-oneliner">Students mastered both frontend and backend to build complete web applications from scratch.</p>
                 </a>
 
                 <a href="front-end-program.html" class="program-item">
                     <div class="program-header">
                         <h3>Front-End Program</h3>
-                        <span class="program-date">October 2024 – July 2025</span>
+                        <span class="program-date">Batch 1 · Oct 2024 – Jun 2025</span>
                     </div>
-                    <p class="program-oneliner">Learn to create beautiful, responsive user interfaces that users love.</p>
+                    <p class="program-oneliner">Students learned to create beautiful, responsive user interfaces that users love.</p>
                 </a>
             </div>
 
