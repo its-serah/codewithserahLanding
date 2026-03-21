@@ -2095,19 +2095,19 @@ p {
 
   .bento-board {
     grid-template-columns: repeat(3, 1fr);
-    grid-auto-rows: auto;
+    grid-auto-rows: 110px;
     gap: 10px;
   }
 
   .bento-pin img {
     width: 100%;
-    height: auto;
-    object-fit: contain;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
   }
 
   .bento-pin--stat {
     padding: var(--space-6) var(--space-3);
-    aspect-ratio: 1 / 1;
   }
 
   .bento-pin__value {
@@ -2122,7 +2122,7 @@ p {
 @media (max-width: 480px) {
   .bento-board {
     grid-template-columns: repeat(3, 1fr);
-    grid-auto-rows: auto;
+    grid-auto-rows: 100px;
     gap: 6px;
   }
 
@@ -2132,13 +2132,13 @@ p {
 
   .bento-pin img {
     width: 100%;
-    height: auto;
-    object-fit: contain;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
   }
 
   .bento-pin--stat {
     padding: var(--space-4) var(--space-2);
-    aspect-ratio: 1 / 1;
   }
 
   .bento-pin__value {
@@ -5977,15 +5977,18 @@ textarea::placeholder {
 /* Mobile fixes — story floats, partners grid */
 @media (max-width: 768px) {
   .story-float-img {
-    position: relative !important;
-    left: auto !important;
-    right: auto !important;
-    top: auto !important;
-    bottom: auto !important;
-    display: block;
-    margin: var(--space-4) auto 0;
-    width: 80px !important;
-    transform: rotate(0deg) !important;
+    width: 60px !important;
+    opacity: 0.8;
+  }
+
+  .story-float-img:first-of-type {
+    left: -10px !important;
+    bottom: -20px !important;
+  }
+
+  .story-float-img:last-of-type {
+    right: -10px !important;
+    top: -20px !important;
   }
 
   .partners-grid {
@@ -5996,6 +5999,11 @@ textarea::placeholder {
 
   .partners-grid > div {
     padding: var(--space-3) var(--space-4) !important;
+  }
+
+  .partners-grid > div:last-child {
+    grid-column: 1 / -1;
+    justify-self: center;
   }
 
   .partners-grid img {
