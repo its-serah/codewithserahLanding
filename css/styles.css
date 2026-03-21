@@ -2095,18 +2095,12 @@ p {
 
   .bento-board {
     grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-  }
-
-  .bento-pin img {
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-    display: block;
+    grid-auto-rows: 75px;
+    gap: 8px;
   }
 
   .bento-pin--stat {
-    padding: var(--space-4) var(--space-3);
+    padding: var(--space-3) var(--space-2);
   }
 
   .bento-pin__value {
@@ -2121,6 +2115,7 @@ p {
 @media (max-width: 480px) {
   .bento-board {
     grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 65px;
     gap: 6px;
   }
 
@@ -2128,15 +2123,8 @@ p {
     border-radius: 12px;
   }
 
-  .bento-pin img {
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-    display: block;
-  }
-
   .bento-pin--stat {
-    padding: var(--space-3) var(--space-2);
+    padding: var(--space-2) var(--space-1);
   }
 
   .bento-pin__value {
