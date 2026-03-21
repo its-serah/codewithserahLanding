@@ -3044,6 +3044,7 @@ p {
 
 .become-ambassador {
   text-align: center;
+  margin-top: var(--space-12);
 }
 
 .cta-card {
@@ -6021,20 +6022,20 @@ textarea::placeholder {
 @media (max-width: 768px) {
   .story-float-ada {
     width: 75px !important;
-    right: auto !important;
+    left: auto !important;
     bottom: auto !important;
-    left: -10px !important;
+    right: -10px !important;
     top: -25px !important;
-    transform: rotate(-6deg) !important;
+    transform: rotate(6deg) !important;
   }
 
   .story-float-weird {
     width: 85px !important;
     top: auto !important;
-    left: auto !important;
-    right: -10px !important;
+    right: auto !important;
+    left: -10px !important;
     bottom: -25px !important;
-    transform: rotate(6deg) !important;
+    transform: rotate(-6deg) !important;
   }
 
   .partners-grid {
