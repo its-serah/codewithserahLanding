@@ -5084,7 +5084,12 @@ p {
   .footer-links {
     grid-template-columns: repeat(3, 1fr);
     gap: var(--space-4);
-    text-align: left;
+    text-align: center;
+  }
+
+  .footer-column a:hover {
+    transform: none;
+    padding-left: 0;
   }
 
   .footer-bottom {
