@@ -2103,7 +2103,7 @@ p {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: top;
+    object-position: center top;
   }
 
   .bento-pin--stat {
@@ -2134,7 +2134,7 @@ p {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: top;
+    object-position: center top;
   }
 
   .bento-pin--stat {
@@ -5976,19 +5976,20 @@ textarea::placeholder {
 
 /* Mobile fixes — story floats, partners grid */
 @media (max-width: 768px) {
-  .story-float-img {
-    width: 60px !important;
-    opacity: 0.8;
+  .story-float-ada {
+    width: 75px !important;
+    left: -15px !important;
+    bottom: -25px !important;
+    transform: rotate(-4deg) !important;
   }
 
-  .story-float-img:first-of-type {
-    left: -10px !important;
-    bottom: -20px !important;
-  }
-
-  .story-float-img:last-of-type {
-    right: -10px !important;
-    top: -20px !important;
+  .story-float-weird {
+    width: 85px !important;
+    right: auto !important;
+    top: auto !important;
+    left: -15px !important;
+    bottom: -25px !important;
+    transform: rotate(-6deg) !important;
   }
 
   .partners-grid {
