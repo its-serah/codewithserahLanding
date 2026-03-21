@@ -2788,7 +2788,7 @@ p {
 .ambassadors-grid {
   display: flex;
   gap: var(--space-8);
-  margin-bottom: var(--space-16);
+  margin-bottom: 0;
   overflow-x: auto;
   overflow-y: hidden;
   scroll-snap-type: x mandatory;
@@ -2809,13 +2809,14 @@ p {
 /* Carousel Controls */
 .ambassadors-carousel-wrapper {
   position: relative;
-  margin-bottom: var(--space-16);
+  display: flex;
+  align-items: center;
+  margin-bottom: var(--space-32);
 }
 
 .carousel-arrow {
   position: absolute;
-  top: 25%;
-  transform: translateY(-50%);
+  flex-shrink: 0;
   background: linear-gradient(
     135deg,
     rgba(123, 44, 191, 0.95),
@@ -2843,7 +2844,7 @@ p {
     rgba(168, 85, 247, 1)
   );
   border-color: rgba(255, 255, 255, 0.5);
-  transform: translateY(-50%) scale(1.15);
+  transform: scale(1.15);
   box-shadow: 0 6px 30px rgba(123, 44, 191, 0.5);
 }
 
