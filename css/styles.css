@@ -2095,15 +2095,19 @@ p {
 
   .bento-board {
     grid-template-columns: repeat(3, 1fr);
-    grid-auto-rows: 110px;
     gap: 10px;
+  }
+
+  .bento-pin {
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
   }
 
   .bento-pin img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center top;
+    object-position: center;
   }
 
   .bento-pin--stat {
@@ -2122,19 +2126,20 @@ p {
 @media (max-width: 480px) {
   .bento-board {
     grid-template-columns: repeat(3, 1fr);
-    grid-auto-rows: 100px;
     gap: 6px;
   }
 
   .bento-pin {
     border-radius: 12px;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
   }
 
   .bento-pin img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center top;
+    object-position: center;
   }
 
   .bento-pin--stat {
@@ -5978,18 +5983,20 @@ textarea::placeholder {
 @media (max-width: 768px) {
   .story-float-ada {
     width: 75px !important;
-    left: -15px !important;
-    bottom: -25px !important;
-    transform: rotate(-4deg) !important;
+    left: auto !important;
+    bottom: auto !important;
+    right: -10px !important;
+    top: -25px !important;
+    transform: rotate(6deg) !important;
   }
 
   .story-float-weird {
     width: 85px !important;
-    right: auto !important;
     top: auto !important;
-    left: -15px !important;
+    left: auto !important;
+    right: -10px !important;
     bottom: -25px !important;
-    transform: rotate(-6deg) !important;
+    transform: rotate(6deg) !important;
   }
 
   .partners-grid {
