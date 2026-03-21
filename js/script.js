@@ -364,53 +364,27 @@
 
       var enteredEmail = email.value.trim();
 
-      // Create popup overlay
-      var overlay = document.createElement("div");
-      overlay.className = "newsletter-popup-overlay";
-
-      var popup = document.createElement("div");
-      popup.className = "newsletter-popup";
-
-      var closeBtn = document.createElement("button");
-      closeBtn.className = "newsletter-popup-close";
-      closeBtn.innerHTML = "&times;";
-      closeBtn.addEventListener("click", function () {
-        overlay.remove();
-      });
-
-      overlay.addEventListener("click", function (e) {
-        if (e.target === overlay) overlay.remove();
-      });
-
-      var content = document.createElement("div");
-      content.className = "newsletter-popup-content";
-
-      // Load the ConvertKit form script
-      var script = document.createElement("script");
-      script.async = true;
-      script.setAttribute("data-uid", "ce252b6cee");
-      script.src = "https://code-with-serah.kit.com/ce252b6cee/index.js";
-
-      popup.appendChild(closeBtn);
-      popup.appendChild(content);
-      content.appendChild(script);
-      overlay.appendChild(popup);
-      document.body.appendChild(overlay);
-
-      // Pre-fill the email once the ConvertKit form loads
-      var attempts = 0;
-      var prefillInterval = setInterval(function () {
-        var ckEmailInput = overlay.querySelector(
-          'input[type="email"], input[name="email_address"]',
-        );
-        if (ckEmailInput) {
-          ckEmailInput.value = enteredEmail;
-          ckEmailInput.dispatchEvent(new Event("input", { bubbles: true }));
-          clearInterval(prefillInterval);
-        }
-        attempts++;
-        if (attempts > 40) clearInterval(prefillInterval);
-      }, 250);
+      // Open Kit form in a centered popup window with email pre-filled
+      var url =
+        "https://code-with-serah.kit.com/ce252b6cee?email_address=" +
+        encodeURIComponent(enteredEmail);
+      var w = 600;
+      var h = 700;
+      var left = (screen.width - w) / 2;
+      var top = (screen.height - h) / 2;
+      window.open(
+        url,
+        "newsletter",
+        "width=" +
+          w +
+          ",height=" +
+          h +
+          ",left=" +
+          left +
+          ",top=" +
+          top +
+          ",scrollbars=yes",
+      );
 
       email.value = "";
     });
