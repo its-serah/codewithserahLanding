@@ -4594,7 +4594,7 @@ p {
 
 .footer-message p {
   color: var(--pastel-yellow);
-  font-size: var(--text-lg);
+  font-size: var(--text-2xl);
   margin: 0;
   transform: rotate(1deg);
 }
