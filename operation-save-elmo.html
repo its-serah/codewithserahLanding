@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Operation Save ELMO — Code with Serah</title>
-    <meta name="description" content="Operation Save ELMO (OSE) — A 5-week hands-on Agentic AI program by Code with Serah. Learn to build and deploy AI agents with Claude. Starts April 22nd. Certificate included.">
+    <meta name="description" content="Operation Save ELMO (OSE) — A 5-week hands-on Agentic AI program by Code with Serah. Build and deploy AI agents with Claude and Google ADK. Starts April 22nd. Certificate included.">
     <link rel="icon" type="image/png" href="images/logo.webp" media="(prefers-color-scheme: light)">
     <link rel="icon" type="image/png" href="LogoVariance.webp" media="(prefers-color-scheme: dark)">
 
@@ -230,6 +230,54 @@
             font-weight: 700;
             flex-shrink: 0;
         }
+
+        .program-prereqs {
+            margin-bottom: var(--space-12);
+        }
+
+        .program-prereqs h2 {
+            font-size: var(--text-3xl);
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: var(--space-6);
+            text-align: center;
+        }
+
+        .program-prereqs p {
+            color: var(--text-secondary);
+            font-size: var(--text-lg);
+            line-height: 1.8;
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto var(--space-8);
+        }
+
+        .prereqs-list {
+            list-style: none;
+            padding: 0;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .prereqs-list li {
+            color: var(--text-secondary);
+            font-size: var(--text-lg);
+            padding: var(--space-3) 0;
+            border-bottom: 1px solid var(--glass-border, rgba(255,255,255,0.06));
+            display: flex;
+            align-items: center;
+            gap: var(--space-3);
+        }
+
+        .prereqs-list li:last-child {
+            border-bottom: none;
+        }
+
+        .prereqs-list .prereq-icon {
+            color: #d97706;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
     </style>
 </head>
 <body>
@@ -272,7 +320,7 @@
             <h1 class="program-title">Operation <span class="highlight">Save ELMO</span></h1>
 
             <p class="program-body">
-                A <strong>5-week hands-on program</strong> where you'll learn to build, deploy, and work with AI agents using <strong>Claude</strong>. If you were at the Winter Sprint Bootcamp, you know ELMO has been on quite the journey. This time, <strong>you're part of the rescue mission</strong> and you'll be using Agentic AI to do it.
+                A <strong>5-week hands-on program</strong> where you'll learn to build, deploy, and work with AI agents using <strong>Claude and Google ADK</strong>. If you were at the Winter Sprint Bootcamp, you know ELMO has been on quite the journey. This time, <strong>you're part of the rescue mission</strong> and you'll be using Agentic AI to do it.
             </p>
         </div>
     </section>
@@ -304,16 +352,29 @@
         <div class="program-what">
             <h2>What You'll Learn</h2>
             <p>
-                OSE is all about <strong>Agentic AI</strong>, the next frontier of AI where models don't just answer questions, they take action. You'll get hands-on experience building and working with AI agents powered by <strong>Claude</strong>, from the ground up.
+                OSE is all about <strong>Agentic AI</strong>, the next frontier of AI where models don't just answer questions, they take action. You'll get hands-on experience building and working with AI agents powered by <strong>Claude and Google ADK</strong>, from the ground up.
             </p>
 
             <ul class="highlights-list">
                 <li><span class="check"><i class="fas fa-check"></i></span> Understand how AI agents work and why they matter</li>
-                <li><span class="check"><i class="fas fa-check"></i></span> Build your own agents with Claude that can reason, plan, and execute tasks</li>
-                <li><span class="check"><i class="fas fa-check"></i></span> Work with real tools, APIs, and agentic frameworks</li>
+                <li><span class="check"><i class="fas fa-check"></i></span> Build agents with Claude and Google ADK</li>
+                <li><span class="check"><i class="fas fa-check"></i></span> Work with real tools, APIs, and protocols like MCP, A2A, and AG-UI</li>
                 <li><span class="check"><i class="fas fa-check"></i></span> Hands on projects, no theory only fluff</li>
                 <li><span class="check"><i class="fas fa-check"></i></span> Learn to deploy and manage agents in real workflows</li>
                 <li><span class="check"><i class="fas fa-check"></i></span> Certificate of completion at the end of the program</li>
+            </ul>
+        </div>
+
+        <div class="program-prereqs">
+            <h2>Prerequisites</h2>
+            <p>
+                OSE picks up where the Winter Sprint Bootcamp left off. To get the most out of this program, make sure you've covered these basics first.
+            </p>
+
+            <ul class="prereqs-list">
+                <li><span class="prereq-icon"><i class="fas fa-exclamation-circle"></i></span> Familiarity with at least one programming language, preferably Python</li>
+                <li><span class="prereq-icon"><i class="fas fa-exclamation-circle"></i></span> Watch the Winter Sprint Bootcamp AI sessions</li>
+                <li><span class="prereq-icon"><i class="fas fa-exclamation-circle"></i></span> Watch the Winter Sprint Bootcamp Software Engineering sessions</li>
             </ul>
         </div>
 
