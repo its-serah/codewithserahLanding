@@ -1,12 +1,10 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="color-scheme" content="light">
-    <meta name="supported-color-schemes" content="light">
-    <title>Code with Serah - Bi-Monthly Newsletter</title>
+    <title>April Newsletter - Code with Serah</title>
     <!--[if mso]>
     <noscript>
         <xml>
@@ -16,368 +14,353 @@
         </xml>
     </noscript>
     <![endif]-->
-    <style type="text/css">
-        /* Reset */
+    <style>
         body, table, td, a { -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
         table, td { mso-table-lspace: 0pt; mso-table-rspace: 0pt; }
-        img { -ms-interpolation-mode: bicubic; border: 0; height: auto; line-height: 100%; outline: none; text-decoration: none; }
+        img { -ms-interpolation-mode: bicubic; border: 0; outline: none; text-decoration: none; }
         body { margin: 0; padding: 0; width: 100% !important; height: 100% !important; }
-        a[x-apple-data-detectors] { color: inherit !important; text-decoration: none !important; font-size: inherit !important; font-family: inherit !important; font-weight: inherit !important; line-height: inherit !important; }
-        @media only screen and (max-width: 620px) {
-            .email-container { width: 100% !important; max-width: 100% !important; }
-            .fluid { max-width: 100% !important; height: auto !important; }
-            .stack-column { display: block !important; width: 100% !important; max-width: 100% !important; }
-            .stack-column-center { text-align: center !important; }
-            .center-on-narrow { text-align: center !important; display: block !important; margin-left: auto !important; margin-right: auto !important; float: none !important; }
-            table.center-on-narrow { display: inline-block !important; }
-            .padding-mobile { padding-left: 20px !important; padding-right: 20px !important; }
+
+        @media only screen and (max-width: 600px) {
+            .email-container { width: 100% !important; max-width: 100% !important; border-radius: 0 !important; }
+            .pad { padding-left: 18px !important; padding-right: 18px !important; }
+            .pad-mobile-sm { padding: 22px 18px !important; }
+            .hero-title { font-size: 24px !important; line-height: 30px !important; }
+            .section-title { font-size: 20px !important; }
+            .stat-cell { display: block !important; width: 100% !important; padding: 6px 0 !important; }
+            .stack-block { display: block !important; width: 100% !important; padding: 0 0 12px 0 !important; }
+            .social-pill { display: inline-block !important; margin: 4px 3px !important; }
+            .social-cell { display: block !important; width: 100% !important; padding: 0 !important; text-align: center !important; }
+            .cta-btn { display: block !important; width: auto !important; padding: 14px 24px !important; font-size: 14px !important; }
+            .date-box { width: 48px !important; }
+            .body-text { font-size: 15px !important; line-height: 26px !important; }
+            .card-pad { padding: 16px !important; }
         }
     </style>
 </head>
-<body style="margin: 0; padding: 0; background-color: #f7f3e9; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+<body style="margin: 0; padding: 0; background-color: #f7f3e9; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">
 
-    <!-- Pre-header text (hidden, shows in email preview) -->
-    <div style="display: none; font-size: 1px; line-height: 1px; max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden; mso-hide: all;">
-        Your bi-monthly update from Code with Serah. Winter Sprint recap, community updates, safety first, and more.
+    <!-- Preheader -->
+    <div style="display: none; max-height: 0; overflow: hidden; font-size: 1px; line-height: 1px; color: #f7f3e9;">
+        We're back! All Code with Serah activities resume April 15th. Plus: Operation Save ELMO returns.
+        &zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
     </div>
 
-    <!-- Background wrapper -->
+    <!-- Layout placeholder (required by email platform) -->
+    <div style="display: none; max-height: 0; overflow: hidden;">{{ message_content }}</div>
+
+    <!-- Wrapper — beige bg like the site -->
     <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="background-color: #f7f3e9;">
     <tr>
-    <td align="center" style="padding: 20px 10px;">
+    <td align="center" style="padding: 20px 16px 16px;">
 
-        <!-- Email container -->
-        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="600" class="email-container" style="max-width: 600px; margin: 0 auto;">
+        <!-- ═══════════════════════════════════════ -->
+        <!-- MAIN CARD — warm white like the site    -->
+        <!-- ═══════════════════════════════════════ -->
+        <table class="email-container" role="presentation" cellspacing="0" cellpadding="0" border="0" width="580" style="max-width: 580px; width: 100%; background-color: #fefcf7; border-radius: 20px; overflow: hidden;">
 
-            <!-- ====== HEADER BANNER ====== -->
+            <!-- HERO BANNER -->
             <tr>
-                <td style="padding: 0; text-align: center; background-color: #f7f3e9; border-radius: 24px 24px 0 0;">
-                    <img src="https://i.imgur.com/y56c1z7.png" alt="Code with Serah - Welcome to our Monthly Newsletter" width="600" style="display: block; width: 100%; max-width: 600px; height: auto; border-radius: 24px 24px 0 0;" loading="lazy" decoding="async">
+                <td align="center" style="padding: 0; line-height: 0;">
+                    <img src="https://i.imgur.com/43uGva3.png" alt="Code with Serah April Newsletter" width="580" style="display: block; width: 100%; max-width: 580px; height: auto; border-radius: 20px 20px 0 0;">
                 </td>
             </tr>
 
-            <!-- ====== PERSONAL NOTE / SAFETY MESSAGE ====== -->
+            <!-- ─── ANNOUNCEMENT ─── -->
             <tr>
-                <td style="background-color: #f7f3e9; padding: 40px 40px 32px;" class="padding-mobile">
-                    <p style="margin: 0 0 16px; font-size: 18px; color: #2d1b4e; font-weight: 700;">Hey there,</p>
-                    <p style="margin: 0; font-size: 15px; color: #4a5568; line-height: 1.7;">Before we get into the updates, we want to check in on <strong style="color: #2d1b4e;">you</strong>. We know things have been incredibly difficult, and your safety and well-being come first. Always. We hope you and your families are safe. We're thinking of every single one of you, and we're here. Whenever you're ready, however you need us. Take care of yourselves first. Everything else can wait.</p>
+                <td class="pad" style="padding: 0 40px 32px;">
+                    <p style="margin: 0 0 16px; font-size: 16px; line-height: 28px; color: #2d1b4e;">Hey friend,</p>
+                    <p style="margin: 0 0 16px; font-size: 16px; line-height: 28px; color: #4a5568;">We took a little breather. Now we're back, and we missed you.</p>
+                    <p style="margin: 0 0 16px; font-size: 16px; line-height: 28px; color: #4a5568;">From <strong style="color: #7b2cbf;">April 15th</strong>, everything kicks off again. All your favorites, plus a few things we've been quietly cooking up.</p>
+                    <p style="margin: 0 0 16px; font-size: 16px; line-height: 28px; color: #4a5568;">And yes, <strong style="color: #2d1b4e;">Operation Save ELMO (OSE)</strong> is officially back. Registrations are still open but spots are going fast. If you've been on the fence, this is your sign. It's for people who'd rather build something than talk about building something.</p>
+
+                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin: 24px 0 0;">
+                        <tr>
+                            <td align="center">
+                                <a href="https://codewithserah.com/operation-save-elmo.html" style="display: inline-block; padding: 14px 36px; background-color: #7b2cbf; color: #ffffff; font-size: 15px; font-weight: 600; text-decoration: none; border-radius: 50px;">Learn More &amp; Register &rarr;</a>
+                            </td>
+                        </tr>
+                    </table>
                 </td>
             </tr>
 
-            <!-- Divider -->
-            <tr>
-                <td style="background-color: #f7f3e9; padding: 0 40px;" class="padding-mobile">
-                    <hr style="border: none; border-top: 2px solid #f3e8ff; margin: 0;">
-                </td>
-            </tr>
+            <!-- ─── DIVIDER ─── -->
+            <tr><td style="padding: 0 40px;"><div style="height: 1px; background-color: #ede5d3;"></div></td></tr>
 
-            <!-- ====== EVENTS & WEBINARS PAUSED ====== -->
+            <!-- ─── SERAH'S PICKS ─── -->
             <tr>
-                <td style="background-color: #f7f3e9; padding: 32px 40px;" class="padding-mobile">
+                <td class="pad" style="padding: 32px 40px 28px;">
+                    <p style="margin: 0 0 4px; font-size: 12px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: #9d4edd;">Curated</p>
+                    <h2 style="margin: 0 0 18px; font-size: 22px; font-weight: 700; color: #2d1b4e;">Serah's Picks</h2>
+
+                    <!-- Pick 1: PURE Sabancı -->
+                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin-bottom: 10px;">
+                        <tr><td style="background-color: #f3e8ff; border-radius: 12px; padding: 18px 20px;">
+                            <p style="margin: 0 0 6px; font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: #9d4edd;">Summer Research &bull; Turkey</p>
+                            <p style="margin: 0 0 8px; font-size: 16px; font-weight: 700; color: #2d1b4e;">PURE: Program for Undergraduate Research</p>
+                            <p style="margin: 0 0 10px; font-size: 14px; line-height: 22px; color: #4a5568;">7-week summer research program at <strong>Sabancı University</strong> in Istanbul.</p>
+                            <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin-bottom: 12px;">
+                                <tr><td style="font-size: 13px; line-height: 22px; color: #4a5568;">
+                                    <strong style="color: #2d1b4e;">Host:</strong> Sabancı University, Istanbul<br>
+                                    <strong style="color: #2d1b4e;">Duration:</strong> 7 Weeks &bull; <strong style="color: #2d1b4e;">Type:</strong> Summer Research<br>
+                                    <strong style="color: #2d1b4e;">Deadline:</strong> <span style="color: #b91c1c;">28 April 2026</span>
+                                </td></tr>
+                            </table>
+                            <a href="https://pure.sabanciuniv.edu/" style="display: inline-block; padding: 8px 20px; background-color: #7b2cbf; color: #ffffff; font-size: 13px; font-weight: 600; text-decoration: none; border-radius: 50px;">Apply &rarr;</a>
+                        </td></tr>
+                    </table>
+
+                    <!-- Pick 2: WTO Young Professionals -->
+                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin-bottom: 10px;">
+                        <tr><td style="background-color: #fff8e1; border-radius: 12px; padding: 18px 20px;">
+                            <p style="margin: 0 0 6px; font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: #c98a00;">Fully Funded &bull; Switzerland</p>
+                            <p style="margin: 0 0 8px; font-size: 16px; font-weight: 700; color: #2d1b4e;">WTO Young Professionals Program 2027</p>
+                            <p style="margin: 0 0 10px; font-size: 14px; line-height: 22px; color: #4a5568;">1-year paid professional program with the <strong>World Trade Organization</strong> in Geneva.</p>
+                            <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin-bottom: 12px;">
+                                <tr><td style="font-size: 13px; line-height: 22px; color: #4a5568;">
+                                    <strong style="color: #2d1b4e;">Organization:</strong> World Trade Organization<br>
+                                    <strong style="color: #2d1b4e;">Location:</strong> Geneva &bull; <strong style="color: #2d1b4e;">Duration:</strong> 1 Year<br>
+                                    <strong style="color: #2d1b4e;">Type:</strong> Paid Professional Program<br>
+                                    <strong style="color: #2d1b4e;">Deadline:</strong> <span style="color: #b91c1c;">7 May 2026</span>
+                                </td></tr>
+                            </table>
+                            <a href="https://wto.wd103.myworkdayjobs.com/en-US/External/job/CWR/Young-Professionals_JR104137" style="display: inline-block; padding: 8px 20px; background-color: #7b2cbf; color: #ffffff; font-size: 13px; font-weight: 600; text-decoration: none; border-radius: 50px;">Apply &rarr;</a>
+                        </td></tr>
+                    </table>
+
+                    <!-- Pick 3: Microsoft University Internship -->
                     <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
-                        <tr>
-                            <td style="width: 48px; vertical-align: top; padding-right: 16px;">
-                                <div style="width: 44px; height: 44px; background-color: #fff8e1; border-radius: 50%; text-align: center; line-height: 44px; font-size: 20px; font-weight: 700; color: #e6c200;">!</div>
-                            </td>
-                            <td style="vertical-align: top;">
-                                <h2 style="margin: 0 0 12px; font-size: 20px; color: #2d1b4e; font-weight: 700;">Events &amp; Webinars: Temporarily Paused</h2>
-                                <p style="margin: 0; font-size: 15px; color: #4a5568; line-height: 1.7;">We've made the decision to <strong style="color: #2d1b4e;">pause all upcoming events and webinars</strong> until further notice. Your safety matters more to us than any workshop, webinar, or deadline ever could. We'll be back the moment it's right. Until then, please focus on what matters most: your safety and your loved ones.</p>
-                            </td>
-                        </tr>
+                        <tr><td style="background-color: #ffe5cc; border-radius: 12px; padding: 18px 20px;">
+                            <p style="margin: 0 0 6px; font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: #e07c3e;">Paid + Visa Sponsorship &bull; Global</p>
+                            <p style="margin: 0 0 8px; font-size: 16px; font-weight: 700; color: #2d1b4e;">Microsoft University Internship 2026</p>
+                            <p style="margin: 0 0 10px; font-size: 14px; line-height: 22px; color: #4a5568;">Paid internships at <strong>Microsoft</strong> with visa sponsorship for eligible candidates.</p>
+                            <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin-bottom: 12px;">
+                                <tr><td style="font-size: 13px; line-height: 22px; color: #4a5568;">
+                                    <strong style="color: #2d1b4e;">Company:</strong> Microsoft<br>
+                                    <strong style="color: #2d1b4e;">Location:</strong> Multiple countries<br>
+                                    <strong style="color: #2d1b4e;">Duration:</strong> Typically 8 to 12 weeks<br>
+                                    <strong style="color: #2d1b4e;">Mode:</strong> On-site / Hybrid / Remote (varies by role)
+                                </td></tr>
+                            </table>
+                            <a href="https://careers.microsoft.com/v2/global/en/universityinternship" style="display: inline-block; padding: 8px 20px; background-color: #7b2cbf; color: #ffffff; font-size: 13px; font-weight: 600; text-decoration: none; border-radius: 50px;">Apply &rarr;</a>
+                        </td></tr>
                     </table>
                 </td>
             </tr>
 
-            <!-- Divider -->
+            <!-- ─── DIVIDER ─── -->
+            <tr><td style="padding: 0 40px;"><div style="height: 1px; background-color: #ede5d3;"></div></td></tr>
+
+            <!-- ─── WHAT'S COMING UP ─── -->
             <tr>
-                <td style="background-color: #f7f3e9; padding: 0 40px;" class="padding-mobile">
-                    <hr style="border: none; border-top: 2px solid #f3e8ff; margin: 0;">
-                </td>
-            </tr>
+                <td class="pad" style="padding: 32px 40px 32px;">
+                    <p style="margin: 0 0 4px; font-size: 12px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: #9d4edd;">Mark Your Calendar</p>
+                    <h2 style="margin: 0 0 18px; font-size: 22px; font-weight: 700; color: #2d1b4e;">What's Coming Up</h2>
 
-            <!-- ====== WINTER SPRINT BOOTCAMP RECAP ====== -->
-            <tr>
-                <td style="background-color: #f7f3e9; padding: 32px 40px;" class="padding-mobile">
-                    <h2 style="margin: 0 0 6px; font-size: 13px; color: #9d4edd; font-weight: 600; text-transform: uppercase; letter-spacing: 1.5px;">In Case You Missed It</h2>
-                    <h3 style="margin: 0 0 16px; font-size: 22px; color: #2d1b4e; font-weight: 700;">Winter Sprint Bootcamp 2026: That's a Wrap!</h3>
-                    <p style="margin: 0 0 14px; font-size: 15px; color: #4a5568; line-height: 1.7;">Last month, we wrapped up our <strong style="color: #2d1b4e;">Winter Sprint Bootcamp</strong>. 5 intense days of AI Agents, Full-Stack Development, and Data Science with <strong style="color: #7b2cbf;">495 attendees</strong> from around the world.</p>
-                    <p style="margin: 0 0 20px; font-size: 15px; color: #4a5568; line-height: 1.7;">Missed it? No worries, all sessions are available to re-watch. Catch up at your own pace, grab the resources, and learn like you were there.</p>
-
-                    <!-- Stats row -->
-                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin-bottom: 24px;">
-                        <tr>
-                            <td width="33%" style="text-align: center; padding: 16px 8px; background-color: #f3e8ff; border-radius: 12px;">
-                                <p style="margin: 0; font-size: 24px; font-weight: 700; color: #7b2cbf;">495</p>
-                                <p style="margin: 4px 0 0; font-size: 12px; color: #718096; text-transform: uppercase; letter-spacing: 0.5px;">Attendees</p>
-                            </td>
-                            <td width="6"></td>
-                            <td width="33%" style="text-align: center; padding: 16px 8px; background-color: #fff8e1; border-radius: 12px;">
-                                <p style="margin: 0; font-size: 24px; font-weight: 700; color: #e6c200;">5</p>
-                                <p style="margin: 4px 0 0; font-size: 12px; color: #718096; text-transform: uppercase; letter-spacing: 0.5px;">Days</p>
-                            </td>
-                            <td width="6"></td>
-                            <td width="33%" style="text-align: center; padding: 16px 8px; background-color: #ffe5cc; border-radius: 12px;">
-                                <p style="margin: 0; font-size: 24px; font-weight: 700; color: #e07c3e;">3</p>
-                                <p style="margin: 4px 0 0; font-size: 12px; color: #718096; text-transform: uppercase; letter-spacing: 0.5px;">Tracks</p>
-                            </td>
-                        </tr>
-                    </table>
-
-                    <!-- CTA Button -->
-                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" style="margin: 0 auto;">
-                        <tr>
-                            <td style="border-radius: 50px; background: linear-gradient(135deg, #7b2cbf 0%, #9d4edd 100%);">
-                                <a href="https://www.youtube.com/@CodewithSerah" target="_blank" style="display: inline-block; padding: 14px 32px; font-size: 15px; font-weight: 600; color: #ffffff; text-decoration: none; border-radius: 50px;">
-                                    Re-watch the Sessions &#8594;
-                                </a>
-                            </td>
-                        </tr>
-                    </table>
-                </td>
-            </tr>
-
-            <!-- Divider -->
-            <tr>
-                <td style="background-color: #f7f3e9; padding: 0 40px;" class="padding-mobile">
-                    <hr style="border: none; border-top: 2px solid #f3e8ff; margin: 0;">
-                </td>
-            </tr>
-
-            <!-- ====== OPERATION SAVE ELMOPAUSED ====== -->
-            <tr>
-                <td style="background-color: #f7f3e9; padding: 32px 40px;" class="padding-mobile">
-                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
-                        <tr>
-                            <td style="width: 48px; vertical-align: top; padding-right: 16px;">
-                                <div style="width: 44px; height: 44px; background-color: #f3e8ff; border-radius: 50%; text-align: center; line-height: 44px; font-size: 18px; font-weight: 700; color: #7b2cbf;">||</div>
-                            </td>
-                            <td style="vertical-align: top;">
-                                <h2 style="margin: 0 0 12px; font-size: 20px; color: #2d1b4e; font-weight: 700;">Operation Save ELMO: On Pause</h2>
-                                <p style="margin: 0; font-size: 15px; color: #4a5568; line-height: 1.7;">We know many of you have been looking forward to this program, and so have we. Due to the current situation, <strong style="color: #2d1b4e;">Operation Save ELMO is paused</strong> for now. ELMO isn't going anywhere. The mission is still on. We'll keep you updated the moment things are back on track. Hang tight.</p>
-                            </td>
-                        </tr>
-                    </table>
-                </td>
-            </tr>
-
-            <!-- Divider -->
-            <tr>
-                <td style="background-color: #f7f3e9; padding: 0 40px;" class="padding-mobile">
-                    <hr style="border: none; border-top: 2px solid #f3e8ff; margin: 0;">
-                </td>
-            </tr>
-
-            <!-- ====== ACADEMY ACCESSSTAY TUNED ====== -->
-            <tr>
-                <td style="background-color: #f7f3e9; padding: 32px 40px;" class="padding-mobile">
-                    <div style="background: linear-gradient(135deg, #f3e8ff 0%, #fff8e1 100%); border-radius: 16px; padding: 28px 24px; border-left: 4px solid #7b2cbf;">
-                        <h2 style="margin: 0 0 12px; font-size: 20px; color: #2d1b4e; font-weight: 700;">Academy Access: Coming Your Way</h2>
-                        <p style="margin: 0 0 14px; font-size: 15px; color: #4a5568; line-height: 1.7;">For those of you who were part of the <strong style="color: #7b2cbf;">Pre-Winter and Winter Sprint Bootcamp</strong>, we'll be reaching out soon with <strong style="color: #2d1b4e;">free access to the Academy</strong>.</p>
-                        <p style="margin: 0; font-size: 15px; color: #4a5568; line-height: 1.7;">Stay tuned to your inbox. We haven't forgotten about you. This is our way of saying thank you for being part of this journey with us.</p>
-                    </div>
-                </td>
-            </tr>
-
-            <!-- Divider -->
-            <tr>
-                <td style="background-color: #f7f3e9; padding: 0 40px;" class="padding-mobile">
-                    <hr style="border: none; border-top: 2px solid #f3e8ff; margin: 0;">
-                </td>
-            </tr>
-
-            <!-- ====== TIPS TO DE-STRESS ====== -->
-            <tr>
-                <td style="background-color: #f7f3e9; padding: 32px 40px;" class="padding-mobile">
-                    <h2 style="margin: 0 0 6px; font-size: 13px; color: #43a047; font-weight: 600; text-transform: uppercase; letter-spacing: 1.5px;">Take Care of You</h2>
-                    <h3 style="margin: 0 0 20px; font-size: 22px; color: #2d1b4e; font-weight: 700;">Little Things That Help When Everything Feels Heavy</h3>
-
-                    <!-- Tip 1 -->
-                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin-bottom: 16px;">
-                        <tr>
-                            <td style="background-color: #e8f5e9; border-radius: 12px; padding: 18px 20px;">
-                                <p style="margin: 0 0 4px; font-size: 15px; font-weight: 700; color: #2d1b4e;">Step away from screens</p>
-                                <p style="margin: 0; font-size: 14px; color: #4a5568; line-height: 1.6;">Even 10 minutes outside, a walk around the block, or just sitting by a window can make a difference. Your brain needs the break.</p>
-                            </td>
-                        </tr>
-                    </table>
-
-                    <!-- Tip 2 -->
-                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin-bottom: 16px;">
-                        <tr>
-                            <td style="background-color: #f3e8ff; border-radius: 12px; padding: 18px 20px;">
-                                <p style="margin: 0 0 4px; font-size: 15px; font-weight: 700; color: #2d1b4e;">Create something, anything</p>
-                                <p style="margin: 0; font-size: 14px; color: #4a5568; line-height: 1.6;">Draw, write, doodle, code a silly project, bake something new. Creating helps process emotions in ways talking sometimes can't.</p>
-                            </td>
-                        </tr>
-                    </table>
-
-                    <!-- Tip 3 -->
-                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin-bottom: 16px;">
-                        <tr>
-                            <td style="background-color: #fff8e1; border-radius: 12px; padding: 18px 20px;">
-                                <p style="margin: 0 0 4px; font-size: 15px; font-weight: 700; color: #2d1b4e;">Put on your comfort playlist</p>
-                                <p style="margin: 0; font-size: 14px; color: #4a5568; line-height: 1.6;">Music heals. Whether it's lo-fi beats, your favorite album, or that one song that always makes you feel something, let it play.</p>
-                            </td>
-                        </tr>
-                    </table>
-
-                    <!-- Tip 4 -->
-                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin-bottom: 16px;">
-                        <tr>
-                            <td style="background-color: #ffe5cc; border-radius: 12px; padding: 18px 20px;">
-                                <p style="margin: 0 0 4px; font-size: 15px; font-weight: 700; color: #2d1b4e;">Limit the news scroll</p>
-                                <p style="margin: 0; font-size: 14px; color: #4a5568; line-height: 1.6;">Staying informed matters, but doom-scrolling doesn't help anyone. Set boundaries. Check in once or twice a day, then step away.</p>
-                            </td>
-                        </tr>
-                    </table>
-
-                    <!-- Tip 5 -->
-                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
-                        <tr>
-                            <td style="background-color: #e3f2fd; border-radius: 12px; padding: 18px 20px;">
-                                <p style="margin: 0 0 4px; font-size: 15px; font-weight: 700; color: #2d1b4e;">Reach out to someone</p>
-                                <p style="margin: 0; font-size: 14px; color: #4a5568; line-height: 1.6;">A text to a friend, a call with family, or just being in the same room as someone you trust. You don't have to carry it alone.</p>
-                            </td>
-                        </tr>
-                    </table>
-                </td>
-            </tr>
-
-            <!-- Divider -->
-            <tr>
-                <td style="background-color: #f7f3e9; padding: 0 40px;" class="padding-mobile">
-                    <hr style="border: none; border-top: 2px solid #f3e8ff; margin: 0;">
-                </td>
-            </tr>
-
-            <!-- ====== LATEST NEWS & RESOURCES (placeholder) ====== -->
-            <tr>
-                <td style="background-color: #f7f3e9; padding: 32px 40px;" class="padding-mobile">
-                    <h2 style="margin: 0 0 6px; font-size: 13px; color: #1e88e5; font-weight: 600; text-transform: uppercase; letter-spacing: 1.5px;">Serah's Picks</h2>
-                    <h3 style="margin: 0 0 20px; font-size: 22px; color: #2d1b4e; font-weight: 700;">Latest News &amp; Resources</h3>
-
-                    <!-- Resource 1: Cursor Course -->
+                    <!-- Event 1 -->
                     <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin-bottom: 12px;">
                         <tr>
-                            <td style="background-color: #f3e8ff; border-radius: 12px; padding: 18px 20px;">
-                                <p style="margin: 0 0 4px; font-size: 15px; font-weight: 700; color: #7b2cbf;">Nebius Academy: Cursor Course</p>
-                                <p style="margin: 0 0 12px; font-size: 14px; color: #4a5568; line-height: 1.6;">Real talk: not everyone's been using AI coding tools the right way. If you've been vibing with Cursor or want to start, this free course is a must. Learn how to actually code with AI, not just autocomplete your way through life.</p>
-                                <a href="https://academy.nebius.com/aicoding/cursor" target="_blank" style="display: inline-block; padding: 8px 20px; background-color: #7b2cbf; color: #ffffff; font-size: 13px; font-weight: 600; text-decoration: none; border-radius: 20px;">Check it out &#8594;</a>
+                            <td width="56" valign="top" style="padding-right: 14px;">
+                                <table role="presentation" cellspacing="0" cellpadding="0" border="0" style="background-color: #fff8e1; border-radius: 10px; width: 56px;">
+                                    <tr><td align="center" style="padding: 8px 4px;">
+                                        <p style="margin: 0; font-size: 18px; font-weight: 800; color: #7b2cbf; line-height: 1;">15</p>
+                                        <p style="margin: 0; font-size: 10px; font-weight: 600; color: #9d4edd; text-transform: uppercase;">Apr</p>
+                                    </td></tr>
+                                </table>
+                            </td>
+                            <td valign="top">
+                                <p style="margin: 0 0 2px; font-size: 15px; font-weight: 600; color: #2d1b4e;">All Programs Resume</p>
+                                <p style="margin: 0; font-size: 13px; color: #718096;">We're officially back! All Code with Serah activities kick off again.</p>
                             </td>
                         </tr>
                     </table>
 
-                    <!-- Resource 2: LLM Agents Interview Prep -->
+                    <!-- Event 2 -->
                     <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin-bottom: 12px;">
                         <tr>
-                            <td style="background-color: #fff8e1; border-radius: 12px; padding: 18px 20px;">
-                                <p style="margin: 0 0 4px; font-size: 15px; font-weight: 700; color: #7b2cbf;">LLM Agents Interview Questions Prep</p>
-                                <p style="margin: 0 0 12px; font-size: 14px; color: #4a5568; line-height: 1.6;">If you're prepping for AI/ML roles or just want to understand how LLM agents actually work under the hood, bookmark this one. Great for leveling up your knowledge whether you're job hunting or just curious.</p>
-                                <a href="https://substack.com/inbox/post/190373429" target="_blank" style="display: inline-block; padding: 8px 20px; background-color: #7b2cbf; color: #ffffff; font-size: 13px; font-weight: 600; text-decoration: none; border-radius: 20px;">Read it &#8594;</a>
+                            <td width="56" valign="top" style="padding-right: 14px;">
+                                <table role="presentation" cellspacing="0" cellpadding="0" border="0" style="background-color: #fff8e1; border-radius: 10px; width: 56px;">
+                                    <tr><td align="center" style="padding: 8px 4px;">
+                                        <p style="margin: 0; font-size: 18px; font-weight: 800; color: #7b2cbf; line-height: 1;">22</p>
+                                        <p style="margin: 0; font-size: 10px; font-weight: 600; color: #9d4edd; text-transform: uppercase;">Apr</p>
+                                    </td></tr>
+                                </table>
+                            </td>
+                            <td valign="top">
+                                <p style="margin: 0 0 2px; font-size: 15px; font-weight: 600; color: #2d1b4e;">Operation Save ELMO Begins</p>
+                                <p style="margin: 0; font-size: 13px; color: #718096;">Hands-on, collaborative, and open for registration now.</p>
                             </td>
                         </tr>
                     </table>
 
-                    <!-- Resource 3: Gemini Embedding 2 -->
-                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin-bottom: 12px;">
-                        <tr>
-                            <td style="background-color: #e8f5e9; border-radius: 12px; padding: 18px 20px;">
-                                <p style="margin: 0 0 4px; font-size: 15px; font-weight: 700; color: #7b2cbf;">Google Dropped Gemini Embedding 2</p>
-                                <p style="margin: 0 0 12px; font-size: 14px; color: #4a5568; line-height: 1.6;">This is huge. Google just released the first fully multimodal embedding model built on Gemini. Text, images, video, audio, PDFs, 100+ languages, all in one shared vector space. If you're building anything with search or RAG, pay attention to this one.</p>
-                                <a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-embedding-2/" target="_blank" style="display: inline-block; padding: 8px 20px; background-color: #7b2cbf; color: #ffffff; font-size: 13px; font-weight: 600; text-decoration: none; border-radius: 20px;">Learn more &#8594;</a>
-                            </td>
-                        </tr>
-                    </table>
-
-                    <!-- Resource 4: OpenSandbox -->
+                    <!-- Event 3 -->
                     <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
                         <tr>
-                            <td style="background-color: #e3f2fd; border-radius: 12px; padding: 18px 20px;">
-                                <p style="margin: 0 0 4px; font-size: 15px; font-weight: 700; color: #7b2cbf;">Alibaba Open-Sourced OpenSandbox</p>
-                                <p style="margin: 0 0 12px; font-size: 14px; color: #4a5568; line-height: 1.6;">Alibaba just made their AI sandbox platform fully open source. It gives AI coding agents like Claude Code and Gemini CLI isolated environments to run in safely. Docker, Kubernetes, browser automation, VNC desktops, code execution with streaming output. If you're into AI agents, this is your new playground. 100% free and open source.</p>
-                                <a href="https://github.com/alibaba/OpenSandbox" target="_blank" style="display: inline-block; padding: 8px 20px; background-color: #7b2cbf; color: #ffffff; font-size: 13px; font-weight: 600; text-decoration: none; border-radius: 20px;">View on GitHub &#8594;</a>
+                            <td width="56" valign="top" style="padding-right: 14px;">
+                                <table role="presentation" cellspacing="0" cellpadding="0" border="0" style="background-color: #fff8e1; border-radius: 10px; width: 56px;">
+                                    <tr><td align="center" style="padding: 8px 4px;">
+                                        <p style="margin: 0; font-size: 18px; font-weight: 800; color: #7b2cbf; line-height: 1;">01</p>
+                                        <p style="margin: 0; font-size: 10px; font-weight: 600; color: #9d4edd; text-transform: uppercase;">May</p>
+                                    </td></tr>
+                                </table>
+                            </td>
+                            <td valign="top">
+                                <p style="margin: 0 0 2px; font-size: 15px; font-weight: 600; color: #2d1b4e;">Webinar with Sarah Rashidi</p>
+                                <p style="margin: 0; font-size: 13px; color: #718096;">Harness Engineering. More details coming soon.</p>
                             </td>
                         </tr>
                     </table>
                 </td>
             </tr>
 
-            <!-- Divider -->
-            <tr>
-                <td style="background-color: #f7f3e9; padding: 0 40px;" class="padding-mobile">
-                    <hr style="border: none; border-top: 2px solid #f3e8ff; margin: 0;">
-                </td>
-            </tr>
+            <!-- ─── DIVIDER ─── -->
+            <tr><td style="padding: 0 40px;"><div style="height: 1px; background-color: #ede5d3;"></div></td></tr>
 
-            <!-- ====== CLOSING MESSAGE ====== -->
+            <!-- ─── SHE RAGES — BETA TESTERS WANTED ─── -->
             <tr>
-                <td style="background-color: #f7f3e9; padding: 32px 40px 40px;" class="padding-mobile">
-                    <p style="margin: 0 0 14px; font-size: 15px; color: #4a5568; line-height: 1.7;">In the meanwhile, <strong style="color: #2d1b4e;">stay safe</strong>, be kind to yourself, and remember that this community is here for you, no matter what. We'll be back with more updates as soon as things settle. Until then, take care of yourselves and each other.</p>
-                    <p style="margin: 0; font-size: 15px; color: #2d1b4e; font-weight: 600;">With love, Serah &amp; the Code with Serah Team</p>
-                </td>
-            </tr>
-
-            <!-- ====== SOCIAL MEDIA FOOTER ====== -->
-            <tr>
-                <td style="background: linear-gradient(135deg, #2d1b4e 0%, #3a2559 60%, #5a189a 100%); padding: 36px 40px; text-align: center; border-radius: 0 0 24px 24px;" class="padding-mobile">
-                    <p style="margin: 0 0 16px; font-size: 14px; color: rgba(255,255,255,0.7); font-weight: 500;">Stay connected with us</p>
-
-                    <!-- Social icons as labeled pill buttons -->
-                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" style="margin: 0 auto;">
+                <td class="pad" style="padding: 32px 40px 32px;">
+                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="background-color: #fff4e6; border-radius: 16px; border-left: 4px solid #7b2cbf;">
                         <tr>
-                            <td style="padding: 0 4px;">
-                                <a href="https://www.youtube.com/@CodewithSerah" target="_blank" style="display: inline-block; padding: 8px 14px; background-color: rgba(255,255,255,0.12); border-radius: 20px; text-decoration: none; font-size: 12px; font-weight: 600; color: #ffffff; letter-spacing: 0.3px;">YouTube</a>
-                            </td>
-                            <td style="padding: 0 4px;">
-                                <a href="https://www.linkedin.com/company/codewithserah" target="_blank" style="display: inline-block; padding: 8px 14px; background-color: rgba(255,255,255,0.12); border-radius: 20px; text-decoration: none; font-size: 12px; font-weight: 600; color: #ffffff; letter-spacing: 0.3px;">LinkedIn</a>
-                            </td>
-                            <td style="padding: 0 4px;">
-                                <a href="https://www.instagram.com/codewithserah/" target="_blank" style="display: inline-block; padding: 8px 14px; background-color: rgba(255,255,255,0.12); border-radius: 20px; text-decoration: none; font-size: 12px; font-weight: 600; color: #ffffff; letter-spacing: 0.3px;">Instagram</a>
-                            </td>
-                            <td style="padding: 0 4px;">
-                                <a href="https://chat.whatsapp.com/CUZuaSJLydM4y1zJ5Zw2h0" target="_blank" style="display: inline-block; padding: 8px 14px; background-color: rgba(255,255,255,0.12); border-radius: 20px; text-decoration: none; font-size: 12px; font-weight: 600; color: #ffffff; letter-spacing: 0.3px;">WhatsApp</a>
-                            </td>
-                            <td style="padding: 0 4px;">
-                                <a href="https://github.com/Code-with-Serah" target="_blank" style="display: inline-block; padding: 8px 14px; background-color: rgba(255,255,255,0.12); border-radius: 20px; text-decoration: none; font-size: 12px; font-weight: 600; color: #ffffff; letter-spacing: 0.3px;">GitHub</a>
+                            <td style="padding: 28px 24px 24px;">
+                                <p style="margin: 0 0 8px; font-size: 12px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #7b2cbf;">Beta Testers Wanted</p>
+                                <h3 style="margin: 0 0 14px; font-size: 20px; font-weight: 700; color: #2d1b4e; line-height: 28px;">We're looking for girls and women to test something new</h3>
+
+                                <p style="margin: 0 0 10px; font-size: 15px; line-height: 24px; color: #2d1b4e;"><strong>Not another app.</strong><br>Something actually built with you in mind.</p>
+
+                                <p style="margin: 0 0 14px; font-size: 15px; line-height: 24px; color: #4a5568;">If you're curious, honest with feedback, and want early access, this is your sign.</p>
+
+                                <p style="margin: 0 0 6px; font-size: 15px; line-height: 24px; color: #2d1b4e;">Get a chance to win a <strong>gift card</strong> if you're selected and participate.</p>
+                                <p style="margin: 0 0 22px; font-size: 14px; line-height: 22px; color: #718096;">Spots are limited.</p>
+
+                                <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin-bottom: 14px;">
+                                    <tr><td align="center">
+                                        <a href="https://forms.gle/Kps6tRQES6eqX2UB9" style="display: inline-block; padding: 13px 34px; background-color: #7b2cbf; color: #ffffff; font-size: 14px; font-weight: 700; text-decoration: none; border-radius: 50px;">Register Here</a>
+                                    </td></tr>
+                                </table>
+
+                                <p style="margin: 0; font-size: 13px; line-height: 20px; color: #4a5568; text-align: center;">Follow: <a href="https://www.instagram.com/sheragesapp/" style="color: #7b2cbf; text-decoration: underline; font-weight: 600;">@sheragesapp</a></p>
                             </td>
                         </tr>
                     </table>
+                </td>
+            </tr>
 
-                    <!-- Links -->
-                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" style="margin: 20px auto 0;">
+            <!-- ─── DIVIDER ─── -->
+            <tr><td style="padding: 0 40px;"><div style="height: 1px; background-color: #ede5d3;"></div></td></tr>
+
+            <!-- ─── IN CASE YOU MISSED IT (moved to end) ─── -->
+            <tr>
+                <td class="pad" style="padding: 32px 40px 12px;">
+                    <p style="margin: 0 0 4px; font-size: 12px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: #9d4edd;">Throwback</p>
+                    <h2 style="margin: 0 0 16px; font-size: 22px; font-weight: 700; color: #2d1b4e;">In Case You Missed It</h2>
+                </td>
+            </tr>
+
+            <!-- Bootcamp recap — purple card -->
+            <tr>
+                <td class="pad" style="padding: 0 40px 32px;">
+                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="background: linear-gradient(135deg, #5a189a 0%, #7b2cbf 100%); border-radius: 16px;">
                         <tr>
-                            <td style="padding: 0 12px;">
-                                <a href="https://codewithserah.com" target="_blank" style="font-size: 13px; color: rgba(255,255,255,0.6); text-decoration: none;">Website</a>
-                            </td>
-                            <td style="color: rgba(255,255,255,0.3);">|</td>
-                            <td style="padding: 0 12px;">
-                                <a href="https://codewithserah.com/academy.html" target="_blank" style="font-size: 13px; color: rgba(255,255,255,0.6); text-decoration: none;">Academy</a>
-                            </td>
-                            <td style="color: rgba(255,255,255,0.3);">|</td>
-                            <td style="padding: 0 12px;">
-                                <a href="https://codewithserah.com/bootcamp.html" target="_blank" style="font-size: 13px; color: rgba(255,255,255,0.6); text-decoration: none;">Bootcamp</a>
-                            </td>
-                            <td style="color: rgba(255,255,255,0.3);">|</td>
-                            <td style="padding: 0 12px;">
-                                <a href="https://codewithserah.com/events.html" target="_blank" style="font-size: 13px; color: rgba(255,255,255,0.6); text-decoration: none;">Stage</a>
+                            <td style="padding: 28px 24px 24px;">
+                                <h3 style="margin: 0 0 10px; font-size: 19px; font-weight: 700; color: #ffffff;">Winter Sprint Bootcamp 2026: That's a Wrap!</h3>
+                                <p style="margin: 0 0 20px; font-size: 15px; line-height: 25px; color: rgba(255,255,255,0.75);">Back in February, we wrapped up our Winter Sprint Bootcamp. 5 intense days of AI Agents, Full-Stack Development, and Data Science with 495 attendees from around the world.</p>
+
+                                <!-- Stats -->
+                                <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin-bottom: 20px;">
+                                    <tr>
+                                        <td class="stat-cell" align="center" width="33%" style="padding: 0 3px;">
+                                            <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="background-color: rgba(255,255,255,0.1); border-radius: 10px;">
+                                                <tr><td align="center" style="padding: 14px 6px;">
+                                                    <p style="margin: 0 0 2px; font-size: 28px; font-weight: 800; color: #ffffff; line-height: 1;">495</p>
+                                                    <p style="margin: 0; font-size: 10px; font-weight: 600; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 1px;">Attendees</p>
+                                                </td></tr>
+                                            </table>
+                                        </td>
+                                        <td class="stat-cell" align="center" width="33%" style="padding: 0 3px;">
+                                            <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="background-color: rgba(255,255,255,0.1); border-radius: 10px;">
+                                                <tr><td align="center" style="padding: 14px 6px;">
+                                                    <p style="margin: 0 0 2px; font-size: 28px; font-weight: 800; color: #ffffff; line-height: 1;">5</p>
+                                                    <p style="margin: 0; font-size: 10px; font-weight: 600; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 1px;">Days</p>
+                                                </td></tr>
+                                            </table>
+                                        </td>
+                                        <td class="stat-cell" align="center" width="33%" style="padding: 0 3px;">
+                                            <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="background-color: rgba(255,255,255,0.1); border-radius: 10px;">
+                                                <tr><td align="center" style="padding: 14px 6px;">
+                                                    <p style="margin: 0 0 2px; font-size: 28px; font-weight: 800; color: #ffffff; line-height: 1;">3</p>
+                                                    <p style="margin: 0; font-size: 10px; font-weight: 600; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 1px;">Tracks</p>
+                                                </td></tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+
+                                <p style="margin: 0 0 20px; font-size: 15px; line-height: 25px; color: rgba(255,255,255,0.75);">Missed it? No worries, all sessions are available to re-watch. Catch up at your own pace, grab the resources, and learn like you were there.</p>
+
+                                <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                                    <tr><td align="center">
+                                        <a href="https://codewithserah.com/bootcamp-winter.html" style="display: inline-block; padding: 12px 32px; background-color: #ffffff; color: #5a189a; font-size: 14px; font-weight: 700; text-decoration: none; border-radius: 50px;">Re-watch the Sessions &rarr;</a>
+                                    </td></tr>
+                                </table>
                             </td>
                         </tr>
                     </table>
+                </td>
+            </tr>
 
-                    <p style="margin: 24px 0 0; font-size: 18px; color: #ffe066; font-style: italic;">
-                        "Don't be another brick in the wall. Build differently."
-                    </p>
-
-                    <p style="margin: 20px 0 0; font-size: 12px; color: rgba(255,255,255,0.4); line-height: 1.6;">
-                        &copy; 2026 Code with Serah. All rights reserved.<br>
-                        You're receiving this because you subscribed to our newsletter.<br>
-                        <a href="{{ unsubscribe_url }}" style="color: rgba(255,255,255,0.5); text-decoration: underline;">Unsubscribe</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#" style="color: rgba(255,255,255,0.5); text-decoration: underline;">View in browser</a>
-                    </p>
+            <!-- Sign-off -->
+            <tr>
+                <td class="pad" style="padding: 0 40px 40px;">
+                    <p style="margin: 0 0 4px; font-size: 16px; line-height: 26px; color: #4a5568;">Catch you on May 10th for the webinar with Sarah Rashidi. Don't ghost us, we'll know.</p>
+                    <p style="margin: 0; font-size: 16px; font-weight: 700; color: #2d1b4e;">Serah</p>
                 </td>
             </tr>
 
         </table>
-        <!-- End email container -->
+        <!-- /Main card -->
+
+        <!-- ═══════════════════════════════════════ -->
+        <!-- FOOTER — on the beige bg                -->
+        <!-- ═══════════════════════════════════════ -->
+        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="580" style="max-width: 580px; width: 100%;">
+            <tr>
+                <td align="center" style="padding: 28px 24px 8px;">
+
+                    <p style="margin: 0 0 16px; font-size: 14px; font-weight: 600; color: #2d1b4e;">Stay connected with us</p>
+
+                    <!-- Social pill buttons (brand colors, wraps on mobile) -->
+                    <div style="text-align: center; margin-bottom: 18px; line-height: 32px;">
+                        <a href="https://www.youtube.com/@CodewithSerah" style="display: inline-block; padding: 8px 14px; margin: 4px 3px; background-color: #FF0000; color: #ffffff; font-size: 12px; font-weight: 700; text-decoration: none; border-radius: 50px; letter-spacing: 0.3px;">YouTube</a>
+                        <a href="https://www.linkedin.com/company/codewithserah" style="display: inline-block; padding: 8px 14px; margin: 4px 3px; background-color: #0A66C2; color: #ffffff; font-size: 12px; font-weight: 700; text-decoration: none; border-radius: 50px; letter-spacing: 0.3px;">LinkedIn</a>
+                        <a href="https://www.instagram.com/codewithserah/" style="display: inline-block; padding: 8px 14px; margin: 4px 3px; background-color: #E4405F; color: #ffffff; font-size: 12px; font-weight: 700; text-decoration: none; border-radius: 50px; letter-spacing: 0.3px;">Instagram</a>
+                        <a href="https://chat.whatsapp.com/CUZuaSJLydM4y1zJ5Zw2h0" style="display: inline-block; padding: 8px 14px; margin: 4px 3px; background-color: #25D366; color: #ffffff; font-size: 12px; font-weight: 700; text-decoration: none; border-radius: 50px; letter-spacing: 0.3px;">WhatsApp</a>
+                        <a href="https://github.com/Code-with-Serah" style="display: inline-block; padding: 8px 14px; margin: 4px 3px; background-color: #24292F; color: #ffffff; font-size: 12px; font-weight: 700; text-decoration: none; border-radius: 50px; letter-spacing: 0.3px;">GitHub</a>
+                    </div>
+
+                    <!-- Site links -->
+                    <p style="margin: 0 0 16px; font-size: 13px;">
+                        <a href="https://codewithserah.com" style="color: #7b2cbf; text-decoration: none; font-weight: 500;">Website</a>
+                        <span style="color: #ede5d3;">&nbsp;&nbsp;&bull;&nbsp;&nbsp;</span>
+                        <a href="https://codewithserah.com/academy.html" style="color: #7b2cbf; text-decoration: none; font-weight: 500;">Academy</a>
+                        <span style="color: #ede5d3;">&nbsp;&nbsp;&bull;&nbsp;&nbsp;</span>
+                        <a href="https://codewithserah.com/bootcamp.html" style="color: #7b2cbf; text-decoration: none; font-weight: 500;">Bootcamp</a>
+                        <span style="color: #ede5d3;">&nbsp;&nbsp;&bull;&nbsp;&nbsp;</span>
+                        <a href="https://codewithserah.com/events.html" style="color: #7b2cbf; text-decoration: none; font-weight: 500;">The Stage</a>
+                    </p>
+
+                    <!-- Quote -->
+                    <p style="margin: 0 0 20px; font-size: 14px; color: #5a189a; font-style: italic;">"Don't be another brick in the wall. Build differently."</p>
+
+                    <!-- Legal -->
+                    <p style="margin: 0 0 4px; font-size: 11px; color: #718096;">&copy; 2026 Code with Serah. All rights reserved.</p>
+                    <p style="margin: 0 0 6px; font-size: 11px; color: #a0aec0;">You're receiving this because you subscribed to our newsletter.</p>
+                    <p style="margin: 0; font-size: 11px;">
+                        <a href="{{ unsubscribe_url }}" style="color: #7b2cbf; text-decoration: underline;">Unsubscribe</a>
+                        <span style="color: #ede5d3;">&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+                        <a href="{{ unsubscribe_url }}" style="color: #7b2cbf; text-decoration: underline;">View in browser</a>
+                    </p>
+                </td>
+            </tr>
+        </table>
 
     </td>
     </tr>
